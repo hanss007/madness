@@ -1,0 +1,28 @@
+{
+  "name": "madness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "^10.0.4",
+    "node-sass": "^5.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-id-swiper": "^4.0.0",
+    "react-slick": "^0.27.13",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.1",
+    "styled-icons": "^10.23.0",
+    "swiper": "^6.4.5"
+  }
+}
