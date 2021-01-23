@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import styled from "styled-components";
 import GlobalStyle from "../theme/GlobalStyle";
 
-const Layout = (props) => (
+const Layout = ({ news }) => (
   <>
     <GlobalStyle />
     <Head>
@@ -16,7 +16,7 @@ const Layout = (props) => (
     </Head>
     <Navbar />
     <Header />
-    <News />
+    <News news={news} />
     <Calendar />
     <Gallery />
     <Footer />

@@ -4,7 +4,6 @@ import CardNews from "./CardNews";
 import { fetchQuery } from "../../utils";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { news } from "../../data/dataNews";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -17,46 +16,10 @@ const StyledWrapper = styled.div`
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-// export const MySwiper = ({ items }) => {
-//   return (
-//     <Swiper
-//       style={{ height: "570px" }}
-//       spaceBetween={10}
-//       slidesPerView={3}
-//       navigation
-//     >
-//       {items.map((item) => (
-//         <SwiperSlide>
-//           {({ isNext }) => {
-//             return <CardNews isActive={isNext} key={item.id} item={item} />;
-//           }}
-//         </SwiperSlide>
-//       ))}
-//     </Swiper>
-//   );
-// };
-
-// export default function News() {
-//   return (
-//     <StyledWrapper>
-//       <MySwiper />
-//     </StyledWrapper>
-//   );
-// }
-// export async function getServerSideProps() {
-//   const items = await fetchQuery("items");
-
-//   return {
-//     props: {
-//       items,
-//     },
-//   };
-// }
-
-export const MySwiper = ({ title, content, created, imageNews }) => {
+export const MySwiper = ({ news }) => {
   return (
     <Swiper
-      style={{ height: "570px" }}
+      style={{ height: "610px" }}
       spaceBetween={10}
       slidesPerView={3}
       navigation
@@ -64,15 +27,7 @@ export const MySwiper = ({ title, content, created, imageNews }) => {
       {news.map((item, i) => (
         <SwiperSlide>
           {({ isNext }) => {
-            return (
-              <CardNews
-                isActive={isNext}
-                title={item.title}
-                content={item.content}
-                imageNews={item.imageNews}
-                created={item.created}
-              />
-            );
+            return <CardNews isActive={isNext} key={item.id} item={item} />;
           }}
         </SwiperSlide>
       ))}
@@ -80,10 +35,11 @@ export const MySwiper = ({ title, content, created, imageNews }) => {
   );
 };
 
-export default function News() {
+export default function News({ news }) {
+  console.log("new", news);
   return (
     <StyledWrapper>
-      <MySwiper />
+      <MySwiper news={news} />
     </StyledWrapper>
   );
 }

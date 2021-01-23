@@ -1,28 +1,3 @@
-// const News = ({ item }) => {
-//   console.log(item);
-
-//   return (
-//     <div>
-//       <h1>miejsce na newsy</h1>
-//     </div>
-//   );
-// };
-
-// export async function getServerSideProps() {
-//   const { API_URL } = process.env;
-
-//   const res = await fetch(`${API_URL}/item`);
-//   const data = await res.json();
-
-//   return {
-//     props: {
-//       news: data,
-//     },
-//   };
-// }
-
-// export default News;
-
 import Navbar from "../components/Navbar";
 import Card from "../components/News/Card";
 import GlobalStyle from "../theme/GlobalStyle";

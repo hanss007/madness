@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_group_itemgroups",
+  "info": {
+    "name": "itemgroup",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "resultteam": {
+      "type": "component",
+      "repeatable": true,
+      "component": "group.resultteam"
+    },
+    "table": {
+      "type": "component",
+      "repeatable": true,
+      "component": "table.resultgroup"
+    }
+  }
+}

@@ -72,7 +72,7 @@ const Button = styled.a`
 `;
 
 const ImageWrapper = styled.img`
-  width: 550px;
+  width: 650px;
   height: 500px;
   border: 1px solid black;
   margin-bottom: 30px;
@@ -107,12 +107,7 @@ export default function Item({ item }) {
               </Link>
             </ContentButton>
           </InnerWrapper>
-          <ImageWrapper
-            src="https://cdn.pixabay.com/photo/2019/08/05/08/54/football-4385515_1280.jpg"
-            alt={item.title}
-          />
-          {/* <ImageWrapper src={`${baseUrl}${item.url}`} alt={item.title} /> */}
-
+          <ImageWrapper src={`${baseUrl}${item.image.url}`} alt={item.title} />
           <ContentWrapper>{item.content}</ContentWrapper>
         </StyledWrapper>
       </BackgroundWrapper>

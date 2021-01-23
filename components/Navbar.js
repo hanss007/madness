@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { DownArrow } from "@styled-icons/boxicons-solid/DownArrow";
-import { OverflowMenu, OverflowMenuItem } from "carbon-components-react";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -17,17 +16,51 @@ const InnerWrapper = styled.ul`
   justify-content: flex-end;
   align-items: center;
   margin-right: 60px;
+
+  &.madness {
+    position: absolute;
+    top: 42px;
+    right: 240px;
+    margin-right: 0;
+    padding: 0;
+    width: 120px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    overflow: hidden;
+    z-index: 999;
+    opacity: 0;
+  }
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const StyledList = styled.li`
   margin-right: 10px;
   padding-right: 15px;
-  border-right: 1px solid white;
+  margin-bottom: 5px;
   list-style: none;
   text-decoration: none;
-  &:last-child {
-    border-right: none;
+  &.madness {
+    list-style: none;
   }
+`;
+
+const BorderRightWrapper = styled.div`
+  border-right: 1px solid white;
+  height: 20px;
+  margin-right: 15px;
+`;
+
+const BorderBottomWrapper = styled.div`
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  width: 100px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 `;
 
 const LinkStyled = styled.a`
@@ -36,6 +69,7 @@ const LinkStyled = styled.a`
   text-decoration: none;
   color: white;
   cursor: pointer;
+
   &.active {
     background-color: #fd5825;
     padding: 2px;
@@ -64,6 +98,7 @@ const Navbar = ({ menu }) => {
             Home
           </LinkStyled>
         </StyledList>
+        <BorderRightWrapper />
         <StyledList>
           <LinkStyled
             href="/news"
@@ -72,6 +107,7 @@ const Navbar = ({ menu }) => {
             Aktualności
           </LinkStyled>
         </StyledList>
+        <BorderRightWrapper />
         <StyledList>
           <LinkStyled
             href="/madness"
@@ -79,17 +115,48 @@ const Navbar = ({ menu }) => {
           >
             Madness
           </LinkStyled>
-          <Arrow />
-        </StyledList>
 
-        {/* <StyledList>
-          <LinkStyled
-            href="/calender"
-            className={router.pathname == "/calender" ? "active" : ""}
-          >
-            Terminarz
-          </LinkStyled>
-        </StyledList> */}
+          <Arrow />
+
+          <InnerWrapper className="madness">
+            <StyledList className="madness">
+              <LinkStyled
+                href="/"
+                className={router.pathname == "/" ? "active" : ""}
+              >
+                Turnieje
+              </LinkStyled>
+            </StyledList>
+            <BorderBottomWrapper />
+            <StyledList className="madness">
+              <LinkStyled
+                href="/zory/index"
+                className={router.pathname === "/zory/[index]" ? "active" : ""}
+              >
+                Żory
+              </LinkStyled>
+            </StyledList>
+            <BorderBottomWrapper />
+            <StyledList className="madness">
+              <LinkStyled
+                href="/plf/index"
+                className={router.pathname == "/plf/[index]" ? "active" : ""}
+              >
+                PLF
+              </LinkStyled>
+            </StyledList>
+            <BorderBottomWrapper />
+            <StyledList className="madness">
+              <LinkStyled
+                href="/chlf/index"
+                className={router.pathname == "/chlf/[index]" ? "active" : ""}
+              >
+                CHLF
+              </LinkStyled>
+            </StyledList>
+          </InnerWrapper>
+        </StyledList>
+        <BorderRightWrapper />
         <StyledList>
           <LinkStyled
             href="/results"
@@ -98,6 +165,7 @@ const Navbar = ({ menu }) => {
             Wyniki
           </LinkStyled>
         </StyledList>
+        <BorderRightWrapper />
         <StyledList>
           <LinkStyled
             href="/gallery"

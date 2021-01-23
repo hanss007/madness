@@ -10,6 +10,7 @@ const StyledWrapper = styled.div`
   font-family: roboto;
   text-align: center;
   transition: 0.5s ease;
+
   cursor: pointer;
   /* margin: 30px; */
   max-width: 290px;
@@ -38,11 +39,12 @@ const ImgStyled = styled.img`
 const TextStyled = styled.div`
   grid-area: text;
   margin: 25px;
+  max-height: 290px;
 `;
 
 const TitleStyled = styled.h2`
   margin-top: 0px;
-  font-size: 22px;
+  font-size: 20px;
   color: #222;
   margin-bottom: 25px;
   text-transform: capitalize;
@@ -70,10 +72,14 @@ const StatInfo = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-
+  text-transform: capitalize;
   padding: 10px;
   border-left: 1px solid rgba(247, 239, 229, 0.6);
   border-right: 1px solid rgba(247, 239, 229, 0.6);
+  height: 55px;
+  &.date {
+    font-size: 15px;
+  }
 
   &:last-child {
     border-right: none;
@@ -102,40 +108,21 @@ const Button = styled.a`
   }
 `;
 
-// const CardNews = ({ item, isActive }) => (
-//   <StyledWrapper isActive={isActive}>
-//     <ImageWrapper>
-//       <ImgStyled src={`${baseUrl}${item.url}`} alt={item.title} />
-//     </ImageWrapper>
-//     <TextStyled>
-//       <TitleStyled>{item.title}</TitleStyled>
-//       <ContentStyled>{item.excerpt}</ContentStyled>
-//     </TextStyled>
-//     <StatsStyled>
-//       <StatInfo>{item.created}</StatInfo>
-//       <StatInfo>01</StatInfo>
-//       <StatInfo>{item.typ}</StatInfo>
-//     </StatsStyled>
-//   </StyledWrapper>
-// );
-
-// export default CardNews;
-
-const CardNews = ({ title, content, created, imageNews, isActive }) => (
+const CardNews = ({ item, isActive }) => (
   <StyledWrapper isActive={isActive}>
     <ImageWrapper>
-      <ImgStyled src={imageNews} alt="foto" />
+      <ImgStyled src={`${baseUrl}${item.image.url}`} alt="foto" />
     </ImageWrapper>
     <TextStyled>
-      <TitleStyled>{title}</TitleStyled>
-      <ContentStyled>{content}</ContentStyled>
+      <TitleStyled>{item.title}</TitleStyled>
+      <ContentStyled>{item.excerpt}</ContentStyled>
     </TextStyled>
     <StatsStyled>
-      <StatInfo>19.12.2020</StatInfo>
+      <StatInfo className="date">{item.created}</StatInfo>
       <StatInfo>
-        <Button href="">więcej</Button>
+        <Button href={`/items/${item.id}`}>więcej</Button>
       </StatInfo>
-      <StatInfo>Turnieje</StatInfo>
+      <StatInfo>{item.typ}</StatInfo>
     </StatsStyled>
   </StyledWrapper>
 );

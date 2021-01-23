@@ -47,14 +47,21 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+const Title = styled.h2`
+  text-align: center;
+`;
+
 const Gallery = () => (
-  <Container>
-    <StyledWrapper>
-      {images.map((item) => (
-        <CardGallery ImageUrl={item.ImageUrl} />
-      ))}
-    </StyledWrapper>
-  </Container>
+  <>
+    <Title>Galeria w Budowie dostępna wkrótce !!</Title>
+    <Container>
+      <StyledWrapper>
+        {images.map((item) => (
+          <CardGallery ImageUrl={item.ImageUrl} />
+        ))}
+      </StyledWrapper>
+    </Container>
+  </>
 );
 
 export default Gallery;

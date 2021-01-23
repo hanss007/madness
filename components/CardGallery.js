@@ -6,24 +6,28 @@ const StyledWrapper = styled.div`
   width: 280px;
   height: 280px;
   background-color: transparent;
-  border: 2px solid #222;
+  border: 2px solid rgba(34, 2, 0, 0.3);
   border-radius: 5px;
 `;
-
-const StyledImg = styled.img`
+//poźniej .img
+const StyledImg = styled.div`
   position: absolute;
   width: 200px;
   height: 200px;
-  background-color: #222;
+  background-color: #727876;
   background-size: contain;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
 `;
 
 const CardGallery = ({ ImageUrl }) => (
   <StyledWrapper>
-    <StyledImg src={ImageUrl} />
+    <StyledImg>
+      <h3>miejsce na na zdjęcie</h3>
+    </StyledImg>
   </StyledWrapper>
 );
 

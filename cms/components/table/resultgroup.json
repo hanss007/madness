@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_table_resultgroups",
+  "info": {
+    "name": "resultgroup",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "pkt": {
+      "type": "integer"
+    },
+    "goalsscored": {
+      "type": "integer"
+    },
+    "goalslost": {
+      "type": "integer"
+    }
+  }
+}

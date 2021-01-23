@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "itemresults",
+  "info": {
+    "name": "Itemresults"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "teamAA": {
+      "type": "string"
+    },
+    "teamBB": {
+      "type": "string"
+    },
+    "scoreAA": {
+      "type": "integer"
+    },
+    "scoreBB": {
+      "type": "integer"
+    }
+  }
+}

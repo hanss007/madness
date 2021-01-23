@@ -16,7 +16,7 @@
     },
     "excerpt": {
       "type": "string",
-      "maxLength": 250
+      "maxLength": 120
     },
     "content": {
       "type": "text"

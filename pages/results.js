@@ -2,6 +2,9 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import GlobalStyle from "../theme/GlobalStyle";
 
+import Link from "next/link";
+import { fetchQuery, baseUrl } from "../utils";
+
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,7 +23,7 @@ const StyledWrapper = styled.div`
     background-size: cover;
 
     width: 100%;
-    height: 110%;
+    height: 110vh;
     opacity: 0.3;
     z-index: -1;
   }
@@ -38,31 +41,70 @@ const InnerWrapper = styled.div`
   grid-column-gap: 85px;
   margin-top: 40px;
 `;
-const ImageWrapper = styled.div`
-  width: 350px;
+const ImageWrapper = styled.img`
+  width: 400px;
   height: 350px;
-  background-image: url("https://scontent.fpoz4-1.fna.fbcdn.net/v/t1.0-9/131033579_3692388594117845_8935158420715119533_o.jpg?_nc_cat=110&ccb=2&_nc_sid=8bfeb9&_nc_ohc=otZyR8vZPU4AX_5y37c&_nc_ht=scontent.fpoz4-1.fna&oh=9ce6b87fe7f79defed3839c772225db5&oe=602206D2");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-right: 30px;
+  margin-bottom: 70px;
 `;
 
-const Results = () => (
-  <>
-    <GlobalStyle />
-    <Navbar />
-    <StyledWrapper>
-      <Title>Wyniki Turniejów Stowarzyszenia Madness</Title>
-      <InnerWrapper>
-        <ImageWrapper />
-        <ImageWrapper />
-        <ImageWrapper />
-        <ImageWrapper />
-        <ImageWrapper />
-        <ImageWrapper />
-      </InnerWrapper>
-    </StyledWrapper>
-  </>
-);
+export default function Results({ results }) {
+  return (
+    <>
+      <GlobalStyle />
+      <Navbar />
+      <StyledWrapper>
+        <Title>Wyniki Turniejów Stowarzyszenia Madness</Title>
+        <InnerWrapper>
+          {results.map((item) => (
+            <Link href={`/results/${item.id}`}>
+              <ImageWrapper src={`${baseUrl}${item.image.url}`} alt="" />
+            </Link>
+          ))}
+        </InnerWrapper>
+      </StyledWrapper>
+    </>
+  );
+}
 
-export default Results;
+export async function getServerSideProps() {
+  const results = await fetchQuery("results");
+
+  return {
+    props: {
+      results,
+    },
+  };
+}
+
+// export default function Results({ results }) {
+//   console.log(results.title);
+//   return (
+//     <>
+//       <GlobalStyle />
+//       <Navbar />
+//       <StyledWrapper>
+//         <Title>Wyniki Turniejów Stowarzyszenia Madness</Title>
+//
+//           {results.map((item) => (
+//             <Link href={`/results/${item.id}`}>
+//               <ImageWrapper src={`${baseUrl}${item.image.url}`} alt="" />
+//             </Link>
+//           ))}
+//         </InnerWrapper>
+//       </StyledWrapper>
+//     </>
+//   );
+// }
+
+// export async function getServerSideProps() {
+//   const results = await fetchQuery("results");
+
+//   return {
+//     props: {
+//       results,
+//     },
+//   };
+// }

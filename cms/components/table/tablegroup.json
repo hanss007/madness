@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_table_tablegroups",
+  "info": {
+    "name": "tablegroup",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "resultgroup": {
+      "type": "component",
+      "repeatable": true,
+      "component": "table.resultgroup"
+    }
+  }
+}

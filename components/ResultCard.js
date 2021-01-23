@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Link from "next/link";
 import styled, { css, keyframes } from "styled-components";
 import { Article } from "@styled-icons/material-outlined/Article";
-import { baseUrl } from "../../utils";
+import { baseUrl } from "../utils";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -79,32 +79,20 @@ const MyArticle = styled(Article)`
 `;
 
 const ContentButton = styled.div`
-  display: flex;
+  display: fex;
   justify-content: flex-start;
   align-items: center;
   margin-top: 2px;
 `;
 
-const Card = ({ item }) => (
+const ResultCard = ({ result }) => (
   <StyledWrapper>
-    <ImageWrapper src={`${baseUrl}${item.image.url}`} />
     <InnerWrapper>
-      <Title>
-        {item.typ} <Data>/ {item.created}</Data>
-      </Title>
-      <ContentWrapper>
-        <ContentText>{item.title}</ContentText>
-        <ContentExcerpt>{item.excerpt}</ContentExcerpt>
-      </ContentWrapper>
-      <ContentButton>
-        <MyArticle />
-
-        <Link href={`/items/${item.id}`}>
-          <Button>więcej</Button>
-        </Link>
-      </ContentButton>
+      <Link href={`/results/${result.id}`}>
+        <ImageWrapper src={`${baseUrl}${result.image.url}`} alt="" />
+      </Link>
     </InnerWrapper>
   </StyledWrapper>
 );
 
-export default Card;
+export default ResultCard;

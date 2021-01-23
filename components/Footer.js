@@ -93,7 +93,7 @@ const Footer = () => (
         </InnerContent>
         <InnerContent>
           <MyPhone />
-          <p>607-606-405</p>
+          <p>508-244-715</p>
         </InnerContent>
       </Content>
     </InnerWrapper>
@@ -104,11 +104,11 @@ const Footer = () => (
       <Content className="secondary">
         <InnerContent>
           <Mail />
-          <p>seweryn993@gmail.com</p>
+          <p>seweryn17@02.pl</p>
         </InnerContent>
         <InnerContent>
           <MyPhone />
-          <p>505-453-543</p>
+          <p>784-478-999</p>
         </InnerContent>
       </Content>
     </InnerWrapper>
