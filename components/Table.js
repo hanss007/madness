@@ -37,16 +37,16 @@ const BorderBottomWrapper = styled.div`
   padding: 2px;
 `;
 
-const ResultCard = ({ item }) => (
+const Table = ({ item }) => (
   <StyledWrapper>
     <InnerWrapper>
-      <NameTeam>{item.team1}</NameTeam>
-      <Score>{item.score1}</Score>
+      <NameTeam>{item.name}</NameTeam>
+      <NameTeam>{item.pkt}</NameTeam>
+      <NameTeam>{item.goalsscored}</NameTeam>
       <Colon>:</Colon>
-      <Score>{item.score2}</Score>
-      <NameTeam>{item.team2}</NameTeam>
+      <NameTeam>{item.goalslost}</NameTeam>
     </InnerWrapper>
   </StyledWrapper>
 );
 
-export default ResultCard;
+export default Table;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
 import ResultCard from "../../components/ResultCard";
-import ResultTable from "../../components/ResultCard";
+import Table from "../../components/Table";
 
 const BackgroundWrapper = styled.div`
   position: relative;
@@ -44,14 +44,12 @@ export default function ItemResults({ item }) {
       <BackgroundWrapper>
         <StyledWrapper>
           {item["Group"].map((item) =>
-            item["resultteam"].map((item) => (
-              <ResultCard key={item.id} item={item} />
-            ))
+            item["resultteam"].map((item) => <ResultCard item={item} />)
           )}
+        </StyledWrapper>
+        <StyledWrapper>
           {item["Group"].map((item) =>
-            item["table"].map((item) => (
-              <ResultCard key={item.id} item={item} />
-            ))
+            item["table"].map((item) => <Table key={item.id} item={item} />)
           )}
         </StyledWrapper>
       </BackgroundWrapper>
