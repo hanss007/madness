@@ -3,10 +3,12 @@ import { baseUrl, fetchQuery } from "../../utils";
 import styled from "styled-components";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
+import ResultCard from "../../components/ResultCard";
+import ResultTable from "../../components/ResultCard";
 
 const BackgroundWrapper = styled.div`
   position: relative;
-
+  height: 100vh;
   &:after {
     content: "";
     display: block;
@@ -29,40 +31,9 @@ const StyledWrapper = styled.div`
   top: 80px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const InnerWrapper = styled.div`
-  position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
-  width: 100%;
-`;
-
-const Title = styled.th`
-  position: absolute;
-  background-color: #fd5825;
-  color: white;
-  width: 80%;
-  font-size: 30px;
-  text-align: center;
-  top: -40px;
-`;
-
-const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 0.25fr 0.25fr 1fr;
-  grid-gap: 50px;
-  margin-bottom: 30px;
-`;
-
-const ResultWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 export default function ItemResults({ item }) {
@@ -72,33 +43,16 @@ export default function ItemResults({ item }) {
       <Navbar />
       <BackgroundWrapper>
         <StyledWrapper>
-          <InnerWrapper>
-            <Title>{item["Group"].map((item) => item.title)}</Title>
-            <ContentWrapper>
-              <ResultWrapper>
-                {item["Group"].map((item) =>
-                  item["resultteam"].map((item) => <h2>{item.team1}</h2>)
-                )}
-              </ResultWrapper>
-
-              <ResultWrapper>
-                {item["Group"].map((item) =>
-                  item["resultteam"].map((item) => <h2>{item.score1}</h2>)
-                )}
-              </ResultWrapper>
-
-              <ResultWrapper>
-                {item["Group"].map((item) =>
-                  item["resultteam"].map((item) => <h2>{item.score2}</h2>)
-                )}
-              </ResultWrapper>
-              <ResultWrapper>
-                {item["Group"].map((item) =>
-                  item["resultteam"].map((item) => <h2>{item.team2}</h2>)
-                )}
-              </ResultWrapper>
-            </ContentWrapper>
-          </InnerWrapper>
+          {item["Group"].map((item) =>
+            item["resultteam"].map((item) => (
+              <ResultCard key={item.id} item={item} />
+            ))
+          )}
+          {item["Group"].map((item) =>
+            item["table"].map((item) => (
+              <ResultCard key={item.id} item={item} />
+            ))
+          )}
         </StyledWrapper>
       </BackgroundWrapper>
     </>
@@ -115,23 +69,52 @@ export async function getServerSideProps({ query, params }) {
   };
 }
 
-// </td>
-//               <td>
-//                 {item["Group"].map((item) =>
-//                   item["resultteam"].map((item) => (
-//                     <h2>{`${item.score1} : `}</h2>
-//                   ))
-//                 )}
-//               </td>
-//               <td>
-//                 {item["Group"].map((item) =>
-//                   item["resultteam"].map((item) => <h2>{item.score2}</h2>)
-//                 )}
-//               </td>
-//               <td>
-//                 {" "}
+// export default function ItemResults({ item }) {
+//   return (
+//     <>
+//       <GlobalStyle />
+//       <Navbar />
+//       <BackgroundWrapper>
+//         <StyledWrapper>
+//           <InnerWrapper>
+//             <Title>{item["Group"].map((item) => item.title)}</Title>
+//             <ContentWrapper>
+//               <ResultWrapper>
 //                 {item["Group"].map((item) =>
 //                   item["resultteam"].map((item) => <h2>{item.team1}</h2>)
 //                 )}
-//               </td>
-//             </tr> */}
+//               </ResultWrapper>
+
+//               <ResultWrapper>
+//                 {item["Group"].map((item) =>
+//                   item["resultteam"].map((item) => <h2>{item.score1}</h2>)
+//                 )}
+//               </ResultWrapper>
+
+//               <ResultWrapper>
+//                 {item["Group"].map((item) =>
+//                   item["resultteam"].map((item) => <h2>{item.score2}</h2>)
+//                 )}
+//               </ResultWrapper>
+//               <ResultWrapper>
+//                 {item["Group"].map((item) =>
+//                   item["resultteam"].map((item) => <h2>{item.team2}</h2>)
+//                 )}
+//               </ResultWrapper>
+//             </ContentWrapper>
+//           </InnerWrapper>
+//         </StyledWrapper>
+//       </BackgroundWrapper>
+//     </>
+//   );
+// }
+
+// export async function getServerSideProps({ query, params }) {
+//   console.log("query", query, params);
+//   const item = await fetchQuery(`results/${params.resultId}`);
+//   return {
+//     props: {
+//       item,
+//     },
+//   };
+// }

@@ -80,14 +80,13 @@ export async function getServerSideProps() {
 }
 
 // export default function Results({ results }) {
-//   console.log(results.title);
 //   return (
 //     <>
 //       <GlobalStyle />
 //       <Navbar />
 //       <StyledWrapper>
 //         <Title>Wyniki Turniejów Stowarzyszenia Madness</Title>
-//
+//         <InnerWrapper>
 //           {results.map((item) => (
 //             <Link href={`/results/${item.id}`}>
 //               <ImageWrapper src={`${baseUrl}${item.image.url}`} alt="" />
