@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Email } from "@styled-icons/entypo/Email";
 import { Phone } from "@styled-icons/boxicons-regular/Phone";
 
@@ -18,6 +18,10 @@ const Mail = styled(Email)`
   border-radius: 10px;
   color: black;
   margin-right: 20px;
+  @media (max-width: 1024px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 const MyPhone = styled(Phone)`
   width: 35px;
@@ -27,6 +31,10 @@ const MyPhone = styled(Phone)`
   border-radius: 10px;
   color: black;
   margin-right: 20px;
+  @media (max-width: 1024px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -34,15 +42,23 @@ const InnerWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin: 10px 0 0 50px;
+
   &.secondary {
-    margin-top: 80px;
+    margin-top: 70px;
+    @media (max-width: 1200px) {
+      margin-top: 60px;
+    }
   }
 `;
 
 const Title = styled.h2`
+  font-size: 20px;
   color: white;
   text-transform: uppercase;
   font-weight: 500;
+  @media (max-width: 1200px) {
+    font-size: 17px;
+  }
 `;
 
 const NameTitle = styled.p`
@@ -50,8 +66,23 @@ const NameTitle = styled.p`
   color: #f7efe5;
   font-size: 18px;
   font-weight: 500;
+
   &.secondary {
     top: 8%;
+    @media (max-width: 1240px) {
+      top: 5%;
+    }
+    @media (max-width: 1024px) {
+      top: 12%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  @media (max-width: 800px) {
+    font-size: 12px;
   }
 `;
 
@@ -62,6 +93,15 @@ const BorderBottomWrapper = styled.div`
   width: 55%;
   &.secondary {
     top: 8%;
+    @media (max-width: 1200px) {
+      top: 5%;
+    }
+    @media (max-width: 1024px) {
+      top: 12%;
+    }
+  }
+  @media (max-width: 1024px) {
+    width: 90%;
   }
 `;
 
@@ -71,6 +111,9 @@ const Content = styled.div`
   color: #f7efe5;
   &.secondary {
     top: 8%;
+    @media (max-width: 1024px) {
+      top: 10%;
+    }
   }
 `;
 
@@ -78,6 +121,15 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
+  @media (max-width: 800px) {
+    font-size: 8px;
+  }
 `;
 
 const Footer = () => (
@@ -114,7 +166,7 @@ const Footer = () => (
     </InnerWrapper>
     <InnerWrapper>
       <Title>Madness Chocianów</Title>
-      <NameTitle className="secondary">2 lig Futsalu - Michał Jakiś</NameTitle>
+      <NameTitle className="secondary">PLF - Michał Jakiś</NameTitle>
 
       <BorderBottomWrapper className="secondary" />
 
@@ -149,3 +201,5 @@ const Footer = () => (
 );
 
 export default Footer;
+
+// 1240px

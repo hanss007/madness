@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { baseUrl } from "../utils";
 
 const StyledWrapper = styled.div`
-  position: relative;
-  padding: 16px;
-  top: 80px;
+  padding: 8px;
+
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,16 +12,14 @@ const StyledWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.2fr 0.1fr 0.3fr;
+  width: 100%;
 `;
 
 const NameTeam = styled.h2`
   margin: 0 20px;
-`;
-
-const Score = styled.h3`
-  font-size: 22px;
-  margin: 0 8px;
+  font-size: 20px;
 `;
 
 const Colon = styled.span`
@@ -32,9 +29,10 @@ const Colon = styled.span`
 
 const BorderBottomWrapper = styled.div`
   border-bottom: 2px solid #222;
-  opacity: 0.7;
-  width: 740px;
+  opacity: 0.4;
+  width: 90%;
   padding: 2px;
+  margin-left: -75px;
 `;
 
 const Table = ({ item }) => (
@@ -46,6 +44,7 @@ const Table = ({ item }) => (
       <Colon>:</Colon>
       <NameTeam>{item.goalslost}</NameTeam>
     </InnerWrapper>
+    <BorderBottomWrapper />
   </StyledWrapper>
 );
 

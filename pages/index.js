@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import { fetchQuery } from "../utils";
+import Head from "next/head";
 
 export async function getServerSideProps() {
   const news = await fetchQuery("items");
@@ -11,6 +12,14 @@ export async function getServerSideProps() {
   };
 }
 
-const Index = ({ news }) => <Layout news={news} />;
+const Index = ({ news }) => (
+  <>
+    <Head>
+      <title>Madness</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
+    <Layout news={news} />
+  </>
+);
 
 export default Index;

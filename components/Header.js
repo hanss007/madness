@@ -12,6 +12,7 @@ const StyledWrapper = styled.div`
   background-color: #e6e6e6;
   color: black;
   margin: 0;
+  z-index: -1;
 `;
 
 const InnerWrapper = styled.div`

@@ -17,8 +17,13 @@ const StyledWrapper = styled.div`
 
 const ImageWrapper = styled.img`
   width: 240px;
-  height: 180px;
+  height: 185px;
   border-radius: 5px;
+  background-size: cover;
+  @media (max-width: 1024px) {
+    width: 200px;
+    height: 170px;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -27,12 +32,27 @@ const InnerWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding-left: 20px;
+  height: 185px;
+  width: 900px;
+  @media (max-width: 1366px) {
+    width: 700px;
+  }
+  @media (max-width: 1200px) {
+    width: 600px;
+  }
+  @media (max-width: 1024px) {
+    width: 550px;
+    height: 170px;
+  }
 `;
 
 const Title = styled.p`
   text-transform: uppercase;
   color: #fd5825;
   font-weight: 700;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
 `;
 
 const Data = styled.span`
@@ -43,7 +63,11 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70%;
+  width: 80%;
+  height: 180px;
+  @media (max-width: 1024px) {
+    height: 170px;
+  }
 `;
 
 const ContentText = styled.h2`
@@ -51,11 +75,17 @@ const ContentText = styled.h2`
   color: #222;
   padding: 0;
   margin: 0;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 `;
 
 const ContentExcerpt = styled.h4`
   color: #222;
   font-weight: 500;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
 `;
 
 const Button = styled.a`
@@ -71,11 +101,18 @@ const Button = styled.a`
     background-color: #fd5825;
     color: white;
   }
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
 `;
 
 const MyArticle = styled(Article)`
   width: 25px;
   height: 25px;
+  @media (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const ContentButton = styled.div`

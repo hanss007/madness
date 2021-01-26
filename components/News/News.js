@@ -1,5 +1,5 @@
 import React, { Component, useRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import CardNews from "./CardNews";
 import { fetchQuery } from "../../utils";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -7,11 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const StyledWrapper = styled.div`
   position: relative;
-  top: -160px;
-  width: 1200px;
-  height: 560px;
+  top: -110px;
+  width: 90%;
+  height: 620px;
   margin: 0 auto;
   background-color: transparent;
+  z-index: 9999;
 `;
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -23,6 +24,20 @@ export const MySwiper = ({ news }) => {
       spaceBetween={10}
       slidesPerView={3}
       navigation
+      breakpoints={
+        {
+          // 1366: {
+          //   width: 1200,
+          //   spaceBetween: 10,
+          //   slidesPerView: 3,
+          // },
+          // 1024: {
+          //   width: 1024,
+          //   spaceBetween: -90,
+          //   slidesPerView: 3,
+          // },
+        }
+      }
     >
       {news.map((item, i) => (
         <SwiperSlide>

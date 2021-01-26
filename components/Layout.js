@@ -11,9 +11,7 @@ import GlobalStyle from "../theme/GlobalStyle";
 const Layout = ({ news }) => (
   <>
     <GlobalStyle />
-    <Head>
-      <title>Stowarzyszenie Madness</title>
-    </Head>
+
     <Navbar />
     <Header />
     <News news={news} />

@@ -4,6 +4,8 @@ import CardEvents from "./CardEvents";
 import { events } from "../data/events";
 
 const StyledWrapper = styled.div`
+  position: relative;
+  top: -70px;
   padding: 5px;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -12,6 +14,12 @@ const StyledWrapper = styled.div`
   height: 540px;
   color: black;
   margin: 0;
+  @media (max-width: 1024px) {
+    top: -140px;
+  }
+  @media (max-width: 800px) {
+    top: -200px;
+  }
 `;
 const StyledCalender = styled.div`
   display: flex;
@@ -52,17 +60,30 @@ const StyledAside = styled.div`
   margin-top: 25px;
 `;
 
-const HeaderAside = styled.div`
+const HeaderAside = styled.h2`
   width: 90%;
   height: 55px;
-  background-color: #fd5825;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  text-transform: uppercase;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
 `;
 
 const ImageWrapper = styled.img`
   margin-left: 10px;
   padding: 5px;
+  width: 200px;
+  @media (max-width: 1200px) {
+    width: 150px;
+  }
+  @media (max-width: 800px) {
+    width: 110px;
+  }
 `;
 
 const Calendar = ({ day, month, content }) => (
@@ -84,13 +105,14 @@ const Calendar = ({ day, month, content }) => (
     </StyledCalender>
     <StyledAside>
       <div>
+        <HeaderAside>Najbliższy turniej sponsorują:</HeaderAside>
         <ImageWrapper
           src="https://hotelkameleon.com/assets/grafika/logo.png"
           alt="logo kameleon żory"
         />
         <ImageWrapper
-          src="https://lh3.googleusercontent.com/proxy/nqoEVRrMdJj7pJDkTZCA4rKSA1P2IAqK9VPUd9r3L6URoFZYbrMHGAk8O8XHCdKMeDS-Eqlz-oOOvhYJu8vPtCt7dFq9QpZBH8hqQmdt"
-          alt="logo-kk kwant"
+          src="https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png"
+          alt="logo-staropolanka"
         />
         <ImageWrapper
           src="https://www.firmagodnazaufania.pl/assets/upload/photos/4a777d3f3f1d9511e7597500fd8eec76799d2e10.jpeg"

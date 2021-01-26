@@ -58,6 +58,7 @@ import React from "react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
+import "../theme/style.css";
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

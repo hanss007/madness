@@ -49,6 +49,12 @@ const Container = styled.div`
 
 const Title = styled.h2`
   text-align: center;
+  @media (max-width: 1190px) {
+    margin-top: 70px;
+  }
+  @media (max-width: 800px) {
+    margin-top: -100px;
+  }
 `;
 
 const Gallery = () => (

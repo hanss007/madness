@@ -8,7 +8,7 @@ const StyledWrapper = styled.div`
   justify-content: flex-end;
   background-color: #222;
   height: 75px;
-  font-size: 1rem;
+  font-size: 16px;
   text-transform: uppercase;
 `;
 const InnerWrapper = styled.ul`
@@ -48,6 +48,10 @@ const StyledList = styled.li`
   &.madness {
     list-style: none;
   }
+  @media (max-width: 800px) {
+    padding-right: 10px;
+    margin-right: 5px;
+  }
 `;
 
 const BorderRightWrapper = styled.div`
@@ -75,6 +79,9 @@ const LinkStyled = styled.a`
     padding: 2px;
     border-radius: 3px;
   }
+  @media (max-width: 800px) {
+    font-size: 10px;
+  }
 `;
 
 const Arrow = styled(DownArrow)`
@@ -85,10 +92,27 @@ const Arrow = styled(DownArrow)`
   padding: 0 0 1px 0;
 `;
 
+const LogoWrapper = styled.div`
+  position: absolute;
+  top: 2px;
+  left: 25px;
+  width: 80px;
+  height: 65px;
+  background-image: url("images/logo.png");
+  background-size: cover;
+  @media (max-width: 800px) {
+    top: 8px;
+    width: 70px;
+    height: 55px;
+  }
+`;
+
 const Navbar = ({ menu }) => {
   const router = useRouter();
+
   return (
     <StyledWrapper>
+      <LogoWrapper />
       <InnerWrapper>
         <StyledList>
           <LinkStyled

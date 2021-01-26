@@ -1,0 +1,22 @@
+@media screen and (max-width: 1366px) {
+  .swiper-wrapper {
+    width: 1366px;
+  }
+
+  .swiper-button-next {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .swiper-wrapper {
+    margin-left: -10px;
+  }
+
+  .swiper-button-next {
+    top: 200px;
+  }
+  .swiper-button-prev {
+    top: 200px;
+    margin-left: -12px;
+  }
+}

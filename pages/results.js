@@ -40,6 +40,9 @@ const InnerWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 85px;
   margin-top: 40px;
+  /* @media (max-width: 1190px) {
+    margin-left: 30px;
+  } */
 `;
 const ImageWrapper = styled.img`
   width: 400px;
@@ -48,6 +51,20 @@ const ImageWrapper = styled.img`
   background-repeat: no-repeat;
   margin-right: 30px;
   margin-bottom: 70px;
+  @media (max-width: 1366px) {
+    width: 350px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1200px) {
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1024px) {
+    width: 260px;
+    height: 210px;
+  }
 `;
 
 export default function Results({ results }) {

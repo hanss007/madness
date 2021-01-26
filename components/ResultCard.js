@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import styled, { css, keyframes } from "styled-components";
-import { baseUrl } from "../utils";
+import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  position: relative;
-  padding: 16px;
-  top: 80px;
+  padding: 8px;
+
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,11 +11,14 @@ const StyledWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.2fr 0.5fr 2fr;
+  width: 100%;
 `;
 
 const NameTeam = styled.h2`
   margin: 0 20px;
+  font-size: 20px;
 `;
 
 const Score = styled.h3`
@@ -32,8 +33,8 @@ const Colon = styled.span`
 
 const BorderBottomWrapper = styled.div`
   border-bottom: 2px solid #222;
-  opacity: 0.7;
-  width: 740px;
+  opacity: 0.4;
+
   padding: 2px;
 `;
 
@@ -46,6 +47,7 @@ const ResultCard = ({ item }) => (
       <Score>{item.score2}</Score>
       <NameTeam>{item.team2}</NameTeam>
     </InnerWrapper>
+    <BorderBottomWrapper />
   </StyledWrapper>
 );
 

@@ -22,6 +22,12 @@ const Day = styled.h2`
   padding: 0;
   font-size: 35px;
   color: #222;
+  @media (max-width: 1155px) {
+    font-size: 28px;
+  }
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
 
 const Month = styled.h2`
@@ -34,6 +40,12 @@ const Month = styled.h2`
 const ContentWrapper = styled.h2`
   font-size: 20px;
   color: #222;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `;
 const BorderBottomWrapper = styled.div`
   border-bottom: 2px solid rgba(34, 34, 34, 0.3);
