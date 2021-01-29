@@ -14,19 +14,41 @@ const StyledWrapper = styled.div`
   height: 480px;
   margin: 0 auto;
   margin-top: ${(props) => (props.isActive ? "50px" : "-20px")};
-  @media (max-width: 1366px) {
+  /* @media (max-width: 1366px) {
     max-width: 300px;
   }
   @media (max-width: 1200px) {
     max-width: 270px;
   }
   @media (max-width: 1024px) {
-    max-width: 230px;
+    max-width: 250px;
     height: 420px;
   }
-  @media (max-width: 800px) {
-    max-width: 210px;
+
+  @media (max-width: 768px) {
+    max-width: 200px;
     height: 380px;
+  } */
+
+  @media (min-width: 320px) {
+    max-width: 290px;
+    height: 480px;
+  }
+  @media (min-width: 460px) {
+    max-width: 320px;
+    height: 480px;
+  }
+  @media (min-width: 768px) {
+    margin-top: ${(props) => (props.isActive ? "-30px" : "-30px")};
+  }
+  @media (min-width: 800px) {
+    max-width: 240px;
+    height: 380px;
+    margin-top: ${(props) => (props.isActive ? "50px" : "-20px")};
+  }
+  @media (min-width: 1024px) {
+    max-width: 260px;
+    height: 400px;
   }
   &:hover {
     transform: scale(1.1);
@@ -46,28 +68,40 @@ const ImgStyled = styled.img`
   border-top-right-radius: 8px;
   width: 320px;
   height: 240px;
-  @media (max-width: 1366px) {
+  /* @media (max-width: 1366px) {
     max-width: 300px;
   }
   @media (max-width: 1200px) {
     max-width: 270px;
   }
-  @media (max-width: 1024px) {
-    max-width: 230px;
-    height: 180px;
+
+  */
+
+  @media (min-width: 320px) {
+    max-width: 290px;
+    height: 240px;
   }
-  @media (max-width: 800px) {
-    max-width: 210px;
+  @media (min-width: 460px) {
+    max-width: 320px;
+    height: 240px;
+  }
+  @media (min-width: 800px) {
+    max-width: 240px;
     height: 170px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 260px;
+    height: 180px;
   }
 `;
 const TextStyled = styled.div`
   grid-area: text;
   margin: 25px;
   height: 135px;
-  @media (max-width: 800px) {
+
+  @media (min-width: 320px) {
+    margin: 25px;
     height: 135px;
-    margin: 15px;
   }
 `;
 
@@ -77,11 +111,18 @@ const TitleStyled = styled.h2`
   color: #222;
   margin-bottom: 25px;
   text-transform: capitalize;
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
+    font-size: 18px;
+  } */
+
+  @media (min-width: 460px) {
     font-size: 18px;
   }
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     font-size: 14px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 16px;
   }
 `;
 
@@ -89,10 +130,11 @@ const ContentStyled = styled.p`
   color: grey;
   font-size: 15px;
   font-weight: 300;
-  @media (max-width: 1024px) {
+
+  @media (min-width: 460px) {
     font-size: 14px;
   }
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     font-size: 12px;
   }
 `;
@@ -106,8 +148,9 @@ const StatsStyled = styled.div`
   border-bottom-right-radius: 8px;
   background-color: #3fabaf;
   color: #f7efe5;
-  @media (max-width: 1024px) {
-    grid-template-columns: 1.25fr 0.3fr 1.25fr;
+
+  @media (min-width: 320px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
@@ -131,7 +174,11 @@ const StatInfo = styled.div`
   &:first-child {
     border-left: none;
   }
-  @media (max-width: 800px) {
+
+  @media (min-width: 320px) {
+    height: 55px;
+  }
+  s @media (min-width: 800px) {
     height: 45px;
   }
 `;
@@ -154,10 +201,10 @@ const Button = styled.a`
     border-radius: 4px;
     font-size: 12px;
   }
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     font-size: 12px;
-    margin:0;s
-  }
+    margin: 0;
+  } */
 `;
 
 const CardNews = ({ item, isActive }) => (

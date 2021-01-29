@@ -10,6 +10,12 @@ const StyledWrapper = styled.div`
   height: 75px;
   font-size: 16px;
   text-transform: uppercase;
+  @media (min-width: 320px) {
+    height: 55px;
+  }
+  @media (min-width: 1024px) {
+    height: 65px;
+  }
 `;
 const InnerWrapper = styled.ul`
   display: flex;
@@ -48,7 +54,7 @@ const StyledList = styled.li`
   &.madness {
     list-style: none;
   }
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     padding-right: 10px;
     margin-right: 5px;
   }
@@ -79,8 +85,15 @@ const LinkStyled = styled.a`
     padding: 2px;
     border-radius: 3px;
   }
-  @media (max-width: 800px) {
+
+  @media (min-width: 320px) {
+    font-size: 8px;
+  }
+  @media (min-width: 800px) {
     font-size: 10px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 12px;
   }
 `;
 
@@ -104,6 +117,15 @@ const LogoWrapper = styled.div`
     top: 8px;
     width: 70px;
     height: 55px;
+  }
+  @media (min-width: 320px) {
+    width: 55px;
+    height: 45px;
+  }
+  @media (min-width: 1024px) {
+    top: 5px;
+    width: 65px;
+    height: 50px;
   }
 `;
 

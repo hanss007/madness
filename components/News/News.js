@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const StyledWrapper = styled.div`
   position: relative;
+
   top: -110px;
   width: 90%;
   height: 620px;
@@ -21,23 +22,27 @@ export const MySwiper = ({ news }) => {
   return (
     <Swiper
       style={{ height: "610px" }}
-      spaceBetween={10}
-      slidesPerView={3}
+      spaceBetween={30}
+      slidesPerView={1}
       navigation
-      breakpoints={
-        {
-          // 1366: {
-          //   width: 1200,
-          //   spaceBetween: 10,
-          //   slidesPerView: 3,
-          // },
-          // 1024: {
-          //   width: 1024,
-          //   spaceBetween: -90,
-          //   slidesPerView: 3,
-          // },
-        }
-      }
+      breakpoints={{
+        460: {
+          spaceBetween: 40,
+          slidesPerView: 1,
+        },
+        768: {
+          spaceBetween: 0,
+          slidesPerView: 2,
+        },
+        800: {
+          spaceBetween: 2,
+          slidesPerView: 3,
+        },
+        1024: {
+          spaceBetween: -2,
+          slidesPerView: 3,
+        },
+      }}
     >
       {news.map((item, i) => (
         <SwiperSlide>

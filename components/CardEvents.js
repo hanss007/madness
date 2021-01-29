@@ -15,6 +15,9 @@ const Data = styled.div`
   margin-right: 15px;
   padding: 0;
   height: 70%;
+  @media (max-width: 460px) {
+    height: 85%;
+  }
 `;
 
 const Day = styled.h2`
@@ -26,6 +29,9 @@ const Day = styled.h2`
     font-size: 28px;
   }
   @media (max-width: 800px) {
+    font-size: 24px;
+  }
+  @media (max-width: 460px) {
     font-size: 24px;
   }
 `;
@@ -40,11 +46,17 @@ const Month = styled.h2`
 const ContentWrapper = styled.h2`
   font-size: 20px;
   color: #222;
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     font-size: 18px;
+  } */
+
+  @media (min-width: 320px) {
+    font-size: 15px;
+    width: 90%;
   }
-  @media (max-width: 800px) {
-    font-size: 14px;
+  @media (min-width: 800px) {
+    font-size: 16px;
+    width: 90%;
   }
 `;
 const BorderBottomWrapper = styled.div`
@@ -52,9 +64,15 @@ const BorderBottomWrapper = styled.div`
   width: 95%;
   padding: 5px;
 `;
+const List = styled.ul`
+  @media (max-width: 460px) {
+    width: 100%;
+    padding-left: 20px;
+  }
+`;
 
 const CardEvents = ({ day, month, content }) => (
-  <ul>
+  <List>
     <ItemWrapper>
       <Data>
         <Day>{day}</Day>
@@ -64,7 +82,7 @@ const CardEvents = ({ day, month, content }) => (
       <ContentWrapper>{content}</ContentWrapper>
     </ItemWrapper>
     <BorderBottomWrapper />
-  </ul>
+  </List>
 );
 
 export default CardEvents;

@@ -3,11 +3,24 @@ import { Email } from "@styled-icons/entypo/Email";
 import { Phone } from "@styled-icons/boxicons-regular/Phone";
 
 const StyledWrapper = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100vw;
-  height: 350px;
+  height: auto;
   background-color: #222;
+
+  @media (min-width: 320px) {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+  }
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 `;
 
 const Mail = styled(Email)`
@@ -18,7 +31,7 @@ const Mail = styled(Email)`
   border-radius: 10px;
   color: black;
   margin-right: 20px;
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     width: 30px;
     height: 30px;
   }
@@ -31,7 +44,7 @@ const MyPhone = styled(Phone)`
   border-radius: 10px;
   color: black;
   margin-right: 20px;
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     width: 30px;
     height: 30px;
   }
@@ -42,13 +55,27 @@ const InnerWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin: 10px 0 0 50px;
-
   &.secondary {
-    margin-top: 70px;
-    @media (max-width: 1200px) {
-      margin-top: 60px;
+    @media (min-width: 1024px) {
+      position: absolute;
+      top: 59px;
+      right: 25px;
     }
   }
+
+  /* 
+    @media (max-width: 1200px) {
+      margin-top: 75px;
+    }
+
+    @media (min-width: 320px) {
+      margin-top: 720px;
+      right: 50%;
+    } */
+
+  /* @media (min-width: 320px) {
+    margin-bottom: 20px;
+  } */
 `;
 
 const Title = styled.h2`
@@ -59,26 +86,30 @@ const Title = styled.h2`
   @media (max-width: 1200px) {
     font-size: 17px;
   }
+  @media (min-width: 320px) {
+    font-size: 14px;
+  }
 `;
 
 const NameTitle = styled.p`
   position: relative;
   color: #f7efe5;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 
   &.secondary {
     top: 8%;
-    @media (max-width: 1240px) {
-      top: 5%;
+
+    @media (min-width: 320px) {
+      top: 3%;
     }
-    @media (max-width: 1024px) {
-      top: 12%;
+    @media (min-width: 1024px) {
+      top: 8%;
     }
   }
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 30px;
   }
   @media (max-width: 800px) {
@@ -90,18 +121,30 @@ const BorderBottomWrapper = styled.div`
   position: relative;
   border-bottom: 1px solid rgba(247, 239, 229, 0.6);
   margin-bottom: 20px;
-  width: 55%;
+  width: 70%;
+
   &.secondary {
     top: 8%;
-    @media (max-width: 1200px) {
-      top: 5%;
+
+    @media (min-width: 320px) {
+      top: 4%;
     }
-    @media (max-width: 1024px) {
-      top: 12%;
+    @media (min-width: 1024px) {
+      top: 8%;
     }
   }
-  @media (max-width: 1024px) {
-    width: 90%;
+
+  @media (min-width: 320px) {
+    width: 60%;
+  }
+  @media (min-width: 460px) {
+    width: 40%;
+  }
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+  @media (min-width: 1024px) {
+    width: 85%;
   }
 `;
 
@@ -111,8 +154,12 @@ const Content = styled.div`
   color: #f7efe5;
   &.secondary {
     top: 8%;
-    @media (max-width: 1024px) {
-      top: 10%;
+
+    @media (min-width: 320px) {
+      top: 6%;
+    }
+    @media (min-width: 1024px) {
+      top: 8%;
     }
   }
 `;
@@ -129,6 +176,17 @@ const InnerContent = styled.div`
   }
   @media (max-width: 800px) {
     font-size: 8px;
+  }
+  @media (min-width: 800px) {
+    margin-bottom: 8px;
+  }
+  &.chlf {
+    @media (max-width: 1200px) {
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: 320px) {
+    font-size: 12px;
   }
 `;
 
@@ -166,34 +224,34 @@ const Footer = () => (
     </InnerWrapper>
     <InnerWrapper>
       <Title>Madness Chocianów</Title>
-      <NameTitle className="secondary">PLF - Michał Jakiś</NameTitle>
+      <NameTitle className="secondary">PLF - Adam Klimas</NameTitle>
 
       <BorderBottomWrapper className="secondary" />
 
       <Content className="secondary">
         <InnerContent>
           <Mail />
-          <p>maile2353@gmail.com</p>
+          <p>klimas@interia.pl</p>
         </InnerContent>
         <InnerContent>
           <MyPhone />
-          <p>564-764-343</p>
+          <p>785-227-692</p>
         </InnerContent>
       </Content>
     </InnerWrapper>
     <InnerWrapper className="secondary">
-      <NameTitle className="secondary">CHLF - Adam Bączek</NameTitle>
+      <NameTitle className="secondary">CHLF - Wojciech Chmielewski</NameTitle>
 
       <BorderBottomWrapper className="secondary" />
 
       <Content className="secondary">
         <InnerContent>
           <Mail />
-          <p>maile2353@gmail.com</p>
+          <p>gitness69@interia.pl</p>
         </InnerContent>
         <InnerContent>
           <MyPhone />
-          <p>564-764-343</p>
+          <p>508-244-715</p>
         </InnerContent>
       </Content>
     </InnerWrapper>

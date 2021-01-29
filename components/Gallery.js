@@ -40,6 +40,12 @@ const StyledWrapper = styled.div`
   grid-column-gap: 85px;
   height: 700px;
   margin-top: 20px;
+  @media (min-width: 320px) {
+    display: none;
+  }
+  @media (min-width: 460px) {
+    grid-template-columns: repeat(2, 0.8fr);
+  }
 `;
 
 const Container = styled.div`
@@ -49,11 +55,14 @@ const Container = styled.div`
 
 const Title = styled.h2`
   text-align: center;
+  @media (min-width: 320px) {
+    display: none;
+  }
   @media (max-width: 1190px) {
     margin-top: 70px;
   }
   @media (max-width: 800px) {
-    margin-top: -100px;
+    margin-top: 160px;
   }
 `;
 

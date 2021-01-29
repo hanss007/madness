@@ -20,6 +20,11 @@ const StyledWrapper = styled.div`
   @media (max-width: 800px) {
     top: -200px;
   }
+  @media (min-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    top: -230px;
+  }
 `;
 const StyledCalender = styled.div`
   display: flex;
@@ -34,6 +39,15 @@ const CalendarHeader = styled.div`
   background-color: #fd5825;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  @media (max-width: 460px) {
+    width: 95%;
+  }
+  @media (min-width: 320px) {
+    width: 95%;
+  }
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 const NameHeader = styled.h2`
@@ -50,6 +64,12 @@ const CalendarItems = styled.div`
   margin: 0 auto;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  @media (min-width: 320px) {
+    width: 100%;
+  }
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 const StyledAside = styled.div`
@@ -72,6 +92,13 @@ const HeaderAside = styled.h2`
   @media (max-width: 800px) {
     font-size: 18px;
   }
+  @media (min-width: 320px) {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 
 const ImageWrapper = styled.img`
@@ -83,6 +110,15 @@ const ImageWrapper = styled.img`
   }
   @media (max-width: 800px) {
     width: 110px;
+  }
+  @media (min-width: 460px) {
+    width: 70px;
+  }
+  @media (min-width: 460px) {
+    width: 120px;
+  }
+  @media (min-width: 768px) {
+    width: 140px;
   }
 `;
 

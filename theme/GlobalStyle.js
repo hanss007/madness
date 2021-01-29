@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+
 }
 
 html{
@@ -17,7 +18,7 @@ html{
 
 body {
 
-    margin: 0;
+margin: 0 auto;
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
     background-color:rgb(255, 255, 255);
