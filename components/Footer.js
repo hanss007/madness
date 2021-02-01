@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   @media (min-width: 320px) {
     margin-top: 110px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 
     height: auto;
   }
@@ -35,6 +35,10 @@ const Mail = styled(Email)`
     width: 30px;
     height: 30px;
   }
+  @media (min-width: 1200px) {
+    width: 35px;
+    height: 35px;
+  }
 `;
 const MyPhone = styled(Phone)`
   width: 35px;
@@ -47,6 +51,10 @@ const MyPhone = styled(Phone)`
   @media (min-width: 1024px) {
     width: 30px;
     height: 30px;
+  }
+  @media (min-width: 1200px) {
+    width: 35px;
+    height: 35px;
   }
 `;
 
@@ -61,8 +69,22 @@ const InnerWrapper = styled.div`
       top: 59px;
       right: 25px;
     }
+    @media (min-width: 1200px) {
+      top: 69px;
+    }
+    @media (min-width: 1366px) {
+      right: 85px;
+    }
+    @media (min-width: 1430px) {
+      right: 120px;
+    }
   }
-
+  @media (min-width: 1024px) {
+    margin-bottom: 25px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 35px;
+  }
   /* 
     @media (max-width: 1200px) {
       margin-top: 75px;
@@ -83,11 +105,12 @@ const Title = styled.h2`
   color: white;
   text-transform: uppercase;
   font-weight: 500;
-  @media (max-width: 1200px) {
-    font-size: 17px;
-  }
+
   @media (min-width: 320px) {
     font-size: 14px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 17px;
   }
 `;
 
@@ -168,9 +191,7 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  @media (max-width: 1200px) {
-    font-size: 14px;
-  }
+
   @media (max-width: 1024px) {
     font-size: 12px;
   }
@@ -180,13 +201,12 @@ const InnerContent = styled.div`
   @media (min-width: 800px) {
     margin-bottom: 8px;
   }
-  &.chlf {
-    @media (max-width: 1200px) {
-      margin-top: 10px;
-    }
-  }
+
   @media (min-width: 320px) {
     font-size: 12px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 14px;
   }
 `;
 

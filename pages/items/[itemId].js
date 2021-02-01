@@ -18,9 +18,12 @@ const BackgroundWrapper = styled.div`
     background-size: cover;
 
     width: 100%;
-    height: 100vh;
-    opacity: 0.1;
+    height: 100%;
+    opacity: 0.2;
     z-index: -1;
+  }
+  @media (min-width: 320px) {
+    height: 120vh;
   }
 `;
 
@@ -40,12 +43,33 @@ const InnerWrapper = styled.div`
   justify-content: space-around;
   width: 100%;
   margin-bottom: 15px;
+  @media (min-width: 320px) {
+    font-size: 10px;
+  }
+  @media (min-width: 800px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 15px;
+  }
 `;
 
 const CalendarIcon = styled(Calendar)`
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  @media (min-width: 320px) {
+    width: 20px;
+    height: 20px;
+  }
+  @media (min-width: 800px) {
+    width: 25px;
+    height: 25px;
+  }
+  @media (min-width: 1200px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const ContentButton = styled.div`
@@ -69,6 +93,16 @@ const Button = styled.a`
     background-color: #fd5825;
     color: white;
   }
+  @media (min-width: 320px) {
+    font-size: 9px;
+    margin-left: 50px;
+  }
+  @media (min-width: 460px) {
+    font-size: 10px;
+  }
+  @media (min-width: 640px) {
+    font-size: 12px;
+  }
 `;
 
 const ImageWrapper = styled.img`
@@ -76,16 +110,88 @@ const ImageWrapper = styled.img`
   height: 500px;
   border: 1px solid black;
   margin-bottom: 30px;
+  @media (min-width: 320px) {
+    width: 250px;
+    height: 220px;
+  }
+  @media (min-width: 460px) {
+    width: 300px;
+    height: 250px;
+  }
+  @media (min-width: 640px) {
+    width: 380px;
+    height: 280px;
+  }
+  @media (min-width: 800px) {
+    width: 480px;
+    height: 350px;
+  }
+  @media (min-width: 1024px) {
+    width: 540px;
+    height: 420px;
+  }
+  @media (min-width: 1200px) {
+    width: 600px;
+    height: 450px;
+  }
+  @media (min-width: 1366px) {
+    width: 650px;
+    height: 500px;
+  }
 `;
 const TitleWrapper = styled.h1`
   font-weight: 600;
   font-size: 35px;
+  @media (min-width: 320px) {
+    font-size: 15px;
+  }
+  @media (min-width: 460px) {
+    font-size: 18px;
+  }
+  @media (min-width: 640px) {
+    font-size: 22px;
+  }
+  @media (min-width: 800px) {
+    font-size: 28px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 32px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 35px;
+  }
 `;
 
 const ContentWrapper = styled.p`
   font-size: 20px;
   font-weight: 500;
   margin: 15px;
+  @media (min-width: 320px) {
+    width: 240px;
+    font-size: 12px;
+  }
+  @media (min-width: 460px) {
+    width: 280px;
+    font-size: 14px;
+  }
+  @media (min-width: 640px) {
+    width: 360px;
+    font-size: 16px;
+  }
+  @media (min-width: 800px) {
+    width: 460px;
+    font-size: 18px;
+  }
+  @media (min-width: 1024px) {
+    width: 520px;
+    font-size: 20px;
+  }
+  @media (min-width: 1200px) {
+    width: 580px;
+  }
+  @media (min-width: 1366px) {
+    width: 630px;
+  }
 `;
 
 export default function Item({ item }) {

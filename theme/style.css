@@ -40,6 +40,19 @@
     margin-right: -10px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .swiper-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-button-next.swiper-button-disabled {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
 
 /* @media screen and (max-width: 1366px) {
   .swiper-container {

@@ -50,6 +50,14 @@ const StyledWrapper = styled.div`
     max-width: 260px;
     height: 400px;
   }
+  @media (min-width: 1200px) {
+    max-width: 290px;
+    height: 480px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 320px;
+    height: 480px;
+  }
   &:hover {
     transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
@@ -68,14 +76,6 @@ const ImgStyled = styled.img`
   border-top-right-radius: 8px;
   width: 320px;
   height: 240px;
-  /* @media (max-width: 1366px) {
-    max-width: 300px;
-  }
-  @media (max-width: 1200px) {
-    max-width: 270px;
-  }
-
-  */
 
   @media (min-width: 320px) {
     max-width: 290px;
@@ -92,6 +92,14 @@ const ImgStyled = styled.img`
   @media (min-width: 1024px) {
     max-width: 260px;
     height: 180px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 290px;
+    height: 240px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 320px;
+    height: 240px;
   }
 `;
 const TextStyled = styled.div`
@@ -124,6 +132,9 @@ const TitleStyled = styled.h2`
   @media (min-width: 1024px) {
     font-size: 16px;
   }
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 const ContentStyled = styled.p`
@@ -136,6 +147,9 @@ const ContentStyled = styled.p`
   }
   @media (min-width: 800px) {
     font-size: 12px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 15px;
   }
 `;
 
@@ -178,8 +192,11 @@ const StatInfo = styled.div`
   @media (min-width: 320px) {
     height: 55px;
   }
-  s @media (min-width: 800px) {
+  @media (min-width: 800px) {
     height: 45px;
+  }
+  @media (min-width: 1200px) {
+    height: 55px;
   }
 `;
 

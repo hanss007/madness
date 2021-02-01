@@ -33,7 +33,8 @@
       "required": false
     },
     "created": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "typ": {
       "type": "enumeration",
@@ -41,7 +42,8 @@
         "turnieje",
         "zory",
         "lubin"
-      ]
+      ],
+      "required": true
     }
   }
 }

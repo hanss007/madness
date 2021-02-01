@@ -58,6 +58,9 @@ const ContentWrapper = styled.h2`
     font-size: 16px;
     width: 90%;
   }
+  @media (min-width: 800px) {
+    font-size: 20px;
+  }
 `;
 const BorderBottomWrapper = styled.div`
   border-bottom: 2px solid rgba(34, 34, 34, 0.3);

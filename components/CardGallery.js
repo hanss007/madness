@@ -25,7 +25,7 @@ const StyledImg = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  @media (max-width: 800px) {
+  @media (min-width: 320px) {
     width: 150px;
     height: 150px;
   }

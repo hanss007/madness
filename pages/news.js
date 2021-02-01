@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import BurgerMenu from "../components/BurgerMenu";
 import Card from "../components/News/Card";
 import GlobalStyle from "../theme/GlobalStyle";
 import styled from "styled-components";
@@ -17,9 +18,21 @@ const WrapperStyled = styled.div`
     background-size: cover;
 
     width: 100%;
-    height: 110vh;
+    height: 100%;
     opacity: 0.3;
     z-index: -1;
+  }
+  @media (min-width: 320px) {
+    height: 110vh;
+  }
+  @media (min-width: 640px) {
+    height: 125vh;
+  }
+  @media (min-width: 800px) {
+    height: 150vh;
+  }
+  @media (min-width: 1024px) {
+    height: 160vh;
   }
 `;
 
@@ -29,6 +42,7 @@ export default function News({ items }) {
       <GlobalStyle />
 
       <Navbar />
+      <BurgerMenu />
       <WrapperStyled>
         {items.map((item) => (
           <Card key={item.id} item={item} />

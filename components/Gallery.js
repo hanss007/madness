@@ -35,16 +35,18 @@ const images = [
 ];
 
 const StyledWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 85px;
   height: 700px;
   margin-top: 20px;
   @media (min-width: 320px) {
     display: none;
   }
-  @media (min-width: 460px) {
-    grid-template-columns: repeat(2, 0.8fr);
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 45px;
+  }
+  @media (min-width: 1200px) {
+    grid-column-gap: 95px;
   }
 `;
 
@@ -58,11 +60,9 @@ const Title = styled.h2`
   @media (min-width: 320px) {
     display: none;
   }
-  @media (max-width: 1190px) {
+  @media (min-width: 1024px) {
+    display: block;
     margin-top: 70px;
-  }
-  @media (max-width: 800px) {
-    margin-top: 160px;
   }
 `;
 

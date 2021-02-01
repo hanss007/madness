@@ -60,6 +60,7 @@ import "swiper/components/navigation/navigation.scss";
 
 import "swiper/components/pagination/pagination.scss";
 import "../theme/style.css";
+import "../theme/burger.css";
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

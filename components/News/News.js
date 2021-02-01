@@ -42,6 +42,10 @@ export const MySwiper = ({ news }) => {
           spaceBetween: -2,
           slidesPerView: 3,
         },
+        1200: {
+          spaceBetween: -5,
+          slidesPerView: 3,
+        },
       }}
     >
       {news.map((item, i) => (

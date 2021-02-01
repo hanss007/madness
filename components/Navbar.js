@@ -1,93 +1,86 @@
-import Link from "next/link";
+import React, { Component } from "react";
 import { useRouter } from "next/router";
-import styled from "styled-components";
-import { DownArrow } from "@styled-icons/boxicons-solid/DownArrow";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import styled, { ThemeProvider } from "styled-components";
 
 const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
   background-color: #222;
   height: 75px;
   font-size: 16px;
   text-transform: uppercase;
   @media (min-width: 320px) {
-    height: 55px;
+    display: none;
+  }
+  @media (min-width: 800px) {
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
   }
   @media (min-width: 1024px) {
-    height: 65px;
+    height: 75px;
   }
 `;
-const InnerWrapper = styled.ul`
+
+const StyledUl = styled.ul`
+  list-style-type: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
+  align-items: center;
+  padding: 0px;
   margin-right: 60px;
 
-  &.madness {
-    position: absolute;
-    top: 42px;
-    right: 240px;
-    margin-right: 0;
-    padding: 0;
-    width: 120px;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #222;
-    overflow: hidden;
-    z-index: 999;
-    opacity: 0;
-  }
-  &:hover {
-    opacity: 1;
-  }
+  color: white;
+  font-weight: bold;
 `;
 
-const StyledList = styled.li`
-  margin-right: 10px;
-  padding-right: 15px;
-  margin-bottom: 5px;
-  list-style: none;
-  text-decoration: none;
-  &.madness {
-    list-style: none;
-  }
-  @media (min-width: 800px) {
-    padding-right: 10px;
-    margin-right: 5px;
-  }
+const StyledLi = styled.li`
+  height: 100%;
+  padding: 10px;
 `;
-
 const BorderRightWrapper = styled.div`
   border-right: 1px solid white;
   height: 20px;
-  margin-right: 15px;
+  margin-right: 5px;
+  @media (min-width: 800px) {
+    margin-top: 10px;
+    height: 15px;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 0px;
+    height: 20px;
+  }
 `;
 
-const BorderBottomWrapper = styled.div`
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  width: 100px;
-  margin-right: 10px;
-  margin-bottom: 5px;
+const DropDownContent = styled.div`
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  margin-left: -8px;
+  margin-top: 10px;
+  z-index: 1;
 `;
 
-const LinkStyled = styled.a`
-  font-size: 12px;
-  font-weight: 600;
+const DropDownLi = styled(StyledLi)`
+  display: inline-block;
+  &:hover ${DropDownContent} {
+    display: block;
+  }
+`;
+
+const StyledA = styled.a`
+  display: inline-block;
+  text-align: center;
   text-decoration: none;
+  font-size: 12px;
   color: white;
   cursor: pointer;
-
   &.active {
     background-color: #fd5825;
     padding: 2px;
     border-radius: 3px;
-  }
-
-  @media (min-width: 320px) {
-    font-size: 8px;
   }
   @media (min-width: 800px) {
     font-size: 10px;
@@ -97,132 +90,112 @@ const LinkStyled = styled.a`
   }
 `;
 
-const Arrow = styled(DownArrow)`
-  width: 10px;
-  height: 10px;
-  color: white;
-  margin: 0 0 0 5px;
-  padding: 0 0 1px 0;
+const SubA = styled(StyledA)`
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #222;
+  padding: 10px;
 `;
 
-const LogoWrapper = styled.div`
+const LogoWrapper = styled.img`
   position: absolute;
+
   top: 2px;
   left: 25px;
   width: 80px;
   height: 65px;
-  background-image: url("images/logo.png");
+
   background-size: cover;
-  @media (max-width: 800px) {
+
+  @media (min-width: 800px) {
     top: 8px;
-    width: 70px;
-    height: 55px;
-  }
-  @media (min-width: 320px) {
-    width: 55px;
-    height: 45px;
-  }
-  @media (min-width: 1024px) {
-    top: 5px;
     width: 65px;
     height: 50px;
   }
+
+  @media (min-width: 1024px) {
+    top: 10px;
+    width: 70px;
+    height: 55px;
+  }
+  @media (min-width: 1024px) {
+    top: 5px;
+    width: 80px;
+    height: 65px;
+  }
 `;
 
-const Navbar = ({ menu }) => {
-  const router = useRouter();
+class Navbar extends Component {
+  handleClick = (action) => {
+    if (!action) return;
 
-  return (
-    <StyledWrapper>
-      <LogoWrapper />
-      <InnerWrapper>
-        <StyledList>
-          <LinkStyled
-            href="/"
-            className={router.pathname == "/" ? "active" : ""}
-          >
-            Home
-          </LinkStyled>
-        </StyledList>
-        <BorderRightWrapper />
-        <StyledList>
-          <LinkStyled
-            href="/news"
-            className={router.pathname == "/news" ? "active" : ""}
-          >
-            Aktualności
-          </LinkStyled>
-        </StyledList>
-        <BorderRightWrapper />
-        <StyledList>
-          <LinkStyled
-            href="/madness"
-            className={router.pathname == "/madness" ? "active" : ""}
-          >
-            Madness
-          </LinkStyled>
+    if (this.props.onClick) this.props.onClick(action);
+  };
 
-          <Arrow />
+  render = () => {
+    return (
+      <StyledWrapper>
+        <LogoWrapper src="/images/logo.png" />
 
-          <InnerWrapper className="madness">
-            <StyledList className="madness">
-              <LinkStyled
-                href="/"
-                className={router.pathname == "/" ? "active" : ""}
-              >
+        <StyledUl>
+          <StyledLi>
+            <StyledA href="/" onClick={() => this.handleClick("")}>
+              Home
+            </StyledA>
+          </StyledLi>
+          <BorderRightWrapper />
+          <StyledLi>
+            <StyledA href="/news" onClick={() => this.handleClick()}>
+              Aktualności
+            </StyledA>
+          </StyledLi>
+          <BorderRightWrapper />
+          <DropDownLi>
+            <StyledA onClick={() => this.handleClick("Madness")}>
+              Madness
+            </StyledA>
+
+            <DropDownContent>
+              {" "}
+              <SubA href="/" onClick={() => this.handleClick("Link1")}>
                 Turnieje
-              </LinkStyled>
-            </StyledList>
-            <BorderBottomWrapper />
-            <StyledList className="madness">
-              <LinkStyled
+              </SubA>
+              <SubA
                 href="/zory/index"
-                className={router.pathname === "/zory/[index]" ? "active" : ""}
+                onClick={() => this.handleClick("Link2")}
               >
                 Żory
-              </LinkStyled>
-            </StyledList>
-            <BorderBottomWrapper />
-            <StyledList className="madness">
-              <LinkStyled
-                href="/plf/index"
-                className={router.pathname == "/plf/[index]" ? "active" : ""}
-              >
+              </SubA>
+              <SubA href="/plf/index" onClick={() => this.handleClick("Link3")}>
                 PLF
-              </LinkStyled>
-            </StyledList>
-            <BorderBottomWrapper />
-            <StyledList className="madness">
-              <LinkStyled
+              </SubA>
+              <SubA
                 href="/chlf/index"
-                className={router.pathname == "/chlf/[index]" ? "active" : ""}
+                onClick={() => this.handleClick("Link4")}
               >
-                CHLF
-              </LinkStyled>
-            </StyledList>
-          </InnerWrapper>
-        </StyledList>
-        <BorderRightWrapper />
-        <StyledList>
-          <LinkStyled
-            href="/results"
-            className={router.pathname == "/results" ? "active" : ""}
-          >
-            Wyniki
-          </LinkStyled>
-        </StyledList>
-        <BorderRightWrapper />
-        <StyledList>
-          <LinkStyled
-            href="/gallery"
-            className={router.pathname == "/gallery" ? "active" : ""}
-          >
-            Galeria
-          </LinkStyled>
-        </StyledList>
-      </InnerWrapper>
-    </StyledWrapper>
-  );
-};
+                CHFL
+              </SubA>
+            </DropDownContent>
+          </DropDownLi>
+          <BorderRightWrapper />
+          <StyledLi>
+            <StyledA href="/results" onClick={() => this.handleClick("News")}>
+              Wyniki
+            </StyledA>
+          </StyledLi>
+          <BorderRightWrapper />
+          <StyledLi>
+            <StyledA href="/gallery" onClick={() => this.handleClick("News")}>
+              Galeria
+            </StyledA>
+          </StyledLi>
+        </StyledUl>
+      </StyledWrapper>
+    );
+  };
+}
 
 export default Navbar;
+
+// jak użyć useRouter() zeby nadać w classie activeColor

@@ -7,23 +7,24 @@ const StyledWrapper = styled.div`
   position: relative;
   top: -70px;
   padding: 5px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   background-color: transparent;
   width: 100vw;
   height: 540px;
   color: black;
   margin: 0;
-  @media (max-width: 1024px) {
-    top: -140px;
-  }
-  @media (max-width: 800px) {
-    top: -200px;
-  }
+
   @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
     top: -230px;
+  }
+  @media (min-width: 800px) {
+    top: -200px;
+  }
+  @media (min-width: 1024px) {
+    top: -90px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 `;
 const StyledCalender = styled.div`
@@ -47,6 +48,9 @@ const CalendarHeader = styled.div`
   }
   @media (min-width: 1024px) {
     width: 80%;
+  }
+  @media (min-width: 1200px) {
+    width: 75%;
   }
 `;
 
@@ -86,18 +90,19 @@ const HeaderAside = styled.h2`
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   text-transform: uppercase;
-  @media (max-width: 1200px) {
-    font-size: 20px;
-  }
-  @media (max-width: 800px) {
-    font-size: 18px;
-  }
+
   @media (min-width: 320px) {
     text-align: center;
   }
   @media (min-width: 768px) {
     font-size: 20px;
     text-align: center;
+  }
+  @media (min-width: 800px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 20px;
   }
 `;
 
@@ -119,6 +124,9 @@ const ImageWrapper = styled.img`
   }
   @media (min-width: 768px) {
     width: 140px;
+  }
+  @media (min-width: 1200px) {
+    width: 160px;
   }
 `;
 

@@ -24,7 +24,6 @@ const InnerWrapper = styled.div`
 `;
 
 const TitleStyled = styled.h1`
-  margin-top: 20px;
   color: white;
   text-align: center;
   font-size: 40px;
@@ -45,11 +44,19 @@ const TitleStyled = styled.h1`
     margin-top: 57px;
     margin-left: -110px;
   }
+  @media (min-width: 640px) {
+    font-size: 32px;
+    margin-left: 57px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 40px;
+    margin-top: 50px;
+  }
 `;
 const NameTitle = styled.h2`
   margin-left: 420px;
   text-align: center;
-  font-size: 32px;
+
   text-transform: uppercase;
   color: white;
   letter-spacing: 0.2em;
@@ -66,6 +73,14 @@ const NameTitle = styled.h2`
   @media (min-width: 460px) {
     font-size: 20px;
     margin-left: 170px;
+  }
+  @media (min-width: 640px) {
+    font-size: 28px;
+    margin-left: 70px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 32px;
+    margin-left: 420px;
   }
 `;
 
