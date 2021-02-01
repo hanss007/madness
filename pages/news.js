@@ -44,9 +44,9 @@ export default function News({ items }) {
       <Navbar />
       <BurgerMenu />
       <WrapperStyled>
-        {items.map((item) => (
-          <Card key={item.id} item={item} />
-        ))}
+        {items
+          .map((item) => <Card key={item.id} item={item} />)
+          .sort((a, b) => b.key - a.key)}
       </WrapperStyled>
     </>
   );

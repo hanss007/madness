@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import GlobalStyle from "../theme/GlobalStyle";
-import Menu from "../components/BurgerMenu";
+import BurgerMenu from "../components/BurgerMenu";
 import Link from "next/link";
 import { fetchQuery, baseUrl } from "../utils";
 

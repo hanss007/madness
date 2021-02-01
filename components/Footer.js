@@ -11,15 +11,21 @@ const StyledWrapper = styled.div`
   background-color: #222;
 
   @media (min-width: 320px) {
-    margin-top: 110px;
+    margin-top: 90px;
     display: flex;
-    flex-wrap: wrap;
-
-    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
   }
+  @media (min-width: 800px) {
+    height: 110vh;
+  }
+
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: auto;
   }
 `;
 
@@ -66,7 +72,7 @@ const InnerWrapper = styled.div`
   &.secondary {
     @media (min-width: 1024px) {
       position: absolute;
-      top: 59px;
+      top: 65px;
       right: 25px;
     }
     @media (min-width: 1200px) {
@@ -79,25 +85,20 @@ const InnerWrapper = styled.div`
       right: 120px;
     }
   }
+  @media (min-width: 640px) {
+    margin-left: 150px;
+  }
+  @media (min-width: 800px) {
+    margin-left: 180px;
+  }
   @media (min-width: 1024px) {
+    margin-top: 20px;
     margin-bottom: 25px;
+    margin-left: 10px;
   }
   @media (min-width: 1200px) {
     margin-bottom: 35px;
   }
-  /* 
-    @media (max-width: 1200px) {
-      margin-top: 75px;
-    }
-
-    @media (min-width: 320px) {
-      margin-top: 720px;
-      right: 50%;
-    } */
-
-  /* @media (min-width: 320px) {
-    margin-bottom: 20px;
-  } */
 `;
 
 const Title = styled.h2`
@@ -109,8 +110,17 @@ const Title = styled.h2`
   @media (min-width: 320px) {
     font-size: 14px;
   }
+  @media (min-width: 640px) {
+    font-size: 16px;
+  }
+  @media (min-width: 800px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
   @media (min-width: 1200px) {
-    font-size: 17px;
+    font-size: 20px;
   }
 `;
 
@@ -126,17 +136,22 @@ const NameTitle = styled.p`
     @media (min-width: 320px) {
       top: 3%;
     }
+
     @media (min-width: 1024px) {
-      top: 8%;
+      top: 20px;
     }
   }
-
-  @media (max-width: 1024px) {
-    font-size: 14px;
-    margin-top: 30px;
+  @media (min-width: 800px) {
+    font-size: 16px;
   }
-  @media (max-width: 800px) {
-    font-size: 12px;
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    top: 10px;
+  }
+  &.primary {
+    @media (min-width: 1200px) {
+      top: 22px;
+    }
   }
 `;
 
@@ -153,7 +168,7 @@ const BorderBottomWrapper = styled.div`
       top: 4%;
     }
     @media (min-width: 1024px) {
-      top: 8%;
+      top: 19px;
     }
   }
 
@@ -169,6 +184,14 @@ const BorderBottomWrapper = styled.div`
   @media (min-width: 1024px) {
     width: 85%;
   }
+  @media (min-width: 1200px) {
+    top: 10px;
+  }
+  &.primary {
+    @media (min-width: 1200px) {
+      top: 20px;
+    }
+  }
 `;
 
 const Content = styled.div`
@@ -182,7 +205,12 @@ const Content = styled.div`
       top: 6%;
     }
     @media (min-width: 1024px) {
-      top: 8%;
+      top: 18px;
+    }
+  }
+  &.primary {
+    @media (min-width: 1200px) {
+      top: 25px;
     }
   }
 `;
@@ -191,22 +219,20 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  @media (max-width: 1024px) {
-    font-size: 12px;
-  }
-  @media (max-width: 800px) {
-    font-size: 8px;
-  }
-  @media (min-width: 800px) {
-    margin-bottom: 8px;
-  }
-
   @media (min-width: 320px) {
     font-size: 12px;
   }
+  @media (min-width: 640px) {
+    font-size: 12px;
+  }
+  @media (min-width: 800px) {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
   @media (min-width: 1200px) {
     font-size: 14px;
+    margin-top: 20px;
   }
 `;
 
@@ -214,9 +240,9 @@ const Footer = () => (
   <StyledWrapper>
     <InnerWrapper>
       <Title>Prezes Stowarzyszenia Madness</Title>
-      <NameTitle>Wojciech Chmielewski</NameTitle>
-      <BorderBottomWrapper />
-      <Content>
+      <NameTitle className="primary">Wojciech Chmielewski</NameTitle>
+      <BorderBottomWrapper className="primary" />
+      <Content className="primary">
         <InnerContent>
           <Mail />
           <p>gitness69@interia.pl</p>
@@ -260,11 +286,11 @@ const Footer = () => (
       </Content>
     </InnerWrapper>
     <InnerWrapper className="secondary">
-      <NameTitle className="secondary">CHLF - Wojciech Chmielewski</NameTitle>
+      <NameTitle>CHLF - Wojciech Chmielewski</NameTitle>
 
-      <BorderBottomWrapper className="secondary" />
+      <BorderBottomWrapper />
 
-      <Content className="secondary">
+      <Content>
         <InnerContent>
           <Mail />
           <p>gitness69@interia.pl</p>
