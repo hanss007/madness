@@ -66,5 +66,3 @@ export default function News({ news }) {
     </StyledWrapper>
   );
 }
-
-// news.map((item) => item).sort((a, b) => b.id - a.id);

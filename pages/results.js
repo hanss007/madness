@@ -68,6 +68,7 @@ const InnerWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 85px;
   margin-top: 40px;
+
   @media (min-width: 320px) {
     grid-column-gap: 10px;
   }
@@ -95,6 +96,7 @@ const ImageWrapper = styled.img`
   background-repeat: no-repeat;
   margin-right: 30px;
   margin-bottom: 70px;
+  cursor: pointer;
   @media (min-width: 320px) {
     width: 85px;
     height: 85px;
