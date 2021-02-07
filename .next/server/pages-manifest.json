@@ -2,9 +2,10 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/news": "pages/news.js",
   "/": "pages/index.js",
-  "/results": "pages/results.js",
   "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
-  "/results/[resultId]": "pages/results/[resultId].js"
+  "/zory/[index]": "pages/zory/[index].js",
+  "/news": "pages/news.js",
+  "/chlf/[index]": "pages/chlf/[index].js",
+  "/plf/[index]": "pages/plf/[index].js"
 }

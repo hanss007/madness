@@ -82,7 +82,10 @@ const InnerWrapper = styled.div`
       right: 85px;
     }
     @media (min-width: 1430px) {
-      right: 120px;
+      right: 220px;
+    }
+    @media (min-width: 1200px) {
+      top: 91px;
     }
   }
   @media (min-width: 640px) {
@@ -98,6 +101,7 @@ const InnerWrapper = styled.div`
   }
   @media (min-width: 1200px) {
     margin-bottom: 35px;
+    margin-left: 30px;
   }
 `;
 
@@ -140,6 +144,9 @@ const NameTitle = styled.p`
     @media (min-width: 1024px) {
       top: 20px;
     }
+    @media (min-width: 1200px) {
+      top: 44px;
+    }
   }
   @media (min-width: 800px) {
     font-size: 16px;
@@ -151,6 +158,9 @@ const NameTitle = styled.p`
   &.primary {
     @media (min-width: 1200px) {
       top: 22px;
+    }
+    @media (min-width: 1430px) {
+      top: 45px;
     }
   }
 `;
@@ -170,6 +180,9 @@ const BorderBottomWrapper = styled.div`
     @media (min-width: 1024px) {
       top: 19px;
     }
+    @media (min-width: 1200px) {
+      top: 44px;
+    }
   }
 
   @media (min-width: 320px) {
@@ -187,9 +200,20 @@ const BorderBottomWrapper = styled.div`
   @media (min-width: 1200px) {
     top: 10px;
   }
+  @media (min-width: 1366px) {
+    width: 55%;
+  }
   &.primary {
     @media (min-width: 1200px) {
       top: 20px;
+    }
+    @media (min-width: 1430px) {
+      top: 45px;
+    }
+  }
+  &.last {
+    @media (min-width: 1200px) {
+      width: 110%;
     }
   }
 `;
@@ -208,9 +232,14 @@ const Content = styled.div`
       top: 18px;
     }
   }
-  &.primary {
+  &.last {
     @media (min-width: 1200px) {
-      top: 25px;
+      top: -14px;
+    }
+  }
+  &.primary {
+    @media (min-width: 1430px) {
+      top: 20px;
     }
   }
 `;
@@ -288,9 +317,9 @@ const Footer = () => (
     <InnerWrapper className="secondary">
       <NameTitle>CHLF - Wojciech Chmielewski</NameTitle>
 
-      <BorderBottomWrapper />
+      <BorderBottomWrapper className="last" />
 
-      <Content>
+      <Content className="last">
         <InnerContent>
           <Mail />
           <p>gitness69@interia.pl</p>

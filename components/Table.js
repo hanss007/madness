@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
 
 const InnerWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.8fr 0.2fr 0.1fr 0.1fr 0.1fr;
+  grid-template-columns: 0.8fr 0.3fr 0.1fr 0.1fr;
   width: 100%;
 `;
 
@@ -70,7 +70,7 @@ const Table = ({ item }) => (
       <NameTeam>{item.name}</NameTeam>
       <NameTeam>{item.pkt}</NameTeam>
       <NameTeam>{item.goalsscored}</NameTeam>
-      <Colon>:</Colon>
+
       <NameTeam>{item.goalslost}</NameTeam>
     </InnerWrapper>
     <BorderBottomWrapper />

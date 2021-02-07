@@ -1,6 +1,6 @@
 export const events = [
   {
-    day: "13",
+    day: "27",
     month: "02.2021",
     content: "Mistrzostwa Polski Górników i Przyjaciół",
   },

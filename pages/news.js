@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import BurgerMenu from "../components/BurgerMenu";
 import Card from "../components/News/Card";
@@ -33,6 +34,9 @@ const WrapperStyled = styled.div`
   }
   @media (min-width: 1024px) {
     height: 160vh;
+  }
+  @media (min-width: 1200px) {
+    height: 180vh;
   }
 `;
 

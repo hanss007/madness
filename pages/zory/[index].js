@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import Navbar from "../../components/Navbar";
+import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
+import Navbar from "../../components/Navbar";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -43,6 +44,16 @@ const Title = styled.h1`
   text-align: center;
   top: -120px;
 `;
+
+export async function getServerSideProps() {
+  const news = await fetchQuery("items");
+  console.log("news on server", news);
+  return {
+    props: {
+      news,
+    },
+  };
+}
 
 const HomeZory = () => (
   <>

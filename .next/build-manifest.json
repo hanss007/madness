@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/chlf/[index]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/chlf/[index].js"
+    ],
     "/news": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
@@ -39,15 +44,15 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/next/dist/pages/_error.js"
     ],
-    "/results": [
+    "/plf/[index]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/results.js"
+      "static/chunks/pages/plf/[index].js"
     ],
-    "/results/[resultId]": [
+    "/zory/[index]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/results/[resultId].js"
+      "static/chunks/pages/zory/[index].js"
     ]
   },
   "ampFirstPages": []

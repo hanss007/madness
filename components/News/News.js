@@ -60,10 +60,11 @@ export const MySwiper = ({ news }) => {
 };
 
 export default function News({ news }) {
-  console.log("new", news);
   return (
     <StyledWrapper>
       <MySwiper news={news} />
     </StyledWrapper>
   );
 }
+
+// news.map((item) => item).sort((a, b) => b.id - a.id);

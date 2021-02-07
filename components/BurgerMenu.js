@@ -51,7 +51,6 @@ const SubA = styled(StyledA)`
   border: 1px solid #222;
   padding: 8px;
   margin-left: 5px;
-  fs
 `;
 
 class BurgerMenu extends Component {

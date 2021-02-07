@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   width: 70%;
   top: 20%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 130%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@ const StyledWrapper = styled.div`
     width: 90%;
   }
   @media (min-width: 640px) {
-    top: 60%;
+    top: 70%;
   }
   @media (min-width: 800px) {
     width: 70%;

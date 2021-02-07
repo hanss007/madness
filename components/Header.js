@@ -5,7 +5,7 @@ const StyledWrapper = styled.div`
   position: relative;
   width: 100vw;
   height: 600px;
-  background-image: url("https://images.unsplash.com/photo-1540753003857-32db1552eead?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2690&q=80");
+  background-image: url("/images/header.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;

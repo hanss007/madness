@@ -151,18 +151,14 @@ const Calendar = ({ day, month, content }) => (
       <div>
         <HeaderAside>Najbliższy turniej sponsorują:</HeaderAside>
         <ImageWrapper
-          src="https://hotelkameleon.com/assets/grafika/logo.png"
-          alt="logo kameleon żory"
+          src="https://zory.com.pl/thumb/na-slasku-wiekszosc-miast-ma-swoje-logo/921036/2000/1200/i/jpg/zdjecie4"
+          alt="miasto żory"
         />
         <ImageWrapper
           src="https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png"
           alt="logo-staropolanka"
         />
-        <ImageWrapper
-          src="https://www.firmagodnazaufania.pl/assets/upload/photos/4a777d3f3f1d9511e7597500fd8eec76799d2e10.jpeg"
-          width="200"
-        />
-        <ImageWrapper src="https://www.baza-firm.com.pl/firmy/5/56114/logo/56114_logo.gif?t=1331650725" />
+        <ImageWrapper src="/images/logoMosir.png" width="200" />
       </div>
     </StyledAside>
   </StyledWrapper>
