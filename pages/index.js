@@ -3,7 +3,7 @@ import { fetchQuery } from "../utils";
 import Head from "next/head";
 
 export async function getServerSideProps() {
-  const news = await fetchQuery("items");
+  const news = await fetchQuery("items?_limit=6&_sort=id:DESC");
   console.log("news on server", news);
 
   return {

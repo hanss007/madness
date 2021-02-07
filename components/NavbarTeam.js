@@ -64,7 +64,7 @@ const StyledUlTeam = styled(StyledUl)`
   margin-right: 170px;
 `;
 
-function Navbar2() {
+function NavbarTeam({ name }) {
   const router = useRouter();
   return (
     <StyledWrapperTeam>
@@ -74,7 +74,7 @@ function Navbar2() {
             className={router.pathname === "/zory/[index]" ? "active" : ""}
             href="/zory/index"
           >
-            Home Żory
+            Home {name}
           </StyledA>
         </StyledLi>
         <BorderRightWrapper />
@@ -103,4 +103,4 @@ function Navbar2() {
   );
 }
 
-export default Navbar2;
+export default NavbarTeam;

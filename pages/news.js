@@ -48,18 +48,16 @@ export default function News({ items }) {
       <Navbar />
       <BurgerMenu />
       <WrapperStyled>
-        {items
-          .sort((a, b) => b.id - a.id)
-          .map((item) => (
-            <Card key={item.id} item={item} />
-          ))}
+        {items.map((item) => (
+          <Card key={item.id} item={item} />
+        ))}
       </WrapperStyled>
     </>
   );
 }
 
 export async function getServerSideProps() {
-  const items = await fetchQuery("items");
+  const items = await fetchQuery("items?_limit=7&_sort=id:DESC");
 
   return {
     props: {

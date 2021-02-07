@@ -3,6 +3,7 @@ import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
+import NavbarTeam from "../../components/NavbarTeam";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -60,7 +61,7 @@ const HomeZory = () => (
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-
+    <NavbarTeam />
     <StyledWrapper>
       <Title>Strona w budowie</Title>
     </StyledWrapper>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
+import NavbarTeam from "../../components/NavbarTeam";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -49,7 +50,7 @@ const Plf = () => (
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-
+    <NavbarTeam name="PLF" />
     <StyledWrapper>
       <Title>Strona w budowie</Title>
     </StyledWrapper>
