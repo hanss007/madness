@@ -224,7 +224,7 @@ const Button = styled.a`
   } */
 `;
 
-const CardNews = ({ item, isActive }) => (
+const CardNews = ({ item, isActive, children }) => (
   <>
     <GlobalStyle />
     <StyledWrapper isActive={isActive}>

@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    height: 100vh;
+    height: 120vh;
   }
   @media (min-width: 800px) {
     height: 110vh;
