@@ -97,7 +97,7 @@ const schedule = [
   },
   {
     month: "Luty",
-    day: "05",
+    day: "18",
     content: "team1 - team 2 14 kolejka",
   },
   {
@@ -109,9 +109,10 @@ const schedule = [
 const now = new Date();
 const data = monthNames[now.getMonth()];
 
-const CalendarTeam = () => {
+const CalendarTeam = ({ day, content }) => {
   for (let i in schedule) {
-    if (schedule[i].month === "Luty") {
+    if (schedule[i].month === data) {
+      day = schedule[i].day;
       console.log(schedule[i].content);
     }
   }
@@ -123,9 +124,7 @@ const CalendarTeam = () => {
           <NameHeader>{data}</NameHeader>
         </CalendarHeader>
 
-        <CalendarItems>
-          {/* <CardEvents day={day} content={content} /> */}
-        </CalendarItems>
+        <CalendarItems>{day}</CalendarItems>
       </StyledCalender>
     </StyledWrapper>
   );
