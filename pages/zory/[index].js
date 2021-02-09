@@ -65,7 +65,7 @@ const HomeZory = ({ news }) => (
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-
+    <NavbarTeam />
     <StyledWrapper>
       <Title>Strona w budowie</Title>
     </StyledWrapper>
