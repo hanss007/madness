@@ -64,21 +64,25 @@ export async function getServerSideProps() {
 
 const HomeZory = ({ news, schedule }) => (
   <>
-    // <GlobalStyle />
-    // <BurgerMenu />
-    // <Navbar />
-    // <NavbarTeam name="ŻORY" />
-    // <Header />
-    // <News news={news} />
-    // <CalenderTeam schedule={scheduleZory} />
+    <GlobalStyle />
+    <BurgerMenu />
+    <Navbar />
+
+    <StyledWrapper>
+      <Title>Strona w budowie</Title>
+    </StyledWrapper>
   </>
 );
 export default HomeZory;
 
-// <GlobalStyle />
-// <BurgerMenu />
-// <Navbar />
-// <NavbarTeam name="ŻORY" />
-// <Header />
-// <News news={news} />
-// <CalenderTeam schedule={scheduleZory} />
+{
+  /* <>
+<GlobalStyle />
+<BurgerMenu />
+<Navbar />
+<NavbarTeam name="ŻORY" />
+<Header />
+<News news={news} />
+<CalenderTeam schedule={scheduleZory} />
+</> */
+}
