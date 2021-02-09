@@ -146,7 +146,7 @@ export default function Results({ results }) {
           <InnerWrapper>
             {results.map((item) => (
               <Link href={`/results/${item.id}`}>
-                <ImgStyled src={item.image.url} alt="" />
+                <ImageWrapper src={item.image.url} alt="" />
               </Link>
             ))}
           </InnerWrapper>

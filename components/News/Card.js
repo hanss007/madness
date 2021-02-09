@@ -295,7 +295,7 @@ const ContentButton = styled.div`
 
 const Card = ({ item }) => (
   <StyledWrapper>
-    <ImgStyled src={item.image.url} alt="foto" />
+    <ImageWrapper src={item.image.url} alt="foto" />
     <InnerWrapper>
       <Title>
         {item.typ} <Data>/ {item.created}</Data>
