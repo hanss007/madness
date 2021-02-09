@@ -1,8 +1,14 @@
 import styled from "styled-components";
-import Navbar from "../../components/Navbar";
+import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
+import Navbar from "../../components/Navbar";
 import NavbarTeam from "../../components/NavbarTeam";
+import Header from "../../components/Header";
+import News from "../../components/News/News";
+import Footer from "../../components/Footer";
+import CalendarTeam from "../../components/CalendarTeam";
+import { schedulePlf } from "../../data/schedulePlf";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -50,7 +56,7 @@ const Plf = () => (
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam name="PLF" />
+
     <StyledWrapper>
       <Title>Strona w budowie</Title>
     </StyledWrapper>

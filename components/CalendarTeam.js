@@ -74,6 +74,7 @@ const CalendarItems = styled.div`
     width: 80%;
   }
 `;
+
 const monthNames = [
   "Styczeń",
   "Luty",
@@ -89,48 +90,94 @@ const monthNames = [
   "Grudzień",
 ];
 
-const schedule = [
-  {
-    month: "Luty",
-    day: "05",
-    content: "team1 - team 2 13 kolejka",
-  },
-  {
-    month: "Luty",
-    day: "18",
-    content: "team1 - team 2 14 kolejka",
-  },
-  {
-    month: "Marzec",
-    day: "05",
-    content: "team1 - team 2 19kolejka",
-  },
-];
 const now = new Date();
-const data = monthNames[now.getMonth()];
+const currentMonth = monthNames[now.getMonth()];
 
-const CalendarTeam = ({ day, content }) => {
-  for (let i in schedule) {
-    if (schedule[i].month === data) {
-      day = schedule[i].day;
-      console.log(schedule[i].content);
-    }
-  }
-
+const CalendarTeam = ({ schedule }) => {
+  const currentMonthEvents = schedule.filter(
+    (item) => item.title === currentMonth
+  );
   return (
     <StyledWrapper>
       <StyledCalender>
         <CalendarHeader>
-          <NameHeader>{data}</NameHeader>
+          <NameHeader>{currentMonth}</NameHeader>
         </CalendarHeader>
 
-        <CalendarItems>{day}</CalendarItems>
+        <CalendarItems>
+          {currentMonthEvents.map((event) => (
+            <CardEvents
+              day={event.day}
+              month={event.month}
+              content={event.content}
+              exact={event.exact}
+            />
+          ))}
+        </CalendarItems>
       </StyledCalender>
     </StyledWrapper>
   );
 };
 
 export default CalendarTeam;
+
+// const monthNames = [
+//   "Styczeń",
+//   "Luty",
+//   "Marzec",
+//   "Kwiecień",
+//   "Maj",
+//   "Czerwiec",
+//   "Lipiec",
+//   "Sierpień",
+//   "Wrzesień",
+//   "Październik",
+//   "Listopad",
+//   "Grudzień",
+// ];
+
+// const schedule = [
+//   {
+//     month: "Luty",
+//     day: "05",
+//     content: "team1 - team 2 13 kolejka",
+//   },
+//   {
+//     month: "Luty",
+//     day: "18",
+//     content: "team1 - team 2 14 kolejka",
+//   },
+//   {
+//     month: "Marzec",
+//     day: "05",
+//     content: "team1 - team 2 19kolejka",
+//   },
+// ];
+// const now = new Date();
+// const data = monthNames[now.getMonth()];
+
+// const CalendarTeam = ({ day, content }) => {
+//   for (let i in schedule) {
+//     if (schedule[i].month === data) {
+//       day = schedule[i].day;
+//       console.log(schedule[i].content);
+//     }
+//   }
+
+//   return (
+//     <StyledWrapper>
+//       <StyledCalender>
+//         <CalendarHeader>
+//           <NameHeader>{data}</NameHeader>
+//         </CalendarHeader>
+
+//         <CalendarItems>{day}</CalendarItems>
+//       </StyledCalender>
+//     </StyledWrapper>
+//   );
+// };
+
+// export default CalendarTeam;
 
 // if (obj.find((item) => item.month === "Luty")) {
 //   console.log(item.month);

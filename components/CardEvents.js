@@ -74,7 +74,7 @@ const List = styled.ul`
   }
 `;
 
-const CardEvents = ({ day, month, content }) => (
+const CardEvents = ({ day, month, content, exact }) => (
   <List>
     <ItemWrapper>
       <Data>
@@ -82,7 +82,10 @@ const CardEvents = ({ day, month, content }) => (
         <Month>{month}</Month>
       </Data>
 
-      <ContentWrapper>{content}</ContentWrapper>
+      <ContentWrapper>
+        {content}
+        <h5>{exact}</h5>
+      </ContentWrapper>
     </ItemWrapper>
     <BorderBottomWrapper />
   </List>
