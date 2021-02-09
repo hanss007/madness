@@ -88,15 +88,30 @@ function NavbarTeam({ name }) {
         </StyledLi>
         <BorderRightWrapper />
         <StyledLi>
-          <StyledA href="/">Kadra</StyledA>
+          <StyledA
+            className={router.pathname === "/zory/[players]" ? "active" : ""}
+            href="/zory/players"
+          >
+            Kadra
+          </StyledA>
         </StyledLi>
         <BorderRightWrapper />
         <StyledLi>
-          <StyledA href="/">Rozgrywki</StyledA>
+          <StyledA
+            className={router.pathname === "/zory/[scheudle]" ? "active" : ""}
+            href="/zory/scheudle"
+          >
+            Rozgrywki
+          </StyledA>
         </StyledLi>
         <BorderRightWrapper />
         <StyledLi>
-          <StyledA href="/">Galeria</StyledA>
+          <StyledA
+            className={router.pathname === "/zory/[gallery]" ? "active" : ""}
+            href="/zory/gallery"
+          >
+            Galeria
+          </StyledA>
         </StyledLi>
       </StyledUlTeam>
     </StyledWrapperTeam>
