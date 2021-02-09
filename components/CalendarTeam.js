@@ -103,7 +103,7 @@ const schedule = [
   {
     month: "Marzec",
     day: "05",
-    content: "team1 - team 2 17 kolejka",
+    content: "team1 - team 2 19kolejka",
   },
 ];
 const now = new Date();
