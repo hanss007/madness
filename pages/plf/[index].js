@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 import News from "../../components/News/News";
 import Footer from "../../components/Footer";
 import CalendarTeam from "../../components/CalendarTeam";
-import { schedulePlf } from "../../data/schedulePlf";
+import { schedulePLF } from "../../data/schedulePLF";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -50,16 +50,35 @@ const Title = styled.h1`
   text-align: center;
   top: -120px;
 `;
+const img = [
+  "/images/logoMosir.png",
+  "https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png",
+];
 
-const Plf = () => (
+export async function getServerSideProps() {
+  const news = await fetchQuery("items");
+  console.log("news on server", news);
+  return {
+    props: {
+      news,
+    },
+  };
+}
+
+const sponsors = ["/images/logoMosir.png", "/images/kk-kwant.png"];
+
+const PLF = ({ news }) => (
   <>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-
-    <StyledWrapper>
-      <Title>Strona w budowie</Title>
-    </StyledWrapper>
+    <NavbarTeam name="PLF" />
+    <Header />
+    <News news={news} />
+    <CalendarTeam schedule={schedulePLF} />
+    <Footer />
   </>
 );
-export default Plf;
+export default PLF;
+
+//dlaczego schedulePLF muszi plf być dużymi literami ?
