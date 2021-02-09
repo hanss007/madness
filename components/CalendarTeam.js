@@ -91,7 +91,7 @@ const monthNames = [
 ];
 
 const now = new Date();
-const currentMonth = monthNames[now.getMonth()];
+const currentMonth = monthNames[now.getMonth() + 1];
 
 const CalendarTeam = ({ schedule }) => {
   const currentMonthEvents = schedule.filter(
