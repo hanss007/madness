@@ -7,7 +7,7 @@ export const events = [
 
   {
     day: "27",
-    month: "02.2021",
+    month: "03.2021",
     content: "X OLDBOJOWE MISTRZOSTWA POLSKI GÓRNIKÓW I PRZYJACIÓŁ W FUTSALU ",
   },
   {

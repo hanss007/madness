@@ -8,6 +8,8 @@ import Header from "../../components/Header";
 import News from "../../components/News/News";
 import CalenderTeam from "../../components/CalenderTeam";
 import Footer from "../../components/Footer";
+import { schedulePLF } from "../../data/schedulePLF";
+import { scheduleZory } from "../../data/scheduleZory";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -60,12 +62,12 @@ export async function getServerSideProps() {
   };
 }
 
-const HomeZory = ({ news }) => (
+const HomeZory = ({ news, schedule }) => (
   <>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam />
+
     <StyledWrapper>
       <Title>Strona w budowie</Title>
     </StyledWrapper>
@@ -73,13 +75,10 @@ const HomeZory = ({ news }) => (
 );
 export default HomeZory;
 
-{
-  /* <GlobalStyle />
-<BurgerMenu />
-<Navbar />
-<NavbarTeam />
-<Header />
-<News news={news} />
-<CalenderTeam />
-<Footer /> */
-}
+// <GlobalStyle />
+// <BurgerMenu />
+// <Navbar />
+// <NavbarTeam name="ŻORY" />
+// <Header />
+// <News news={news} />
+// <CalenderTeam schedule={scheduleZory} />

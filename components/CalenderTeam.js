@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import CardEvents from "./CardEvents";
+import { scheduleZory } from "../data/scheduleZory";
+import { schedulePLF } from "../data/schedulePLF";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -74,6 +76,7 @@ const CalendarItems = styled.div`
     width: 80%;
   }
 `;
+
 const monthNames = [
   "Styczeń",
   "Luty",
@@ -89,42 +92,45 @@ const monthNames = [
   "Grudzień",
 ];
 
-const calZory = [
-  {
-    month: "Luty",
-    day: "05",
-    content: "team1 - team 2 13 kolejka",
-  },
-  {
-    month: "Luty",
-    day: "05",
-    content: "team1 - team 2 14 kolejka",
-  },
-  {
-    month: "Marzec",
-    day: "05",
-    content: "team1 - team 2 17 kolejka",
-  },
-];
+// const schedule = [
+//   {
+//     month: "Luty",
+//     day: "05",
+//     content: "team1 - team 2 13 kolejka",
+//   },
+//   {
+//     month: "Luty",
+//     day: "06",
+//     content: "team1 - team 2 14 kolejka",
+//   },
+//   {
+//     month: "Marzec",
+//     day: "05",
+//     content: "team1 - team 2 19kolejka",
+//   },
+// ];
 const now = new Date();
-const data = monthNames[now.getMonth()];
+const currentMonth = monthNames[now.getMonth()];
 
-const CalendarTeam = () => {
-  for (let i in calZory) {
-    if (calZory[i].month === "Luty") {
-      console.log(calZory[i].content);
-    }
-  }
-
+const CalendarTeam = ({ schedule }) => {
+  const currentMonthEvents = schedule.filter(
+    (item) => item.month === currentMonth
+  );
   return (
     <StyledWrapper>
       <StyledCalender>
         <CalendarHeader>
-          <NameHeader>{data}</NameHeader>
+          <NameHeader>{currentMonth}</NameHeader>
         </CalendarHeader>
 
         <CalendarItems>
-          {/* <CardEvents day={day} content={content} /> */}
+          {currentMonthEvents.map((event) => (
+            <CardEvents
+              day={event.day}
+              month={event.month}
+              content={event.content}
+            />
+          ))}
         </CalendarItems>
       </StyledCalender>
     </StyledWrapper>
@@ -132,6 +138,65 @@ const CalendarTeam = () => {
 };
 
 export default CalendarTeam;
+
+// const monthNames = [
+//   "Styczeń",
+//   "Luty",
+//   "Marzec",
+//   "Kwiecień",
+//   "Maj",
+//   "Czerwiec",
+//   "Lipiec",
+//   "Sierpień",
+//   "Wrzesień",
+//   "Październik",
+//   "Listopad",
+//   "Grudzień",
+// ];
+
+// const calZory = [
+//   {
+//     month: "Luty",
+//     day: "05",
+//     content: "team1 - team 2 13 kolejka",
+//   },
+//   {
+//     month: "Luty",
+//     day: "05",
+//     content: "team1 - team 2 14 kolejka",
+//   },
+//   {
+//     month: "Marzec",
+//     day: "05",
+//     content: "team1 - team 2 17 kolejka",
+//   },
+// ];
+// const now = new Date();
+// const data = monthNames[now.getMonth()];
+
+// const CalendarTeam = ({ content }) => {
+//   const rows = [],
+//   for (let i in calZory) {
+//     if (calZory[i].month === "Luty") {
+//       // content = calZory[i].content;
+//       calZory[i].content;
+//     }
+//   }
+
+//   return (
+//     <StyledWrapper>
+//       <StyledCalender>
+//         <CalendarHeader>
+//           <NameHeader>{data}</NameHeader>
+//         </CalendarHeader>
+
+//         <CalendarItems></CalendarItems>
+//       </StyledCalender>
+//     </StyledWrapper>
+//   );
+// };
+
+// export default CalendarTeam;
 
 // if (obj.find((item) => item.month === "Luty")) {
 //   console.log(item.month);

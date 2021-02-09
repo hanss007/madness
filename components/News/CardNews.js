@@ -229,7 +229,7 @@ const CardNews = ({ item, isActive, children }) => (
     <GlobalStyle />
     <StyledWrapper isActive={isActive}>
       <ImageWrapper>
-        <ImgStyled src={`${baseUrl}${item.image.url}`} alt="foto" />
+        <ImgStyled src={item.image.url} alt="foto" />
       </ImageWrapper>
       <TextStyled>
         <TitleStyled>{item.title}</TitleStyled>
