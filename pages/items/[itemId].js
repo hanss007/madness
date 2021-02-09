@@ -213,7 +213,7 @@ export default function Item({ item }) {
               </Link>
             </ContentButton>
           </InnerWrapper>
-          <ImageWrapper src={`${baseUrl}${item.image.url}`} alt={item.title} />
+          <ImageWrapper src={{item.image.url} alt={item.title} />
           <ContentWrapper>{item.content}</ContentWrapper>
         </StyledWrapper>
       </BackgroundWrapper>
