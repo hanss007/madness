@@ -4,6 +4,11 @@ import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
 import NavbarTeam from "../../components/NavbarTeam";
+import Header from "../../components/Header";
+import News from "../../components/News/News";
+import Calendar from "../../components/Calendar";
+import Footer from "../../components/Footer";
+import CalendarTeam from "../../components/CalendarTeam";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -45,6 +50,10 @@ const Title = styled.h1`
   text-align: center;
   top: -120px;
 `;
+const img = [
+  "/images/logoMosir.png",
+  "https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png",
+];
 
 export async function getServerSideProps() {
   const news = await fetchQuery("items");
@@ -56,15 +65,18 @@ export async function getServerSideProps() {
   };
 }
 
-const HomeZory = () => (
+const sponsors = ["/images/logoMosir.png", "/images/kk-kwant.png"];
+
+const HomeZory = ({ news, logo }) => (
   <>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam />
-    <StyledWrapper>
-      <Title>Strona w budowie</Title>
-    </StyledWrapper>
+    <NavbarTeam name="ŻORY" />
+    <Header />
+    <News news={news} />
+    <CalendarTeam />
+    <Footer />
   </>
 );
 export default HomeZory;

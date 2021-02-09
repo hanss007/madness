@@ -6,7 +6,7 @@ const StyledWrapperTeam = styled.div`
   position: absolute;
   height: 40px;
   width: 100%;
-  top: 7%;
+  top: 7, 5%;
 
   font-size: 16px;
   text-transform: uppercase;
