@@ -17,6 +17,7 @@
     "carbon-components-react": "^7.26.0",
     "carbon-icons": "^7.0.7",
     "create-strapi-app": "^3.4.3",
+    "get-git-version": "^0.5.0",
     "global": "^4.4.0",
     "isomorphic-unfetch": "^3.1.0",
     "moment": "^2.29.1",
