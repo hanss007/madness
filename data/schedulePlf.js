@@ -24,7 +24,14 @@ export const schedulePLF = [
     title: "Marzec",
     day: "05",
     month: "03.2021",
-    content: "team1 - team 2 19kolejka",
-    exact: "15 kolejka extraklasy",
+    content: "team1 - team 2 ",
+    exact: "18 kolejka extraklasy",
+  },
+  {
+    title: "Marzec",
+    day: "08",
+    month: "03.2021",
+    content: "team1 - team 2 ",
+    exact: "19 kolejka extraklasy",
   },
 ];
