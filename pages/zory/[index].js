@@ -3,6 +3,11 @@ import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
+import NavbarTeam from "../../components/NavbarTeam";
+import Header from "../../components/Header";
+import News from "../../components/News/News";
+import CalenderTeam from "../../components/CalenderTeam";
+import Footer from "../../components/Footer";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -55,7 +60,7 @@ export async function getServerSideProps() {
   };
 }
 
-const HomeZory = () => (
+const HomeZory = ({ news }) => (
   <>
     <GlobalStyle />
     <BurgerMenu />
@@ -67,3 +72,14 @@ const HomeZory = () => (
   </>
 );
 export default HomeZory;
+
+{
+  /* <GlobalStyle />
+<BurgerMenu />
+<Navbar />
+<NavbarTeam />
+<Header />
+<News news={news} />
+<CalenderTeam />
+<Footer /> */
+}

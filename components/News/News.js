@@ -48,15 +48,13 @@ export const MySwiper = ({ news }) => {
         },
       }}
     >
-      {news
-        .sort((a, b) => b.id - a.id)
-        .map((item, i) => (
-          <SwiperSlide>
-            {({ isNext }) => {
-              return <CardNews isActive={isNext} key={item.id} item={item} />;
-            }}
-          </SwiperSlide>
-        ))}
+      {news.map((item, i) => (
+        <SwiperSlide>
+          {({ isNext }) => {
+            return <CardNews isActive={isNext} key={item.id} item={item} />;
+          }}
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

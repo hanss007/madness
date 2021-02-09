@@ -88,18 +88,57 @@ const monthNames = [
   "Listopad",
   "Grudzień",
 ];
+
+const calZory = [
+  {
+    month: "Luty",
+    day: "05",
+    content: "team1 - team 2 13 kolejka",
+  },
+  {
+    month: "Luty",
+    day: "05",
+    content: "team1 - team 2 14 kolejka",
+  },
+  {
+    month: "Marzec",
+    day: "05",
+    content: "team1 - team 2 17 kolejka",
+  },
+];
 const now = new Date();
+const data = monthNames[now.getMonth()];
 
-const CalendarTeam = () => (
-  <StyledWrapper>
-    <StyledCalender>
-      <CalendarHeader>
-        <NameHeader>{monthNames[now.getMonth()]}</NameHeader>
-      </CalendarHeader>
+const CalendarTeam = () => {
+  for (let i in calZory) {
+    if (calZory[i].month === "Luty") {
+      console.log(calZory[i].content);
+    }
+  }
 
-      <CalendarItems></CalendarItems>
-    </StyledCalender>
-  </StyledWrapper>
-);
+  return (
+    <StyledWrapper>
+      <StyledCalender>
+        <CalendarHeader>
+          <NameHeader>{data}</NameHeader>
+        </CalendarHeader>
+
+        <CalendarItems>
+          {/* <CardEvents day={day} content={content} /> */}
+        </CalendarItems>
+      </StyledCalender>
+    </StyledWrapper>
+  );
+};
 
 export default CalendarTeam;
+
+// if (obj.find((item) => item.month === "Luty")) {
+//   console.log(item.month);
+// } dlaczego nie szło tego tak zrobic
+
+// for (let i in obj) {
+//   if (obj[i].month === "Luty") {
+//  console.log(obj[i].content)
+//   }
+// }
