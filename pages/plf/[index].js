@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 import News from "../../components/News/News";
 import Footer from "../../components/Footer";
 import CalendarTeam from "../../components/CalendarTeam";
-import { schedulePLF } from "../../data/schedulePLF";
+import { schedulePLF } from "../../data/schedulePlf";
 
 const StyledWrapper = styled.div`
   display: flex;
