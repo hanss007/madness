@@ -6,7 +6,7 @@ const StyledWrapperTeam = styled.div`
   position: absolute;
   height: 40px;
   width: 100%;
-  top: 7, 5%;
+  top: 7.5%;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -56,12 +56,10 @@ const StyledA = styled.a`
     border-radius: 3px;
   }
 `;
-const StyledTeam = styled.div`
-  background-color: #222;
-`;
+
 const StyledUlTeam = styled(StyledUl)`
   margin-top: -4px;
-  margin-right: 170px;
+  margin-right: 140px;
 `;
 
 function NavbarTeam({ name }) {
@@ -105,14 +103,6 @@ function NavbarTeam({ name }) {
           </StyledA>
         </StyledLi>
         <BorderRightWrapper />
-        <StyledLi>
-          <StyledA
-            className={router.pathname === "/zory/[gallery]" ? "active" : ""}
-            href="/zory/gallery"
-          >
-            Galeria
-          </StyledA>
-        </StyledLi>
       </StyledUlTeam>
     </StyledWrapperTeam>
   );

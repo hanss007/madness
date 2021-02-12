@@ -8,7 +8,11 @@ import Header from "../../components/Header";
 import News from "../../components/News/News";
 import Footer from "../../components/Footer";
 import CalendarTeam from "../../components/CalendarTeam";
-import { scheduleZory } from "../../data/scheduleZory";
+import Sponsors from "../../components/Sponsors";
+import TableTeam from "../../components/TableTeam";
+import { scheduleZory } from "../../data/schedule";
+import { sponsorsZory } from "../../data/sponsors";
+import { tableZory } from "../../data/table";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -44,19 +48,13 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  color: black;
-  position: absolute;
-  text-align: center;
-  top: -120px;
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 `;
-const img = [
-  "/images/logoMosir.png",
-  "https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png",
-];
 
 export async function getServerSideProps() {
-  const news = await fetchQuery("items");
+  const news = await fetchQuery("items?_limit=6&_sort=id:DESC");
   console.log("news on server", news);
   return {
     props: {
@@ -64,8 +62,6 @@ export async function getServerSideProps() {
     },
   };
 }
-
-const sponsors = ["/images/logoMosir.png", "/images/kk-kwant.png"];
 
 const HomeZory = ({ news }) => (
   <>
@@ -75,7 +71,11 @@ const HomeZory = ({ news }) => (
     <NavbarTeam name="ŻORY" />
     <Header />
     <News news={news} />
-    <CalendarTeam schedule={scheduleZory} />
+    <Wrapper>
+      <CalendarTeam schedule={scheduleZory} />
+      <Sponsors logo={sponsorsZory} />
+    </Wrapper>
+    <TableTeam table={tableZory} />
     <Footer />
   </>
 );

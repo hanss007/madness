@@ -1,10 +1,17 @@
+import React from "react";
 import styled from "styled-components";
 
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const ImageWrapper = styled.img`
-  margin-left: 10px;
-  padding: 5px;
-  width: 200px;
-  @media (max-width: 1200px) {
+  margin: 20px 40px 55px 10px;
+  width: 250px;
+  /* @media (max-width: 1200px) {
     width: 150px;
   }
   @media (max-width: 800px) {
@@ -21,9 +28,15 @@ const ImageWrapper = styled.img`
   }
   @media (min-width: 1200px) {
     width: 160px;
-  }
+  } */
 `;
 
-const Sponosrs = (logo) => <ImageWrapper />;
+const Sponosrs = ({ logo }) => (
+  <StyledWrapper>
+    {logo.map((item) => (
+      <ImageWrapper src={item.url} alt={item.name} />
+    ))}
+  </StyledWrapper>
+);
 
 export default Sponosrs;

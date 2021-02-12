@@ -131,8 +131,6 @@ const ImageWrapper = styled.img`
   }
 `;
 
-const sponsors = ["/images/logo-zory.jpg", "/images/logoMosir.png"];
-
 const Calendar = ({ day, month, content, logo, children }) => (
   <StyledWrapper>
     <StyledCalender>

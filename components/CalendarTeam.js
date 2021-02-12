@@ -1,44 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import styled from "styled-components";
 import CardEvents from "./CardEvents";
+import add from "date-fns/add";
+import { ArrowRightCircleFill } from "@styled-icons/bootstrap/ArrowRightCircleFill";
+import { ArrowLeftCircleFill } from "@styled-icons/bootstrap/ArrowLeftCircleFill";
 
-const StyledWrapper = styled.div`
-  position: relative;
-  top: -70px;
-  padding: 5px;
-  background-color: transparent;
-  width: 100vw;
-  height: 540px;
-  color: black;
-  margin: 0;
+// const StyledWrapper = styled.div`
+//   position: relative;
+//   top: -70px;
+//   padding: 5px;
+//   background-color: transparent;
+//   width: 100vw;
+//   height: 540px;
+//   color: black;
+//   margin: 0;
 
-  @media (min-width: 320px) {
-    display: flex;
-    flex-direction: column;
-    top: -230px;
-  }
-  @media (min-width: 800px) {
-    top: -200px;
-  }
-  @media (min-width: 1024px) {
-    top: -90px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-`;
+//   @media (min-width: 320px) {
+//     display: flex;
+//     flex-direction: column;
+//     top: -230px;
+//   }
+//   @media (min-width: 800px) {
+//     top: -200px;
+//   }
+//   @media (min-width: 1024px) {
+//     top: -90px;
+//     display: grid;
+//     grid-template-columns: 2fr 1fr;
+//   }
+// `;
 const StyledCalender = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 540px;
 `;
 
 const CalendarHeader = styled.div`
   width: 70%;
   height: 55px;
+
   background-color: #fd5825;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+
   @media (max-width: 460px) {
     width: 95%;
   }
@@ -58,6 +67,7 @@ const NameHeader = styled.h2`
   text-transform: uppercase;
   color: white;
   letter-spacing: 3px;
+  margin-top: 12px;
 `;
 
 const CalendarItems = styled.div`
@@ -72,6 +82,28 @@ const CalendarItems = styled.div`
   }
   @media (min-width: 1024px) {
     width: 80%;
+  }
+`;
+
+const NextButton = styled(ArrowRightCircleFill)`
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
+const PrevButton = styled(ArrowLeftCircleFill)`
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
   }
 `;
 
@@ -90,101 +122,97 @@ const monthNames = [
   "Grudzień",
 ];
 
-const now = new Date();
-const currentMonth = monthNames[now.getMonth() + 1];
+function CalendarTeam({ schedule }) {
+  const now = new Date();
+  const [cdate, setDate] = useState(now.getMonth() + 1);
 
-const CalendarTeam = ({ schedule }) => {
+  const nextMonth = () => {
+    if (cdate === 11) {
+      setDate(0);
+      return;
+    }
+    setDate(cdate + 1);
+  };
+
   const currentMonthEvents = schedule.filter(
-    (item) => item.title === currentMonth
+    (item) => item.title === monthNames[cdate]
   );
-  return (
-    <StyledWrapper>
-      <StyledCalender>
-        <CalendarHeader>
-          <NameHeader>{currentMonth}</NameHeader>
-        </CalendarHeader>
 
-        <CalendarItems>
-          {currentMonthEvents.map((event) => (
-            <CardEvents
-              day={event.day}
-              month={event.month}
-              content={event.content}
-              exact={event.exact}
-            />
-          ))}
-        </CalendarItems>
-      </StyledCalender>
-    </StyledWrapper>
+  const previousMonth = () => {
+    if (cdate === 0) {
+      setDate(11);
+      return;
+    }
+    setDate(cdate - 1);
+  };
+
+  return (
+    <StyledCalender>
+      <CalendarHeader>
+        <PrevButton onClick={previousMonth} />
+
+        <NameHeader>{monthNames[cdate]}</NameHeader>
+
+        <NextButton onClick={nextMonth} />
+      </CalendarHeader>
+
+      <CalendarItems>
+        {currentMonthEvents.map((event) => (
+          <CardEvents
+            day={event.day}
+            month={event.month}
+            content={event.content}
+            exact={event.exact}
+          />
+        ))}
+      </CalendarItems>
+    </StyledCalender>
   );
-};
+}
 
 export default CalendarTeam;
 
-// const monthNames = [
-//   "Styczeń",
-//   "Luty",
-//   "Marzec",
-//   "Kwiecień",
-//   "Maj",
-//   "Czerwiec",
-//   "Lipiec",
-//   "Sierpień",
-//   "Wrzesień",
-//   "Październik",
-//   "Listopad",
-//   "Grudzień",
-// ];
+// function CalendarTeam({ schedule }) {
+//   const now = new Date();
 
-// const schedule = [
-//   {
-//     month: "Luty",
-//     day: "05",
-//     content: "team1 - team 2 13 kolejka",
-//   },
-//   {
-//     month: "Luty",
-//     day: "18",
-//     content: "team1 - team 2 14 kolejka",
-//   },
-//   {
-//     month: "Marzec",
-//     day: "05",
-//     content: "team1 - team 2 19kolejka",
-//   },
-// ];
-// const now = new Date();
-// const data = monthNames[now.getMonth()];
+//   const currentMonth = monthNames[now.getMonth() + 1];
 
-// const CalendarTeam = ({ day, content }) => {
-//   for (let i in schedule) {
-//     if (schedule[i].month === data) {
-//       day = schedule[i].day;
-//       console.log(schedule[i].content);
-//     }
-//   }
+//   const month = null;
+//   const [cdate, setDate] = useState(month);
+//   const nextMonth = () => {
+//     let month = currentMonth;
+//     setDate(month);
+//   };
+
+//   const currentMonthEvents = schedule.filter(
+//     (item) => item.title === currentMonth
+//   );
 
 //   return (
 //     <StyledWrapper>
 //       <StyledCalender>
 //         <CalendarHeader>
-//           <NameHeader>{data}</NameHeader>
+//           <div>
+//             <h3>{cdate}</h3>
+//           </div>
+
+//           <NameHeader>{currentMonth}</NameHeader>
+//           <div>{/* button */}</div>
 //         </CalendarHeader>
 
-//         <CalendarItems>{day}</CalendarItems>
+//         <CalendarItems>
+//           {currentMonthEvents.map((event) => (
+//             <CardEvents
+//               day={event.day}
+//               month={event.month}
+//               content={event.content}
+//               exact={event.exact}
+//             />
+//           ))}
+//         </CalendarItems>
 //       </StyledCalender>
 //     </StyledWrapper>
 //   );
-// };
+// }
 
 // export default CalendarTeam;
-
-// if (obj.find((item) => item.month === "Luty")) {
-//   console.log(item.month);
-// } dlaczego nie szło tego tak zrobic
-
-// for (let i in obj) {
-//   if (obj[i].month === "Luty") {
-//  console.log(obj[i].content)
-//   }
-// }
