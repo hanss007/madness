@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 import News from "../../components/News/News";
 import Footer from "../../components/Footer";
 import CalendarTeam from "../../components/CalendarTeam";
-import { schedulePLF } from "../../data/schedulePlf";
+import { schedulePLF } from "../../data/schedule";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -50,10 +50,6 @@ const Title = styled.h1`
   text-align: center;
   top: -120px;
 `;
-const img = [
-  "/images/logoMosir.png",
-  "https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png",
-];
 
 export async function getServerSideProps() {
   const news = await fetchQuery("items");
@@ -64,8 +60,6 @@ export async function getServerSideProps() {
     },
   };
 }
-
-const sponsors = ["/images/logoMosir.png", "/images/kk-kwant.png"];
 
 const PLF = ({ news }) => (
   <>
