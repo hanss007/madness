@@ -6,7 +6,7 @@ import Card from "../../../components/News/Card";
 import GlobalStyle from "../../../theme/GlobalStyle";
 import { fetchQuery } from "../../../utils";
 
-const WrapperStyled = styled.div`
+const StyledWrapper = styled.div`
   position: relative;
   &:after {
     content: "";
@@ -39,27 +39,6 @@ const WrapperStyled = styled.div`
   }
 `;
 
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-color: rgba(245, 240, 237, 0.5);
-`;
-
-const ImageTeam = styled.img`
-  width: 1200px;
-  height: 600px;
-  margin-bottom: 40px;
-`;
-
-const Title = styled.h1`
-  color: #023047;
-  text-align: center;
-  margin-top: 60px;
-`;
-
 export default function NewsZory({ items }) {
   return (
     <>
@@ -68,11 +47,11 @@ export default function NewsZory({ items }) {
       <Navbar />
       <NavbarTeam name="ŻORY" />
       <BurgerMenu />
-      <WrapperStyled>
+      <StyledWrapper>
         {items.map((item) => (
           <Card key={item.id} item={item} />
         ))}
-      </WrapperStyled>
+      </StyledWrapper>
     </>
   );
 }
