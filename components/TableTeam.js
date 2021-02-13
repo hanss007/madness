@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  margin-top: 80px;
-  margin-left: 220px;
+  position: relative;
+  width: 100%;
 `;
 
 const Table = styled.table`
-  position: relative;
+  margin-left: 220px;
+  margin-left: 220px;
+
   font-size: 22px;
   border-spacing: 50px;
   border-collapse: collapse;
@@ -55,7 +57,7 @@ const Button = styled.a`
   text-transform: uppercase;
   font-size: 14px;
   margin-top: 25px;
-  right: 25%;
+  right: 440px;
   border-bottom: 2px solid #fd5825;
   cursor: pointer;
   transition: color 0.2s ease;

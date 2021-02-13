@@ -14,40 +14,6 @@ import { scheduleZory } from "../../data/schedule";
 import { sponsorsZory } from "../../data/sponsors";
 import { tableZory } from "../../data/table";
 
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-image: url("/images/build.png");
-  background-size: cover;
-  color: white;
-  @media (min-width: 320px) {
-    width: 320px;
-    height: 320px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-  }
-  @media (min-width: 460px) {
-    width: 380px;
-    height: 380px;
-  }
-  @media (min-width: 768px) {
-    width: 450px;
-    height: 450px;
-  }
-  @media (min-width: 1024px) {
-    width: 500px;
-    height: 500px;
-  }
-  @media (min-width: 1200px) {
-    width: 550px;
-    height: 550px;
-  }
-`;
-
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;

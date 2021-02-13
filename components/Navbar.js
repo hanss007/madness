@@ -1,9 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import useToggle from "react-use-toggle";
-
-import Link from "next/link";
-import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
 const StyledWrapper = styled.div`

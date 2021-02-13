@@ -78,8 +78,10 @@ function NavbarTeam({ name }) {
         <BorderRightWrapper />
         <StyledLi>
           <StyledA
-            className={router.pathname === "/zory/[news]" ? "active" : ""}
-            href="/zory/news"
+            className={
+              router.pathname === "/zory/secondMenu/[newsZory]" ? "active" : ""
+            }
+            href="/zory/secondMenu/newsZory"
           >
             Atkualności
           </StyledA>
