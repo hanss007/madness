@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const StyledWrapperTeam = styled.div`
@@ -68,32 +69,39 @@ function NavbarTeam({ name }) {
     <StyledWrapperTeam>
       <StyledUlTeam>
         <StyledLi>
-          <StyledA
-            className={router.pathname === "/zory/[index]" ? "active" : ""}
-            href="/zory/index"
-          >
-            Home {name}
-          </StyledA>
+          <Link href="/zory/index">
+            <StyledA
+              className={router.pathname === "/zory/[index]" ? "active" : ""}
+            >
+              Home {name}
+            </StyledA>
+          </Link>
         </StyledLi>
         <BorderRightWrapper />
         <StyledLi>
-          <StyledA
-            className={
-              router.pathname === "/zory/secondMenu/[newsZory]" ? "active" : ""
-            }
-            href="/zory/secondMenu/newsZory"
-          >
-            Atkualności
-          </StyledA>
+          <Link href="/zory/news/newsZory">
+            <StyledA
+              className={
+                router.pathname === "/zory/news/[newsZory]" ? "active" : ""
+              }
+            >
+              Atkualności
+            </StyledA>
+          </Link>
         </StyledLi>
         <BorderRightWrapper />
         <StyledLi>
-          <StyledA
-            className={router.pathname === "/zory/[players]" ? "active" : ""}
-            href="/zory/players"
-          >
-            Kadra
-          </StyledA>
+          <Link href="/zory/players/playersZory">
+            <StyledA
+              className={
+                router.pathname === "/zory/players/[playersZory]"
+                  ? "active"
+                  : ""
+              }
+            >
+              Kadra
+            </StyledA>
+          </Link>
         </StyledLi>
         <BorderRightWrapper />
         <StyledLi>

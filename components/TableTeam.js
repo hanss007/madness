@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  position: relative;
   width: 100%;
+  top: 30px;
 `;
 
 const Table = styled.table`
-  margin-left: 220px;
-  margin-left: 220px;
-
-  font-size: 22px;
+  width: 795px;
+  height: 380px;
+  margin-left: 250px;
   border-spacing: 50px;
   border-collapse: collapse;
 `;
@@ -19,13 +18,13 @@ const HeadlineStyled = styled.thead`
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
-  font-size: 25px;
 `;
 
 const RowStyled = styled.tr`
   border-bottom: 1px solid rgba(34, 34, 34, 0.5);
   color: #0d142d;
   display: table-row;
+
   &.madness {
     background: linear-gradient(
       90deg,
@@ -42,11 +41,13 @@ const CellHeadlineStyled = styled.th`
   vertical-align: inherit;
   font-weight: bold;
   padding: 20px 10px 8px;
+  font-size: 18px;
 `;
 
 const CellContentStyled = styled.td`
   padding: 20px 35px 8px;
   font-weight: 600;
+  font-size: 16px;
 `;
 
 const Button = styled.a`
@@ -56,8 +57,8 @@ const Button = styled.a`
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
-  margin-top: 25px;
-  right: 440px;
+  margin-top: 30px;
+  right: 600px;
   border-bottom: 2px solid #fd5825;
   cursor: pointer;
   transition: color 0.2s ease;

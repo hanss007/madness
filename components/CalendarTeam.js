@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
 import CardEvents from "./CardEvents";
-import add from "date-fns/add";
+
 import { ArrowRightCircleFill } from "@styled-icons/bootstrap/ArrowRightCircleFill";
 import { ArrowLeftCircleFill } from "@styled-icons/bootstrap/ArrowLeftCircleFill";
 
@@ -36,6 +36,7 @@ const StyledCalender = styled.div`
   justify-content: center;
   align-items: center;
   height: 540px;
+  margin-top: -70px;
 `;
 
 const CalendarHeader = styled.div`

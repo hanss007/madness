@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
