@@ -18,8 +18,8 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media (min-width: 320px) {
-    margin-top: 21%;
-    margin-left: 10%;
+    margin: 21% auto;
+
     width: 90%;
   }
   @media (min-width: 640px) {
@@ -27,7 +27,7 @@ const StyledWrapper = styled.div`
   }
   @media (min-width: 800px) {
     width: 70%;
-    margin-top: 10%;
+    margin: 10% auto;
   }
 `;
 
