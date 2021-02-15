@@ -106,8 +106,10 @@ function NavbarTeam({ name }) {
         <BorderRightWrapper />
         <StyledLi>
           <StyledA
-            className={router.pathname === "/zory/[scheudle]" ? "active" : ""}
-            href="/zory/scheudle"
+            className={
+              router.pathname === "/zory/games/[gamesZory]" ? "active" : ""
+            }
+            href="/zory/games/gamesZory"
           >
             Rozgrywki
           </StyledA>

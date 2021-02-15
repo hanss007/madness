@@ -87,9 +87,7 @@ const TableTeam = ({ table }) => (
           .map((item) => (
             <RowStyled
               className={
-                item.team === "MULTIBIURO-MADNESS-KK KWANT ŻORY"
-                  ? "madness"
-                  : ""
+                item.team === "MULTIBIURO-MADNESS-KK KWANT" ? "madness" : ""
               }
             >
               <CellContentStyled>{item.lp}.</CellContentStyled>
@@ -101,7 +99,7 @@ const TableTeam = ({ table }) => (
           ))}
       </tbody>
     </Table>
-    <Button href="/zory/scheudle">Rozwiń Tabelę</Button>
+    <Button href="/zory/games/gamesZory">Rozwiń Tabelę</Button>
   </StyledWrapper>
 );
 

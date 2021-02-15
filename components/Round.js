@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
-import CardEvents from "./CardEvents";
+import CardRound from "./CardRound";
 
 import { ArrowRightCircleFill } from "@styled-icons/bootstrap/ArrowRightCircleFill";
 import { ArrowLeftCircleFill } from "@styled-icons/bootstrap/ArrowLeftCircleFill";
@@ -35,8 +35,10 @@ const StyledCalender = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 540px;
-  margin-top: -70px;
+  height: auto;
+  width: 65%;
+  margin-top: 140px;
+  margin-left: -24%;
 `;
 
 const CalendarHeader = styled.div`
@@ -108,62 +110,79 @@ const PrevButton = styled(ArrowLeftCircleFill)`
   }
 `;
 
-const monthNames = [
-  "Styczeń",
-  "Luty",
-  "Marzec",
-  "Kwiecień",
-  "Maj",
-  "Czerwiec",
-  "Lipiec",
-  "Sierpień",
-  "Wrzesień",
-  "Październik",
-  "Listopad",
-  "Grudzień",
+const allRound = [
+  {
+    title: "1.Kolejka",
+    date: "24.09.2020",
+    time: "18:00",
+    content: "Old Stars 6:4 Maxelektro",
+  },
+  {
+    title: "1.Kolejka",
+    date: "24.09.2020",
+    time: "18:55",
+    content: "Squad Drewna 7:6 Dream Team",
+  },
+  {
+    title: "1.Kolejka",
+    date: "24.09.2020",
+    time: "19:50",
+    content: "Pniówek Team 4:2 Grajki",
+  },
+  {
+    title: "1.Kolejka",
+    date: "25.09.2020",
+    time: "20:20",
+    content: "Multibiuro-Madness-KK Kwant 5:3 Zymft",
+  },
+  {
+    title: "2.Kolejka",
+    date: "1.10.2020",
+    time: "18:00",
+    content: "Drunken Sharks 4:7 Pniówek Team",
+  },
 ];
 
-function CalendarTeam({ schedule }) {
-  const now = new Date();
-  const [cdate, setDate] = useState(now.getMonth() + 1);
+function Round({ schedule }) {
+  //   const now = new Date();
+  //   const [cdate, setDate] = useState(now.getMonth() + 1);
 
-  const nextMonth = () => {
-    if (cdate === 11) {
-      setDate(0);
-      return;
-    }
-    setDate(cdate + 1);
-  };
+  //   const nextMonth = () => {
+  //     if (cdate === 11) {
+  //       setDate(0);
+  //       return;
+  //     }
+  //     setDate(cdate + 1);
+  //   };
 
-  const currentMonthEvents = schedule.filter(
-    (item) => item.title === monthNames[cdate]
-  );
+  //   const currentMonthEvents = schedule.filter(
+  //     (item) => item.title === monthNames[cdate]
+  //   );
 
-  const previousMonth = () => {
-    if (cdate === 0) {
-      setDate(11);
-      return;
-    }
-    setDate(cdate - 1);
-  };
+  //   const previousMonth = () => {
+  //     if (cdate === 0) {
+  //       setDate(11);
+  //       return;
+  //     }
+  //     setDate(cdate - 1);
+  //   };
 
   return (
     <StyledCalender>
       <CalendarHeader>
-        <PrevButton onClick={previousMonth} />
+        {/* <PrevButton onClick={previousMonth} /> */}
 
-        <NameHeader>{monthNames[cdate]}</NameHeader>
+        <NameHeader>{allRound[0].title}</NameHeader>
 
-        <NextButton onClick={nextMonth} />
+        {/* <NextButton onClick={nextMonth} /> */}
       </CalendarHeader>
 
       <CalendarItems>
-        {currentMonthEvents.map((event) => (
-          <CardEvents
-            day={event.day}
-            month={event.month}
+        {allRound.map((event) => (
+          <CardRound
+            date={event.date}
+            time={event.time}
             content={event.content}
-            exact={event.exact}
           />
         ))}
       </CalendarItems>
@@ -171,49 +190,4 @@ function CalendarTeam({ schedule }) {
   );
 }
 
-export default CalendarTeam;
-
-// function CalendarTeam({ schedule }) {
-//   const now = new Date();
-
-//   const currentMonth = monthNames[now.getMonth() + 1];
-
-//   const month = null;
-//   const [cdate, setDate] = useState(month);
-//   const nextMonth = () => {
-//     let month = currentMonth;
-//     setDate(month);
-//   };
-
-//   const currentMonthEvents = schedule.filter(
-//     (item) => item.title === currentMonth
-//   );
-
-//   return (
-//     <StyledWrapper>
-//       <StyledCalender>
-//         <CalendarHeader>
-//           <div>
-//             <h3>{cdate}</h3>
-//           </div>
-
-//           <NameHeader>{currentMonth}</NameHeader>
-//           <div>{/* button */}</div>
-//         </CalendarHeader>
-
-//         <CalendarItems>
-//           {currentMonthEvents.map((event) => (
-//             <CardEvents
-//               day={event.day}
-//               month={event.month}
-//               content={event.content}
-//               exact={event.exact}
-//             />
-//           ))}
-//         </CalendarItems>
-//       </StyledCalender>
-//     </StyledWrapper>
-//   );
-// }
-
-// export default CalendarTeam;
+export default Round;

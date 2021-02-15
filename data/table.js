@@ -22,7 +22,7 @@ export const tableZory = [
   },
   {
     lp: 4,
-    team: "MULTIBIURO-MADNESS-KK KWANT ŻORY",
+    team: "MULTIBIURO-MADNESS-KK KWANT",
     matches: 9,
     pts: "22",
     goals: "55:17",

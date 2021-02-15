@@ -7,8 +7,8 @@ import GlobalStyle from "../../../theme/GlobalStyle";
 import { fetchQuery } from "../../../utils";
 
 const StyledWrapper = styled.div`
-  position: relative;
-  &:after {
+  /* position: relative; */
+  /* &:after {
     content: "";
     display: block;
     position: absolute;
@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
     height: 100%;
     opacity: 0.3;
     z-index: -1;
-  }
+  } */
   @media (min-width: 320px) {
     height: 110vh;
   }
