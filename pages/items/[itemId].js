@@ -3,6 +3,7 @@ import { baseUrl, fetchQuery } from "../../utils";
 import styled from "styled-components";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
+import BurgerMenu from "../../components/BurgerMenu";
 import { Calendar } from "@styled-icons/boxicons-regular/Calendar";
 
 const BackgroundWrapper = styled.div`
@@ -199,6 +200,7 @@ export default function Item({ item }) {
     <>
       <GlobalStyle />
       <Navbar />
+      <BurgerMenu />
       <BackgroundWrapper>
         <StyledWrapper>
           <TitleWrapper>{item.title}</TitleWrapper>
