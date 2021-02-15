@@ -8,7 +8,6 @@ import ResultCard from "../../components/ResultCard";
 import Table from "../../components/Table";
 
 const StyledWrapper = styled.div`
-  position: absolute;
   height: 100vh;
   width: 70%;
   top: 20%;
@@ -114,3 +113,42 @@ export async function getServerSideProps({ query, params }) {
     },
   };
 }
+
+// export default function ItemResults({ item }) {
+//   return (
+//     <>
+//       <GlobalStyle />
+//       <Navbar />
+//       <BurgerMenu />
+//       <StyledWrapper>
+//         {item["Group"].map((item) => (
+//           <>
+//             <Title>{item.title}</Title>
+//             {item["resultteam"].map((item) => (
+//               <ResultCard key={item.id} item={item} />
+//             ))}
+//             <TableWrapper>
+//               <h2>Drużyna</h2>
+//               <h2>Pkt</h2>
+//               <h2>Bramki</h2>
+//             </TableWrapper>
+
+//             {item["table"].map((item) => (
+//               <Table key={item.id} item={item} />
+//             ))}
+//           </>
+//         ))}
+//       </StyledWrapper>
+//     </>
+//   );
+// }
+
+// export async function getServerSideProps({ query, params }) {
+//   console.log("query", query, params);
+//   const item = await fetchQuery(`results/${params.resultId}`);
+//   return {
+//     props: {
+//       item,
+//     },
+//   };
+// }

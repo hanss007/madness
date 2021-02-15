@@ -165,32 +165,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-// export default function Results({ results }) {
-//   return (
-//     <>
-//       <GlobalStyle />
-//       <Navbar />
-//       <StyledWrapper>
-//         <Title>Wyniki Turniejów Stowarzyszenia Madness</Title>
-//         <InnerWrapper>
-//           {results.map((item) => (
-//             <Link href={`/results/${item.id}`}>
-//               <ImageWrapper src={`${baseUrl}${item.image.url}`} alt="" />
-//             </Link>
-//           ))}
-//         </InnerWrapper>
-//       </StyledWrapper>
-//     </>
-//   );
-// }
-
-// export async function getServerSideProps() {
-//   const results = await fetchQuery("results");
-
-//   return {
-//     props: {
-//       results,
-//     },
-//   };
-// }
