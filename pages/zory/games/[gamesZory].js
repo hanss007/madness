@@ -6,7 +6,7 @@ import Round from "../../../components/Round";
 import TableTeam from "../../../components/TableTeam";
 import Footer from "../../../components/Footer";
 import { tableZory } from "../../../data/table";
-
+import { allRoundZory } from "../../../data/schedule";
 import GlobalStyle from "../../../theme/GlobalStyle";
 
 const StyledWrapper = styled.div`
@@ -39,7 +39,7 @@ const GamesZory = () => (
     <StyledWrapper>
       <Title>ŻALO - 2020/2021</Title>
       <TableTeam table={tableZory} />
-      <Round />
+      <Round allRound={allRoundZory} />
     </StyledWrapper>
     <Footer />
   </>

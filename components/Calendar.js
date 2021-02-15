@@ -38,9 +38,8 @@ const StyledCalender = styled.div`
 const CalendarHeader = styled.div`
   width: 70%;
   height: 55px;
-  background-color: #fd5825;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  background-color: #ef273d;
+
   @media (max-width: 460px) {
     width: 95%;
   }

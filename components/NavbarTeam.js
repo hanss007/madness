@@ -13,10 +13,10 @@ const StyledWrapperTeam = styled.div`
   text-transform: uppercase;
   background: linear-gradient(
     90deg,
-    rgba(63, 175, 229, 0.7) 0%,
-    rgba(34, 34, 34, 0.8) 49%,
-    rgba(253, 88, 37, 0.9) 93%
+    rgba(13, 20, 44, 0.9) 34%,
+    rgba(239, 39, 61, 0.9) 99%
   );
+
   display: block;
 `;
 const StyledUl = styled.ul`

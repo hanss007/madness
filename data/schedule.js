@@ -113,6 +113,82 @@ export const scheduleZory = [
   },
 ];
 
+export const allRoundZory = [
+  {
+    numberRound: 1,
+    date: "24.09.2020",
+    time: "18:00",
+    team1: "Old Stars",
+    team2: "Maxelektro",
+    score: "6:4",
+  },
+  {
+    numberRound: 1,
+    date: "24.09.2020",
+    time: "18:55",
+    team1: "Squad Drewna",
+    team2: "Dream Team",
+    score: "7:6",
+  },
+  {
+    numberRound: 1,
+    date: "24.09.2020",
+    time: "19:50",
+    team1: "Pniówek Team",
+    team2: "Grajki",
+    score: "4:2",
+  },
+  {
+    numberRound: 1,
+    date: "25.09.2020",
+    time: "20:20",
+    team1: "Madness",
+    team2: "Zymft",
+    score: "5:3",
+  },
+
+  {
+    numberRound: 2,
+    date: "01.10.2020",
+    time: "18:00",
+    team1: "Drunken Sharks",
+    team2: "Pniówek Team",
+    score: "4:7",
+  },
+  {
+    numberRound: 2,
+    date: "01.10.2020",
+    time: "18:55",
+    team1: "Maxelektro",
+    team2: "Madness",
+    score: "0:9",
+  },
+  {
+    numberRound: 2,
+    date: "01.10.2020",
+    time: "19:50",
+    team1: "Brakuje Nam Jednego",
+    team2: "Squad Drewna",
+    score: "0:11",
+  },
+  {
+    numberRound: 2,
+    date: "01.10.2020",
+    time: "20:45",
+    team1: "Dream Team",
+    team2: "Sekonix Poland",
+    score: "10:0",
+  },
+  {
+    numberRound: 2,
+    date: "02.10.2020",
+    time: "18:30",
+    team1: "Palar Trans Żory",
+    team2: "Zymft",
+    score: "8:4",
+  },
+];
+
 export const schedulePLF = [
   {
     title: "Luty",

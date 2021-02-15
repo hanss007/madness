@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { baseUrl, fetchQuery } from "../../utils";
 import styled from "styled-components";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
@@ -8,18 +6,18 @@ import ResultCard from "../../components/ResultCard";
 import Table from "../../components/Table";
 
 const StyledWrapper = styled.div`
-  position: absolute;
-  height: 100vh;
   width: 70%;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, 130%);
+
+  margin-top: 25%;
+  margin-left: 48%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   @media (min-width: 320px) {
-    top: 40%;
+    margin: 21% auto;
+
     width: 90%;
   }
   @media (min-width: 640px) {
@@ -27,11 +25,7 @@ const StyledWrapper = styled.div`
   }
   @media (min-width: 800px) {
     width: 70%;
-    top: 65%;
-  }
-  @media (min-width: 1200px) {
-    width: 70%;
-    top: 45%;
+    margin: 10% auto;
   }
 `;
 

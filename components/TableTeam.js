@@ -28,10 +28,10 @@ const RowStyled = styled.tr`
   &.madness {
     background: linear-gradient(
       90deg,
-      rgba(63, 175, 229, 1) 0%,
-      rgba(34, 34, 34, 1) 49%,
-      rgba(253, 88, 37, 1) 93%
+      rgba(13, 20, 44, 1) 30%,
+      rgba(239, 39, 61, 1) 99%
     );
+
     color: white;
   }
 `;
