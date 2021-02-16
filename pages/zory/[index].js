@@ -11,6 +11,7 @@ import Footer from "../../components/Footer";
 import CalendarTeam from "../../components/CalendarTeam";
 import Sponsors from "../../components/Sponsors";
 import TableTeam from "../../components/TableTeam";
+import ButtonTable from "../../components/ButtonTable";
 import { scheduleZory } from "../../data/schedule";
 import { sponsorsZory } from "../../data/sponsors";
 import { tableZory } from "../../data/table";
@@ -42,8 +43,12 @@ const HomeZory = ({ news }) => (
       <CalendarTeam schedule={scheduleZory} />
       <Sponsors logo={sponsorsZory} />
     </Wrapper>
-    <TableTeam table={tableZory} />
+    <TableTeam table={tableZory.slice(0, 7)} />
+    <ButtonTable />
     <Footer />
   </>
 );
 export default HomeZory;
+
+// ostatni mecz i nastepny  , newsy generowanie do druzyn , załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
+//  navbarTeam linki do plf i chlf , @media, ,max i min count

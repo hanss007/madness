@@ -50,57 +50,39 @@ const CellContentStyled = styled.td`
   font-size: 16px;
 `;
 
-const Button = styled.a`
-  position: absolute;
-  color: #0d142d;
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-top: 30px;
-  right: 600px;
-  border-bottom: 2px solid #fd5825;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  &:hover {
-    background-color: #fd5825;
-    color: white;
-  }
-`;
-
-const TableTeam = ({ table }) => (
-  <StyledWrapper>
-    <Table>
-      <HeadlineStyled>
-        <RowStyled>
-          <CellHeadlineStyled>LP.</CellHeadlineStyled>
-          <CellHeadlineStyled>Drużyna</CellHeadlineStyled>
-          <CellHeadlineStyled>Mecze</CellHeadlineStyled>
-          <CellHeadlineStyled>PTS</CellHeadlineStyled>
-          <CellHeadlineStyled>Bramki</CellHeadlineStyled>
-        </RowStyled>
-      </HeadlineStyled>
-      <tbody>
-        {table
-          .sort((a, b) => a.lp - b.lp)
-          .slice(0, 7)
-          .map((item) => (
-            <RowStyled
-              className={
-                item.team === "MULTIBIURO-MADNESS-KK KWANT" ? "madness" : ""
-              }
-            >
-              <CellContentStyled>{item.lp}.</CellContentStyled>
-              <CellContentStyled>{item.team}</CellContentStyled>
-              <CellContentStyled>{item.matches}</CellContentStyled>
-              <CellContentStyled>{item.pts}</CellContentStyled>
-              <CellContentStyled>{item.goals}</CellContentStyled>
-            </RowStyled>
-          ))}
-      </tbody>
-    </Table>
-    <Button href="/zory/games/gamesZory">Rozwiń Tabelę</Button>
-  </StyledWrapper>
-);
-
+function TableTeam({ table }) {
+  const activButton = 7;
+  return (
+    <StyledWrapper>
+      <Table>
+        <HeadlineStyled>
+          <RowStyled>
+            <CellHeadlineStyled>LP.</CellHeadlineStyled>
+            <CellHeadlineStyled>Drużyna</CellHeadlineStyled>
+            <CellHeadlineStyled>Mecze</CellHeadlineStyled>
+            <CellHeadlineStyled>PTS</CellHeadlineStyled>
+            <CellHeadlineStyled>Bramki</CellHeadlineStyled>
+          </RowStyled>
+        </HeadlineStyled>
+        <tbody>
+          {table
+            .sort((a, b) => a.lp - b.lp)
+            .map((item) => (
+              <RowStyled
+                className={
+                  item.team === "MULTIBIURO-MADNESS-KK KWANT" ? "madness" : ""
+                }
+              >
+                <CellContentStyled>{item.lp}.</CellContentStyled>
+                <CellContentStyled>{item.team}</CellContentStyled>
+                <CellContentStyled>{item.matches}</CellContentStyled>
+                <CellContentStyled>{item.pts}</CellContentStyled>
+                <CellContentStyled>{item.goals}</CellContentStyled>
+              </RowStyled>
+            ))}
+        </tbody>
+      </Table>
+    </StyledWrapper>
+  );
+}
 export default TableTeam;

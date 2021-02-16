@@ -63,7 +63,7 @@ const StyledUlTeam = styled(StyledUl)`
   margin-right: 140px;
 `;
 
-function NavbarTeam({ name }) {
+function NavbarTeam({ name, link }) {
   const router = useRouter();
   return (
     <StyledWrapperTeam>
