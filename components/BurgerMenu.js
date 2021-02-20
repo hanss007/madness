@@ -23,13 +23,25 @@ const DropDownContent = styled.div`
   position: absolute;
   min-width: 160px;
   margin-left: 90px;
-  margin-top: -35px;
+  margin-top: -25px;
   z-index: 1;
+`;
+const DropDownContentTeam = styled.div`
+  display: none;
+  min-width: 160px;
+  margin-top: 5px;
 `;
 
 const DropDownLi = styled(StyledLi)`
   display: inline-block;
   &:hover ${DropDownContent} {
+    display: block;
+  }
+`;
+
+const DropDownLiTeam = styled(StyledLi)`
+  display: block;
+  &:hover ${DropDownContentTeam} {
     display: block;
   }
 `;
@@ -48,10 +60,29 @@ const SubA = styled(StyledA)`
   display: block;
   text-align: left;
   background-color: rgba(50, 51, 50, 0.98);
-  border: 1px solid #222;
+  border-bottom: 1px solid #222;
+  margin-left: 15px;
+  padding: 2px;
+  width: 100px;
+  &.team {
+    margin-left: 5px;
+  }
+`;
+const SubTeam = styled(StyledA)`
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: rgba(50, 51, 50, 0.98);
+  font-size: 16px;
   padding: 8px;
+  border: 1px solid #222;
   margin-left: 5px;
   width: 150px;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 20, 44, 1) 30%,
+    rgba(239, 39, 61, 1) 99%
+  );
 `;
 
 class BurgerMenu extends Component {
@@ -87,15 +118,78 @@ class BurgerMenu extends Component {
               <SubA href="/" onClick={() => this.handleClick()}>
                 Turnieje
               </SubA>
-              <SubA href="/zory/index" onClick={() => this.handleClick()}>
-                Żory
-              </SubA>
-              <SubA href="/plf/index" onClick={() => this.handleClick()}>
-                PLF
-              </SubA>
-              <SubA href="/chlf/index" onClick={() => this.handleClick()}>
-                CHFL
-              </SubA>
+              <DropDownLiTeam>
+                <SubA className="team" onClick={() => this.handleClick("Żory")}>
+                  Żory
+                </SubA>
+                <DropDownContentTeam>
+                  <SubTeam
+                    href="/zory/index"
+                    onClick={() => this.handleClick()}
+                  >
+                    Home Żory
+                  </SubTeam>
+                  <SubTeam
+                    href="/zory/news/newsZory"
+                    onClick={() => this.handleClick()}
+                  >
+                    Aktualności
+                  </SubTeam>
+                  <SubTeam
+                    href="/zory/players/playersZory"
+                    onClick={() => this.handleClick()}
+                  >
+                    Kadra
+                  </SubTeam>
+                  <SubTeam
+                    href="/zory/games/gamesZory"
+                    onClick={() => this.handleClick()}
+                  >
+                    Rozgrywki
+                  </SubTeam>
+                </DropDownContentTeam>
+              </DropDownLiTeam>
+              <DropDownLiTeam>
+                <SubA className="team" onClick={() => this.handleClick("PLF")}>
+                  PLF
+                </SubA>
+                <DropDownContentTeam>
+                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
+                    Home PLF
+                  </SubTeam>
+                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
+                    Aktualności
+                  </SubTeam>
+                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
+                    Kadra
+                  </SubTeam>
+                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
+                    Rozgrywki
+                  </SubTeam>
+                </DropDownContentTeam>
+              </DropDownLiTeam>
+              <DropDownLiTeam>
+                <SubA className="team" onClick={() => this.handleClick("CHLF")}>
+                  CHLF
+                </SubA>
+                <DropDownContentTeam>
+                  <SubTeam
+                    href="/chlf/index"
+                    onClick={() => this.handleClick()}
+                  >
+                    Home Żory
+                  </SubTeam>
+                  <SubTeam href="#" onClick={() => this.handleClick()}>
+                    Aktualności
+                  </SubTeam>
+                  <SubTeam href="#" onClick={() => this.handleClick()}>
+                    Kadra
+                  </SubTeam>
+                  <SubTeam href="#" onClick={() => this.handleClick()}>
+                    Rozgrywki
+                  </SubTeam>
+                </DropDownContentTeam>
+              </DropDownLiTeam>
             </DropDownContent>
           </DropDownLi>
 

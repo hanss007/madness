@@ -20,24 +20,6 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const StyledWrapperTeam = styled.div`
-  height: 40px;
-  width: 100%;
-  margin-top: 4px;
-  font-size: 16px;
-  text-transform: uppercase;
-  background: linear-gradient(
-    90deg,
-    rgba(63, 175, 229, 0.7) 0%,
-    rgba(34, 34, 34, 0.8) 49%,
-    rgba(253, 88, 37, 0.9) 93%
-  );
-  display: none;
-  &.show {
-    display: block;
-  }
-`;
-
 const StyledUl = styled.ul`
   list-style-type: none;
   display: flex;

@@ -8,7 +8,6 @@ const StyledWrapperTeam = styled.div`
   height: 40px;
   width: 100%;
   top: 7.5%;
-
   font-size: 16px;
   text-transform: uppercase;
   background: linear-gradient(
@@ -16,8 +15,12 @@ const StyledWrapperTeam = styled.div`
     rgba(13, 20, 44, 0.9) 34%,
     rgba(239, 39, 61, 0.9) 99%
   );
-
-  display: block;
+  @media (min-width: 320px) {
+    display: none;
+  }
+  @media (min-width: 800px) {
+    display: block;
+  }
 `;
 const StyledUl = styled.ul`
   list-style-type: none;
