@@ -6,61 +6,47 @@ import CardEvents from "./CardEvents";
 import { ArrowRightCircleFill } from "@styled-icons/bootstrap/ArrowRightCircleFill";
 import { ArrowLeftCircleFill } from "@styled-icons/bootstrap/ArrowLeftCircleFill";
 
-// const StyledWrapper = styled.div`
-//   position: relative;
-//   top: -70px;
-//   padding: 5px;
-//   background-color: transparent;
-//   width: 100vw;
-//   height: 540px;
-//   color: black;
-//   margin: 0;
-
-//   @media (min-width: 320px) {
-//     display: flex;
-//     flex-direction: column;
-//     top: -230px;
-//   }
-//   @media (min-width: 800px) {
-//     top: -200px;
-//   }
-//   @media (min-width: 1024px) {
-//     top: -90px;
-//     display: grid;
-//     grid-template-columns: 2fr 1fr;
-//   }
-// `;
 const StyledCalender = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 540px;
-  margin-top: -70px;
+  /* margin-top: -70px; */
+  /* margin-left: 40px; */
+  @media (min-width: 320px) {
+    margin-top: -220px;
+    margin-left: 10px;
+  }
 `;
 
 const CalendarHeader = styled.div`
-  width: 70%;
+  /* width: 70%; */
   height: 55px;
 
   background-color: #ef273d;
-  /* border-top-left-radius: 8px;
-  border-top-right-radius: 8px; */
   display: flex;
   justify-content: space-around;
-
+  @media (min-width: 320px) {
+    width: 280px;
+  }
+  @media (min-width: 460px) {
+    width: 410px;
+  }
+  @media (min-width: 640px) {
+    width: 95%;
+  }
+  /* 
   @media (max-width: 460px) {
     width: 95%;
   }
-  @media (min-width: 320px) {
-    width: 95%;
-  }
+
   @media (min-width: 1024px) {
     width: 80%;
   }
   @media (min-width: 1200px) {
     width: 75%;
-  }
+  } */
 `;
 
 const NameHeader = styled.h2`

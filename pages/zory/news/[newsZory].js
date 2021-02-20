@@ -5,6 +5,7 @@ import BurgerMenu from "../../../components/BurgerMenu";
 import Card from "../../../components/News/Card";
 import GlobalStyle from "../../../theme/GlobalStyle";
 import { fetchQuery } from "../../../utils";
+import { linksZory } from "../../../data/links";
 
 const StyledWrapper = styled.div`
   /* position: relative; */
@@ -45,7 +46,7 @@ export default function NewsZory({ items }) {
       <GlobalStyle />
 
       <Navbar />
-      <NavbarTeam name="ŻORY" />
+      <NavbarTeam links={linksZory} />
       <BurgerMenu />
       <StyledWrapper>
         {items.map((item) => (
@@ -57,7 +58,7 @@ export default function NewsZory({ items }) {
 }
 
 export async function getServerSideProps() {
-  const items = await fetchQuery("items?_limit=7&_sort=id:DESC");
+  const items = await fetchQuery("zory-news?_limit=7&_sort=id:DESC");
 
   return {
     props: {

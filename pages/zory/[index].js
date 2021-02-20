@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
@@ -15,14 +16,23 @@ import ButtonTable from "../../components/ButtonTable";
 import { scheduleZory } from "../../data/schedule";
 import { sponsorsZory } from "../../data/sponsors";
 import { tableZory } from "../../data/table";
+import { linksZory } from "../../data/links";
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  @media (min-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 `;
 
 export async function getServerSideProps() {
-  const news = await fetchQuery("items?_limit=6&_sort=id:DESC");
+  const news = await fetchQuery("zory-news?_limit=6&_sort=id:DESC");
   console.log("news on server", news);
   return {
     props: {
@@ -36,7 +46,7 @@ const HomeZory = ({ news }) => (
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam name="ŻORY" />
+    <NavbarTeam links={linksZory} />
     <Header />
     <News news={news} />
     <Wrapper>
@@ -50,5 +60,5 @@ const HomeZory = ({ news }) => (
 );
 export default HomeZory;
 
-// ostatni mecz i nastepny  , newsy generowanie do druzyn , załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
-//  navbarTeam linki do plf i chlf , @media, ,max i min count
+// ostatni mecz i nastepny   , załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
+//  navbarTeam linki do plf i chlf , @media,

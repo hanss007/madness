@@ -1,14 +1,7 @@
 import styled from "styled-components";
-import { fetchQuery } from "../../utils";
+import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
-import Navbar from "../../components/Navbar";
-import NavbarTeam from "../../components/NavbarTeam";
-import Header from "../../components/Header";
-import News from "../../components/News/News";
-import Footer from "../../components/Footer";
-import CalendarTeam from "../../components/CalendarTeam";
-import { schedulePLF } from "../../data/schedule";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -51,28 +44,15 @@ const Title = styled.h1`
   top: -120px;
 `;
 
-export async function getServerSideProps() {
-  const news = await fetchQuery("items");
-  console.log("news on server", news);
-  return {
-    props: {
-      news,
-    },
-  };
-}
-
-const PLF = ({ news }) => (
+const Plf = () => (
   <>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam name="PLF" />
-    <Header />
-    <News news={news} />
-    <CalendarTeam schedule={schedulePLF} />
-    <Footer />
+
+    <StyledWrapper>
+      <Title>Strona w budowie</Title>
+    </StyledWrapper>
   </>
 );
-export default PLF;
-
-//dlaczego schedulePLF muszi plf być dużymi literami ?
+export default Plf;

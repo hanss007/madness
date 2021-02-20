@@ -42,6 +42,9 @@ const BorderRightWrapper = styled.div`
   height: 20px;
   margin-right: 5px;
   margin-top: 8px;
+  &:last-child {
+    display: none;
+  }
 `;
 
 const StyledA = styled.a`
@@ -63,58 +66,25 @@ const StyledUlTeam = styled(StyledUl)`
   margin-right: 140px;
 `;
 
-function NavbarTeam({ name, link }) {
+function NavbarTeam({ links }) {
   const router = useRouter();
   return (
     <StyledWrapperTeam>
       <StyledUlTeam>
-        <StyledLi>
-          <Link href="/zory/index">
-            <StyledA
-              className={router.pathname === "/zory/[index]" ? "active" : ""}
-            >
-              Home {name}
-            </StyledA>
-          </Link>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <Link href="/zory/news/newsZory">
-            <StyledA
-              className={
-                router.pathname === "/zory/news/[newsZory]" ? "active" : ""
-              }
-            >
-              Atkualności
-            </StyledA>
-          </Link>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <Link href="/zory/players/playersZory">
-            <StyledA
-              className={
-                router.pathname === "/zory/players/[playersZory]"
-                  ? "active"
-                  : ""
-              }
-            >
-              Kadra
-            </StyledA>
-          </Link>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <StyledA
-            className={
-              router.pathname === "/zory/games/[gamesZory]" ? "active" : ""
-            }
-            href="/zory/games/gamesZory"
-          >
-            Rozgrywki
-          </StyledA>
-        </StyledLi>
-        <BorderRightWrapper />
+        {links.map((link) => (
+          <>
+            <StyledLi>
+              <Link href={link.href}>
+                <StyledA
+                  className={router.pathname === link.pathname ? "active" : ""}
+                >
+                  {link.title} {link.name}
+                </StyledA>
+              </Link>
+            </StyledLi>
+            <BorderRightWrapper />
+          </>
+        ))}
       </StyledUlTeam>
     </StyledWrapperTeam>
   );

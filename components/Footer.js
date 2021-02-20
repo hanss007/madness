@@ -11,15 +11,12 @@ const StyledWrapper = styled.div`
   background-color: #222;
 
   @media (min-width: 320px) {
-    margin-top: 90px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: baseline;
-    height: 100vh;
-  }
-  @media (min-width: 800px) {
-    height: 110vh;
+    height: auto;
   }
 
   @media (min-width: 1024px) {

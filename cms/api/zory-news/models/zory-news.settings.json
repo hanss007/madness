@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "items",
+  "collectionName": "zory_news",
   "info": {
-    "name": "Turnieje-news",
+    "name": "zory-news",
     "description": ""
   },
   "options": {
@@ -33,17 +33,16 @@
       "required": false
     },
     "created": {
-      "type": "date",
-      "required": true
+      "type": "date"
     },
     "typ": {
       "type": "enumeration",
       "enum": [
         "turnieje",
         "zory",
-        "lubin"
-      ],
-      "required": true
+        "plf",
+        "chlf"
+      ]
     }
   }
 }

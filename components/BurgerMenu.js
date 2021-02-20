@@ -23,7 +23,7 @@ const DropDownContent = styled.div`
   position: absolute;
   min-width: 160px;
   margin-left: 90px;
-  margin-top: -25px;
+  margin-top: -35px;
   z-index: 1;
 `;
 
@@ -51,6 +51,7 @@ const SubA = styled(StyledA)`
   border: 1px solid #222;
   padding: 8px;
   margin-left: 5px;
+  width: 150px;
 `;
 
 class BurgerMenu extends Component {

@@ -39,13 +39,14 @@ const CalendarHeader = styled.div`
   width: 70%;
   height: 55px;
   background-color: #ef273d;
+  @media (min-width: 320px) {
+    width: 95%;
+  }
 
   @media (max-width: 460px) {
     width: 95%;
   }
-  @media (min-width: 320px) {
-    width: 95%;
-  }
+
   @media (min-width: 1024px) {
     width: 80%;
   }

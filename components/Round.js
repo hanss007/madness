@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import GlobalStyle from "../theme/GlobalStyle";
 import { ArrowRightCircleFill } from "@styled-icons/bootstrap/ArrowRightCircleFill";
 import { ArrowLeftCircleFill } from "@styled-icons/bootstrap/ArrowLeftCircleFill";
 
@@ -8,30 +9,43 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  margin-top: 120px;
+  /* width: 700px; */
+  margin-top: 60px;
+
+  @media (min-width: 320px) {
+    width: 300px;
+    margin-left: 30px;
+  }
+  @media (min-width: 460px) {
+    width: 400px;
+  }
+  @media (min-width: 640px) {
+    width: 600px;
+  }
+  @media (min-width: 800px) {
+    width: 780px;
+  }
 `;
 
 const CalendarHeader = styled.div`
-  width: 100%;
   height: 55px;
   display: flex;
   justify-content: space-around;
   background-color: #ef273d;
-  margin-left: -60%;
-
-  /* @media (max-width: 460px) {
-    width: 95%;
-  }
+  /* margin-left: -60%; */
   @media (min-width: 320px) {
-    width: 95%;
+    width: 300px;
+    margin-left: -30px;
   }
-  @media (min-width: 1024px) {
-    width: 80%;
+  @media (min-width: 460px) {
+    width: 400px;
   }
-  @media (min-width: 1200px) {
-    width: 75%;
-  } */
+  @media (min-width: 640px) {
+    width: 580px;
+  }
+  @media (min-width: 800px) {
+    width: 700px;
+  }
 `;
 
 const NameHeader = styled.h2`
@@ -65,14 +79,27 @@ const PrevButton = styled(ArrowLeftCircleFill)`
 `;
 
 const Table = styled.table`
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-41%, 2%);
-  width: 700px;
+  transform: translate(-41%, 2%); */
+  /* width: 700px; */
 
-  margin-left: 150px;
+  /* margin-left: 150px; */
   border-spacing: 0;
   border-collapse: collapse;
+  @media (min-width: 320px) {
+    width: 240px;
+    margin-left: -20px;
+  }
+  @media (min-width: 460px) {
+    width: 380px;
+  }
+  @media (min-width: 640px) {
+    width: 560px;
+  }
+  @media (min-width: 800px) {
+    width: 680px;
+  }
 `;
 
 const RowStyled = styled.tr`
@@ -91,7 +118,6 @@ const RowStyled = styled.tr`
   }
 `;
 const CellContentStyled = styled.td`
-  position: relative;
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
@@ -120,22 +146,43 @@ const CellContentStyled = styled.td`
     font-weight: 600;
     letter-spacing: 2px;
   }
+  @media (min-width: 320px) {
+    font-size: 10px;
+  }
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
 `;
 
 function Round({ allRound }) {
-  //   const now = new Date();
   const [count, setCount] = useState(1);
 
+  const nextRound = () => {
+    if (count === 26) {
+      setCount(1);
+      return;
+    }
+    setCount(count + 1);
+  };
+
   const currentRound = allRound.filter((item) => item.numberRound === count);
+
+  const previousRound = () => {
+    if (count === 1) {
+      setCount(26);
+      return;
+    }
+    setCount(count - 1);
+  };
 
   return (
     <StyledWrapper>
       <CalendarHeader>
-        <PrevButton onClick={() => setCount(count - 1)} />
+        <PrevButton onClick={previousRound} />
 
         <NameHeader>{count}.Kolejka</NameHeader>
 
-        <NextButton onClick={() => setCount(count + 1)} />
+        <NextButton onClick={nextRound} />
       </CalendarHeader>
 
       <Table>
