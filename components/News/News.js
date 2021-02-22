@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-export const MySwiper = ({ news }) => {
+export const MySwiper = ({ news, url }) => {
   return (
     <Swiper
       style={{ height: "610px" }}
@@ -48,10 +48,12 @@ export const MySwiper = ({ news }) => {
         },
       }}
     >
-      {news.map((item, i) => (
+      {news.map((item) => (
         <SwiperSlide>
           {({ isNext }) => {
-            return <CardNews isActive={isNext} key={item.id} item={item} />;
+            return (
+              <CardNews isActive={isNext} key={item.id} item={item} url={url} />
+            );
           }}
         </SwiperSlide>
       ))}
@@ -59,10 +61,10 @@ export const MySwiper = ({ news }) => {
   );
 };
 
-export default function News({ news }) {
+export default function News({ news, url }) {
   return (
     <StyledWrapper>
-      <MySwiper news={news} />
+      <MySwiper news={news} url={url} />
     </StyledWrapper>
   );
 }

@@ -40,7 +40,7 @@ const WrapperStyled = styled.div`
   }
 `;
 
-export default function News({ items }) {
+export default function News({ items, url }) {
   return (
     <>
       <GlobalStyle />
@@ -49,7 +49,7 @@ export default function News({ items }) {
       <BurgerMenu />
       <WrapperStyled>
         {items.map((item) => (
-          <Card key={item.id} item={item} />
+          <Card key={item.id} item={item} url={"items"} />
         ))}
       </WrapperStyled>
     </>

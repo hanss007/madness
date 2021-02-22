@@ -34,7 +34,7 @@ const CalendarHeader = styled.div`
     width: 410px;
   }
   @media (min-width: 640px) {
-    width: 95%;
+    width: 80%;
   }
   /* 
   @media (max-width: 460px) {

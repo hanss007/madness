@@ -6,7 +6,7 @@ import Round from "../../../components/Round";
 import TableTeam from "../../../components/TableTeam";
 import Footer from "../../../components/Footer";
 import { tableZory } from "../../../data/table";
-import { allRoundZory } from "../../../data/schedule";
+import { allRoundZory } from "../../../data/allRoundZory";
 import { linksZory } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
 

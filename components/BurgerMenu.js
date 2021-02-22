@@ -85,129 +85,61 @@ const SubTeam = styled(StyledA)`
   );
 `;
 
-class BurgerMenu extends Component {
-  handleClick = (action) => {
-    if (!action) return;
+const BurgerMenu = () => (
+  <Menu>
+    <StyledUl>
+      <StyledLi>
+        <StyledA href="/">Home</StyledA>
+      </StyledLi>
 
-    if (this.props.onClick) this.props.onClick(action);
-  };
-  render = () => {
-    return (
-      // Pass on our props
-      <Menu>
-        <StyledUl>
-          <StyledLi>
-            <StyledA href="/" onClick={() => this.handleClick("")}>
-              Home
-            </StyledA>
-          </StyledLi>
+      <StyledLi>
+        <StyledA href="/news">Aktualności</StyledA>
+      </StyledLi>
 
-          <StyledLi>
-            <StyledA href="/news" onClick={() => this.handleClick()}>
-              Aktualności
-            </StyledA>
-          </StyledLi>
+      <DropDownLi>
+        <StyledA>Madness</StyledA>
 
-          <DropDownLi>
-            <StyledA onClick={() => this.handleClick("Madness")}>
-              Madness
-            </StyledA>
+        <DropDownContent>
+          <SubA href="/">Turnieje</SubA>
+          {/* <DropDownLiTeam>
+            <SubA className="team">Żory</SubA>
+            <DropDownContentTeam>
+              <SubTeam href="/zory/index">Home Żory</SubTeam>
+              <SubTeam href="/zory/news/newsZory">Aktualności</SubTeam>
+              <SubTeam href="/zory/players/playersZory">Kadra</SubTeam>
+              <SubTeam href="/zory/games/gamesZory">Rozgrywki</SubTeam>
+            </DropDownContentTeam>
+          </DropDownLiTeam>
+          <DropDownLiTeam>
+            <SubA className="team">PLF</SubA>
+            <DropDownContentTeam>
+              <SubTeam href="/plf/index">Home PLF</SubTeam>
+              <SubTeam href="/plf/index">Aktualności</SubTeam>
+              <SubTeam href="/plf/index">Kadra</SubTeam>
+              <SubTeam href="/plf/index">Rozgrywki</SubTeam>
+            </DropDownContentTeam>
+          </DropDownLiTeam>
+          <DropDownLiTeam>
+            <SubA className="team">CHLF</SubA>
+            <DropDownContentTeam>
+              <SubTeam href="/chlf/index">Home Żory</SubTeam>
+              <SubTeam href="/chlf/index">Aktualności</SubTeam>
+              <SubTeam href="/chlf/index">Kadra</SubTeam>
+              <SubTeam href="/chlf/index">Rozgrywki</SubTeam>
+            </DropDownContentTeam>
+          </DropDownLiTeam> */}
+        </DropDownContent>
+      </DropDownLi>
 
-            <DropDownContent>
-              {" "}
-              <SubA href="/" onClick={() => this.handleClick()}>
-                Turnieje
-              </SubA>
-              <DropDownLiTeam>
-                <SubA className="team" onClick={() => this.handleClick("Żory")}>
-                  Żory
-                </SubA>
-                <DropDownContentTeam>
-                  <SubTeam
-                    href="/zory/index"
-                    onClick={() => this.handleClick()}
-                  >
-                    Home Żory
-                  </SubTeam>
-                  <SubTeam
-                    href="/zory/news/newsZory"
-                    onClick={() => this.handleClick()}
-                  >
-                    Aktualności
-                  </SubTeam>
-                  <SubTeam
-                    href="/zory/players/playersZory"
-                    onClick={() => this.handleClick()}
-                  >
-                    Kadra
-                  </SubTeam>
-                  <SubTeam
-                    href="/zory/games/gamesZory"
-                    onClick={() => this.handleClick()}
-                  >
-                    Rozgrywki
-                  </SubTeam>
-                </DropDownContentTeam>
-              </DropDownLiTeam>
-              <DropDownLiTeam>
-                <SubA className="team" onClick={() => this.handleClick("PLF")}>
-                  PLF
-                </SubA>
-                <DropDownContentTeam>
-                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
-                    Home PLF
-                  </SubTeam>
-                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
-                    Aktualności
-                  </SubTeam>
-                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
-                    Kadra
-                  </SubTeam>
-                  <SubTeam href="/plf/index" onClick={() => this.handleClick()}>
-                    Rozgrywki
-                  </SubTeam>
-                </DropDownContentTeam>
-              </DropDownLiTeam>
-              <DropDownLiTeam>
-                <SubA className="team" onClick={() => this.handleClick("CHLF")}>
-                  CHLF
-                </SubA>
-                <DropDownContentTeam>
-                  <SubTeam
-                    href="/chlf/index"
-                    onClick={() => this.handleClick()}
-                  >
-                    Home Żory
-                  </SubTeam>
-                  <SubTeam href="#" onClick={() => this.handleClick()}>
-                    Aktualności
-                  </SubTeam>
-                  <SubTeam href="#" onClick={() => this.handleClick()}>
-                    Kadra
-                  </SubTeam>
-                  <SubTeam href="#" onClick={() => this.handleClick()}>
-                    Rozgrywki
-                  </SubTeam>
-                </DropDownContentTeam>
-              </DropDownLiTeam>
-            </DropDownContent>
-          </DropDownLi>
+      <StyledLi>
+        <StyledA href="/results">Wyniki</StyledA>
+      </StyledLi>
 
-          <StyledLi>
-            <StyledA href="/results" onClick={() => this.handleClick()}>
-              Wyniki
-            </StyledA>
-          </StyledLi>
-
-          <StyledLi>
-            <StyledA href="/gallery" onClick={() => this.handleClick("News")}>
-              Galeria
-            </StyledA>
-          </StyledLi>
-        </StyledUl>
-      </Menu>
-    );
-  };
-}
+      <StyledLi>
+        <StyledA href="/gallery">Galeria</StyledA>
+      </StyledLi>
+    </StyledUl>
+  </Menu>
+);
 
 export default BurgerMenu;

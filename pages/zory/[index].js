@@ -47,7 +47,7 @@ const HomeZory = ({ news }) => (
     <Navbar />
     <NavbarTeam links={linksZory} />
     <Header />
-    <News news={news} />
+    <News news={news} url={"zory-news"} />
     <Wrapper>
       <CalendarTeam schedule={scheduleZory} />
       <Sponsors logo={sponsorsZory} />
@@ -59,5 +59,5 @@ const HomeZory = ({ news }) => (
 );
 export default HomeZory;
 
-// ostatni mecz i nastepny   , załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
+//  załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
 //  navbarTeam linki do plf i chlf , @media,
