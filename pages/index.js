@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "../components/Layout";
 import { fetchQuery } from "../utils";
 import Head from "next/head";

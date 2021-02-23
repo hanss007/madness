@@ -101,7 +101,7 @@ const BurgerMenu = () => (
 
         <DropDownContent>
           <SubA href="/">Turnieje</SubA>
-          {/* <DropDownLiTeam>
+          <DropDownLiTeam>
             <SubA className="team">Żory</SubA>
             <DropDownContentTeam>
               <SubTeam href="/zory/index">Home Żory</SubTeam>
@@ -127,7 +127,7 @@ const BurgerMenu = () => (
               <SubTeam href="/chlf/index">Kadra</SubTeam>
               <SubTeam href="/chlf/index">Rozgrywki</SubTeam>
             </DropDownContentTeam>
-          </DropDownLiTeam> */}
+          </DropDownLiTeam>
         </DropDownContent>
       </DropDownLi>
 

@@ -195,6 +195,40 @@ const ContentWrapper = styled.p`
   }
 `;
 
+const ContentWrapperColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 15px;
+  @media (min-width: 320px) {
+    width: 240px;
+    font-size: 12px;
+  }
+  @media (min-width: 460px) {
+    width: 280px;
+    font-size: 14px;
+  }
+  @media (min-width: 640px) {
+    width: 360px;
+    font-size: 16px;
+  }
+  @media (min-width: 800px) {
+    width: 460px;
+    font-size: 18px;
+  }
+  @media (min-width: 1024px) {
+    width: 520px;
+    font-size: 20px;
+  }
+  @media (min-width: 1200px) {
+    width: 580px;
+  }
+  @media (min-width: 1366px) {
+    width: 630px;
+  }
+`;
+
 export default function Item({ item }) {
   return (
     <>
