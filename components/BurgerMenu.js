@@ -33,13 +33,14 @@ const DropDownContentTeam = styled.div`
 `;
 
 const DropDownLi = styled(StyledLi)`
-  display: inline-block;
+  display: block;
   &:hover ${DropDownContent} {
     display: block;
   }
 `;
 
-const DropDownLiTeam = styled(StyledLi)`
+const DropDownTeam = styled.div`
+  margin-left: 10px;
   display: block;
   &:hover ${DropDownContentTeam} {
     display: block;
@@ -54,21 +55,8 @@ const StyledA = styled.a`
   color: white;
   cursor: pointer;
 `;
-
-const SubA = styled(StyledA)`
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  background-color: rgba(50, 51, 50, 0.98);
-  border-bottom: 1px solid #222;
-  margin-left: 15px;
-  padding: 2px;
-  width: 100px;
-  &.team {
-    margin-left: 5px;
-  }
-`;
 const SubTeam = styled(StyledA)`
+  display: none;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -83,6 +71,20 @@ const SubTeam = styled(StyledA)`
     rgba(13, 20, 44, 1) 30%,
     rgba(239, 39, 61, 1) 99%
   );
+`;
+
+const SubA = styled(StyledA)`
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: rgba(50, 51, 50, 0.98);
+  border-bottom: 1px solid #222;
+  margin-left: 15px;
+  padding: 2px;
+  width: 100px;
+  &.team {
+    margin-left: 5px;
+  }
 `;
 
 const BurgerMenu = () => (
@@ -101,7 +103,7 @@ const BurgerMenu = () => (
 
         <DropDownContent>
           <SubA href="/">Turnieje</SubA>
-          <DropDownLiTeam>
+          <DropDownTeam>
             <SubA className="team">Żory</SubA>
             <DropDownContentTeam>
               <SubTeam href="/zory/index">Home Żory</SubTeam>
@@ -109,8 +111,8 @@ const BurgerMenu = () => (
               <SubTeam href="/zory/players/playersZory">Kadra</SubTeam>
               <SubTeam href="/zory/games/gamesZory">Rozgrywki</SubTeam>
             </DropDownContentTeam>
-          </DropDownLiTeam>
-          <DropDownLiTeam>
+          </DropDownTeam>
+          <DropDownTeam>
             <SubA className="team">PLF</SubA>
             <DropDownContentTeam>
               <SubTeam href="/plf/index">Home PLF</SubTeam>
@@ -118,16 +120,16 @@ const BurgerMenu = () => (
               <SubTeam href="/plf/index">Kadra</SubTeam>
               <SubTeam href="/plf/index">Rozgrywki</SubTeam>
             </DropDownContentTeam>
-          </DropDownLiTeam>
-          <DropDownLiTeam>
+          </DropDownTeam>
+          <DropDownTeam>
             <SubA className="team">CHLF</SubA>
             <DropDownContentTeam>
-              <SubTeam href="/chlf/index">Home Żory</SubTeam>
+              <SubTeam href="/chlf/index">Home CHLF</SubTeam>
               <SubTeam href="/chlf/index">Aktualności</SubTeam>
               <SubTeam href="/chlf/index">Kadra</SubTeam>
               <SubTeam href="/chlf/index">Rozgrywki</SubTeam>
             </DropDownContentTeam>
-          </DropDownLiTeam>
+          </DropDownTeam>
         </DropDownContent>
       </DropDownLi>
 
