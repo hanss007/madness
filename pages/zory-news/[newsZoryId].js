@@ -3,8 +3,10 @@ import { baseUrl, fetchQuery } from "../../utils";
 import styled from "styled-components";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
+import NavbarTeam from "../../components/NavbarTeam";
 import BurgerMenu from "../../components/BurgerMenu";
 import { Calendar } from "@styled-icons/boxicons-regular/Calendar";
+import { linksZory } from "../../data/links";
 
 const BackgroundWrapper = styled.div`
   position: relative;
@@ -15,7 +17,7 @@ const BackgroundWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1867&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1867&q=80"); */
     background-size: cover;
 
     width: 100%;
@@ -200,6 +202,7 @@ export default function Item({ item }) {
     <>
       <GlobalStyle />
       <Navbar />
+      <NavbarTeam links={linksZory} />
       <BurgerMenu />
       <BackgroundWrapper>
         <StyledWrapper>

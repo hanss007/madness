@@ -18,6 +18,7 @@ import { tableZory } from "../../data/table";
 import { linksZory } from "../../data/links";
 
 const Wrapper = styled.div`
+  margin-top: 45px;
   @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
@@ -60,4 +61,4 @@ const HomeZory = ({ news }) => (
 export default HomeZory;
 
 //  załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
-//  navbarTeam linki do plf i chlf , @media,
+//  dodawanie bezposrednio news ze strapi na strone , odswiezanie serwera !

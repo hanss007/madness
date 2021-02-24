@@ -8,9 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const StyledWrapper = styled.div`
   position: relative;
 
-  top: -110px;
+  top: -150px;
   width: 90%;
-  height: 620px;
+  height: 610px;
   margin: 0 auto;
   background-color: transparent;
   z-index: 9999;

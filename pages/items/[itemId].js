@@ -257,7 +257,7 @@ export default function Item({ item }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const item = await fetchQuery("items", `${params.itemId}`);
   return {
     props: {
@@ -266,15 +266,15 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
-  const items = await fetchQuery("items");
-  const paths = items.map((item) => {
-    return {
-      params: { itemId: String(item.id) },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   const items = await fetchQuery("items");
+//   const paths = items.map((item) => {
+//     return {
+//       params: { itemId: String(item.id) },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }

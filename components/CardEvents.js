@@ -74,13 +74,20 @@ const Content = styled.h2`
   }
 `;
 
-const Exact = styled.h2`
-  font-size: 15px;
+const Exact = styled.h4`
   font-weight: 600;
-  margin-top: 0;
-  margin-left: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  @media (min-width: 320px) {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  @media (min-width: 460px) {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
 `;
 
 const BorderBottomWrapper = styled.div`

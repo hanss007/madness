@@ -12,6 +12,7 @@ const StyledCalender = styled.div`
   justify-content: center;
   align-items: center;
   height: 540px;
+
   /* margin-top: -70px; */
   /* margin-left: 40px; */
   @media (min-width: 320px) {
@@ -23,30 +24,19 @@ const StyledCalender = styled.div`
 const CalendarHeader = styled.div`
   /* width: 70%; */
   height: 55px;
-
+  min-width: 310px;
   background-color: #ef273d;
   display: flex;
   justify-content: space-around;
   @media (min-width: 320px) {
-    width: 280px;
+    width: 90%;
   }
-  @media (min-width: 460px) {
-    width: 410px;
-  }
-  @media (min-width: 640px) {
-    width: 80%;
-  }
-  /* 
-  @media (max-width: 460px) {
+  @media (min-width: 400px) {
     width: 95%;
   }
-
-  @media (min-width: 1024px) {
+  @media (min-width: 1355px) {
     width: 80%;
   }
-  @media (min-width: 1200px) {
-    width: 75%;
-  } */
 `;
 
 const NameHeader = styled.h2`
@@ -66,6 +56,9 @@ const CalendarItems = styled.div`
   border-bottom-right-radius: 10px;
   @media (min-width: 320px) {
     width: 100%;
+  }
+  @media (min-width: 460px) {
+    width: 95%;
   }
   @media (min-width: 1024px) {
     width: 80%;
@@ -158,48 +151,3 @@ function CalendarTeam({ schedule }) {
 }
 
 export default CalendarTeam;
-
-// function CalendarTeam({ schedule }) {
-//   const now = new Date();
-
-//   const currentMonth = monthNames[now.getMonth() + 1];
-
-//   const month = null;
-//   const [cdate, setDate] = useState(month);
-//   const nextMonth = () => {
-//     let month = currentMonth;
-//     setDate(month);
-//   };
-
-//   const currentMonthEvents = schedule.filter(
-//     (item) => item.title === currentMonth
-//   );
-
-//   return (
-//     <StyledWrapper>
-//       <StyledCalender>
-//         <CalendarHeader>
-//           <div>
-//             <h3>{cdate}</h3>
-//           </div>
-
-//           <NameHeader>{currentMonth}</NameHeader>
-//           <div>{/* button */}</div>
-//         </CalendarHeader>
-
-//         <CalendarItems>
-//           {currentMonthEvents.map((event) => (
-//             <CardEvents
-//               day={event.day}
-//               month={event.month}
-//               content={event.content}
-//               exact={event.exact}
-//             />
-//           ))}
-//         </CalendarItems>
-//       </StyledCalender>
-//     </StyledWrapper>
-//   );
-// }
-
-// export default CalendarTeam;
