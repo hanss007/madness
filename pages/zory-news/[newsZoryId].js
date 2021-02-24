@@ -226,7 +226,7 @@ export default function Item({ item }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   console.log({ params });
   const item = await fetchQuery("zory-news", `${params.newsZoryId}`);
   return {
@@ -236,16 +236,16 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
-  const items = await fetchQuery("zory-news");
-  const paths = items.map((item) => {
-    console.log("item", item);
-    return {
-      params: { newsZoryId: String(item.id) },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   const items = await fetchQuery("zory-news");
+//   const paths = items.map((item) => {
+//     console.log("item", item);
+//     return {
+//       params: { newsZoryId: String(item.id) },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
