@@ -69,46 +69,11 @@ const StyledUlTeam = styled(StyledUl)`
   margin-right: 140px;
 `;
 
-<<<<<<< HEAD
-function Navbar2({ name }) {
-=======
 function NavbarTeam({ links }) {
->>>>>>> feat/team-sites
   const router = useRouter();
   return (
     <StyledWrapperTeam>
       <StyledUlTeam>
-<<<<<<< HEAD
-        <StyledLi>
-          <StyledA
-            className={router.pathname === "/zory/[index]" ? "active" : ""}
-            href="/zory/index"
-          >
-            Home {name}
-          </StyledA>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <StyledA
-            className={router.pathname === "/zory/[news]" ? "active" : ""}
-            href="/zory/news"
-          >
-            Atkualności
-          </StyledA>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <StyledA href="/">Kadra</StyledA>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <StyledA href="/">Rozgrywki</StyledA>
-        </StyledLi>
-        <BorderRightWrapper />
-        <StyledLi>
-          <StyledA href="/">Galeria</StyledA>
-        </StyledLi>
-=======
         {links.map((link) => (
           <>
             <StyledLi>
@@ -123,7 +88,6 @@ function NavbarTeam({ links }) {
             <BorderRightWrapper />
           </>
         ))}
->>>>>>> feat/team-sites
       </StyledUlTeam>
     </StyledWrapperTeam>
   );
