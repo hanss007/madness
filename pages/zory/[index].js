@@ -7,12 +7,6 @@ import Navbar from "../../components/Navbar";
 import NavbarTeam from "../../components/NavbarTeam";
 import Header from "../../components/Header";
 import News from "../../components/News/News";
-<<<<<<< HEAD
-import CalenderTeam from "../../components/CalenderTeam";
-import Footer from "../../components/Footer";
-import { schedulePLF } from "../../data/schedulePLF";
-import { scheduleZory } from "../../data/scheduleZory";
-=======
 import Footer from "../../components/Footer";
 import CalendarTeam from "../../components/CalendarTeam";
 import Sponsors from "../../components/Sponsors";
@@ -22,7 +16,6 @@ import { scheduleZory } from "../../data/schedule";
 import { sponsorsZory } from "../../data/sponsors";
 import { tableZory } from "../../data/table";
 import { linksZory } from "../../data/links";
->>>>>>> feat/team-sites
 
 const Wrapper = styled.div`
   margin-top: 45px;
@@ -48,9 +41,7 @@ export async function getServerSideProps() {
   };
 }
 
-
 const HomeZory = ({ news }) => (
-
   <>
     <GlobalStyle />
     <BurgerMenu />
@@ -68,5 +59,3 @@ const HomeZory = ({ news }) => (
   </>
 );
 export default HomeZory;
-
-

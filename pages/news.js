@@ -49,11 +49,7 @@ export default function News({ items, url }) {
       <BurgerMenu />
       <WrapperStyled>
         {items.map((item) => (
-<<<<<<< HEAD
-          <Card key={item.id} item={item} />
-=======
           <Card key={item.id} item={item} url={"items"} />
->>>>>>> feat/team-sites
         ))}
       </WrapperStyled>
     </>

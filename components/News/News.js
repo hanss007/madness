@@ -48,19 +48,12 @@ export const MySwiper = ({ news, url }) => {
         },
       }}
     >
-<<<<<<< HEAD
-      {news.map((item, i) => (
-        <SwiperSlide>
-          {({ isNext }) => {
-            return <CardNews isActive={isNext} key={item.id} item={item} />;
-=======
       {news.map((item) => (
         <SwiperSlide>
           {({ isNext }) => {
             return (
               <CardNews isActive={isNext} key={item.id} item={item} url={url} />
             );
->>>>>>> feat/team-sites
           }}
         </SwiperSlide>
       ))}

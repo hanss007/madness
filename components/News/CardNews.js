@@ -209,11 +209,7 @@ const Button = styled.a`
   } */
 `;
 
-<<<<<<< HEAD
-const CardNews = ({ item, isActive, children }) => (
-=======
 const CardNews = ({ item, isActive, url }) => (
->>>>>>> feat/team-sites
   <>
     <GlobalStyle />
     <StyledWrapper isActive={isActive}>
