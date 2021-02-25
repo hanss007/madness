@@ -13,7 +13,7 @@ const Layout = ({ news }) => (
     <Navbar />
     <BurgerMenu />
     <Header />
-    <News news={news} />
+    <News news={news} url={"items"} />
     <Calendar />
     <Gallery />
     <Footer />

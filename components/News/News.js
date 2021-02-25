@@ -8,9 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const StyledWrapper = styled.div`
   position: relative;
 
-  top: -110px;
+  top: -150px;
   width: 90%;
-  height: 620px;
+  height: 610px;
   margin: 0 auto;
   background-color: transparent;
   z-index: 9999;
@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-export const MySwiper = ({ news }) => {
+export const MySwiper = ({ news, url }) => {
   return (
     <Swiper
       style={{ height: "610px" }}
@@ -48,10 +48,19 @@ export const MySwiper = ({ news }) => {
         },
       }}
     >
+<<<<<<< HEAD
       {news.map((item, i) => (
         <SwiperSlide>
           {({ isNext }) => {
             return <CardNews isActive={isNext} key={item.id} item={item} />;
+=======
+      {news.map((item) => (
+        <SwiperSlide>
+          {({ isNext }) => {
+            return (
+              <CardNews isActive={isNext} key={item.id} item={item} url={url} />
+            );
+>>>>>>> feat/team-sites
           }}
         </SwiperSlide>
       ))}
@@ -59,10 +68,10 @@ export const MySwiper = ({ news }) => {
   );
 };
 
-export default function News({ news }) {
+export default function News({ news, url }) {
   return (
     <StyledWrapper>
-      <MySwiper news={news} />
+      <MySwiper news={news} url={url} />
     </StyledWrapper>
   );
 }

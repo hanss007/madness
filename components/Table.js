@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled, { css, keyframes } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   padding: 8px;

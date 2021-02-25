@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "items",
   "info": {
-    "name": "Item",
+    "name": "Turnieje-news",
     "description": ""
   },
   "options": {

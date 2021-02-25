@@ -1,9 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import useToggle from "react-use-toggle";
-
-import Link from "next/link";
-import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
 const StyledWrapper = styled.div`
@@ -21,24 +17,6 @@ const StyledWrapper = styled.div`
   }
   @media (min-width: 1024px) {
     height: 75px;
-  }
-`;
-
-const StyledWrapperTeam = styled.div`
-  height: 40px;
-  width: 100%;
-  margin-top: 4px;
-  font-size: 16px;
-  text-transform: uppercase;
-  background: linear-gradient(
-    90deg,
-    rgba(63, 175, 229, 0.7) 0%,
-    rgba(34, 34, 34, 0.8) 49%,
-    rgba(253, 88, 37, 0.9) 93%
-  );
-  display: none;
-  &.show {
-    display: block;
   }
 `;
 
@@ -166,11 +144,6 @@ const StyledUlTeam = styled(StyledUl)`
 function Navbar() {
   const router = useRouter();
 
-  const [show, setShow] = useToggle();
-  const toggle = (e) => {
-    setShow(!show);
-  };
-
   return (
     <>
       <StyledWrapper>
@@ -181,7 +154,6 @@ function Navbar() {
             <StyledA
               className={router.pathname === "/" ? "active" : ""}
               href="/"
-              onClick={toggle}
             >
               Home
             </StyledA>
@@ -252,136 +224,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-// class Navbar extends Component {
-//   handleClick = (action) => {
-//     console.log("click");
-//     if (!action) return;
-
-//     if (this.props.onClick) this.props.onClick(action);
-//   };
-//   state = {
-//     show: false,
-//     isActive: false,
-//   };
-
-//   handleToggle = () => {
-//     this.setState({ isActive: !this.state.isActive });
-//   };
-//   render = () => {
-//     console.log(this.state.active);
-//     const isActive = this.state.isActive;
-//     return (
-//       <>
-//         <StyledWrapper>
-//           <StyledLogoLink href="/" />
-
-//           <StyledUl>
-//             <StyledLi
-//               className={isActive ? "active" : null}
-//               onClick={this.handleToggle}
-//             >
-//               <StyledA href="/">Home</StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/news" onClick={() => this.handleClick()}>
-//                 Aktualności
-//               </StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <DropDownLi>
-//               <StyledA onClick={() => this.setState({ show: true })}>
-//                 Madness
-//               </StyledA>
-
-//               <DropDownContent>
-//                 {" "}
-//                 <SubA href="/" onClick={() => this.handleClick("Link1")}>
-//                   Turnieje
-//                 </SubA>
-//                 <StyledTeam
-//                   onClick={(e) => {
-//                     this.setState({ show: true });
-//                     e.stopPropagation();
-//                   }}
-//                 >
-//                   <SubA href="/zory/index">Żory</SubA>
-//                 </StyledTeam>
-//                 <SubA
-//                   href="/plf/index"
-//                   onClick={() => this.handleClick("Link1")}
-//                 >
-//                   PLF
-//                 </SubA>
-//                 <SubA
-//                   href="/chlf/index"
-//                   onClick={() => this.handleClick("Link4")}
-//                 >
-//                   CHFL
-//                 </SubA>
-//               </DropDownContent>
-//             </DropDownLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/results" onClick={() => this.handleClick("News")}>
-//                 Wyniki
-//               </StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/gallery" onClick={() => this.handleClick("News")}>
-//                 Galeria
-//               </StyledA>
-//             </StyledLi>
-//           </StyledUl>
-//         </StyledWrapper>
-
-//         <StyledWrapper2 className={this.state.show ? "show" : ""}>
-//           <StyledUlTeam>
-//             <StyledLi>
-//               <StyledA href="/zory/index" onClick={() => this.handleClick()}>
-//                 Home Żory
-//               </StyledA>
-//             </StyledLi>
-
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/" onClick={() => this.handleClick("")}>
-//                 Atkualności
-//               </StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/" onClick={() => this.handleClick("")}>
-//                 Home Żory
-//               </StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/" onClick={() => this.handleClick("")}>
-//                 Kadra
-//               </StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/" onClick={() => this.handleClick("")}>
-//                 Rozgrywki
-//               </StyledA>
-//             </StyledLi>
-//             <BorderRightWrapper />
-//             <StyledLi>
-//               <StyledA href="/" onClick={() => this.handleClick("")}>
-//                 Galeria
-//               </StyledA>
-//             </StyledLi>
-//           </StyledUlTeam>
-//         </StyledWrapper2>
-//       </>
-//     );
-//   };
-// }
-
-// export default Navbar;
-
-// // jak użyć useRouter() zeby nadać w classie activeColor

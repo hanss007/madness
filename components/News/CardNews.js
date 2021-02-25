@@ -14,21 +14,6 @@ const StyledWrapper = styled.div`
   height: 480px;
   margin: 0 auto;
   margin-top: ${(props) => (props.isActive ? "50px" : "-20px")};
-  /* @media (max-width: 1366px) {
-    max-width: 300px;
-  }
-  @media (max-width: 1200px) {
-    max-width: 270px;
-  }
-  @media (max-width: 1024px) {
-    max-width: 250px;
-    height: 420px;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 200px;
-    height: 380px;
-  } */
 
   @media (min-width: 320px) {
     max-width: 290px;
@@ -224,7 +209,11 @@ const Button = styled.a`
   } */
 `;
 
+<<<<<<< HEAD
 const CardNews = ({ item, isActive, children }) => (
+=======
+const CardNews = ({ item, isActive, url }) => (
+>>>>>>> feat/team-sites
   <>
     <GlobalStyle />
     <StyledWrapper isActive={isActive}>
@@ -238,7 +227,7 @@ const CardNews = ({ item, isActive, children }) => (
       <StatsStyled>
         <StatInfo className="date">{item.created}</StatInfo>
         <StatInfo>
-          <Button href={`/items/${item.id}`}>więcej</Button>
+          <Button href={`/${url}/${item.id}`}>więcej</Button>
         </StatInfo>
         <StatInfo>{item.typ}</StatInfo>
       </StatsStyled>

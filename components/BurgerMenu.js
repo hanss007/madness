@@ -26,10 +26,23 @@ const DropDownContent = styled.div`
   margin-top: -25px;
   z-index: 1;
 `;
+const DropDownContentTeam = styled.div`
+  display: none;
+  min-width: 160px;
+  margin-top: 5px;
+`;
 
 const DropDownLi = styled(StyledLi)`
-  display: inline-block;
+  display: block;
   &:hover ${DropDownContent} {
+    display: block;
+  }
+`;
+
+const DropDownTeam = styled.div`
+  margin-left: 10px;
+  display: block;
+  &:hover ${DropDownContentTeam} {
     display: block;
   }
 `;
@@ -42,77 +55,93 @@ const StyledA = styled.a`
   color: white;
   cursor: pointer;
 `;
+const SubTeam = styled(StyledA)`
+  display: none;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: rgba(50, 51, 50, 0.98);
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #222;
+  margin-left: 5px;
+  width: 150px;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 20, 44, 1) 30%,
+    rgba(239, 39, 61, 1) 99%
+  );
+`;
 
 const SubA = styled(StyledA)`
   text-decoration: none;
   display: block;
   text-align: left;
   background-color: rgba(50, 51, 50, 0.98);
-  border: 1px solid #222;
-  padding: 8px;
-  margin-left: 5px;
+  border-bottom: 1px solid #222;
+  margin-left: 15px;
+  padding: 2px;
+  width: 100px;
+  &.team {
+    margin-left: 5px;
+  }
 `;
 
-class BurgerMenu extends Component {
-  handleClick = (action) => {
-    if (!action) return;
+const BurgerMenu = () => (
+  <Menu>
+    <StyledUl>
+      <StyledLi>
+        <StyledA href="/">Home</StyledA>
+      </StyledLi>
 
-    if (this.props.onClick) this.props.onClick(action);
-  };
-  render = () => {
-    return (
-      // Pass on our props
-      <Menu>
-        <StyledUl>
-          <StyledLi>
-            <StyledA href="/" onClick={() => this.handleClick("")}>
-              Home
-            </StyledA>
-          </StyledLi>
+      <StyledLi>
+        <StyledA href="/news">Aktualności</StyledA>
+      </StyledLi>
 
-          <StyledLi>
-            <StyledA href="/news" onClick={() => this.handleClick()}>
-              Aktualności
-            </StyledA>
-          </StyledLi>
+      <DropDownLi>
+        <StyledA>Madness</StyledA>
 
-          <DropDownLi>
-            <StyledA onClick={() => this.handleClick("Madness")}>
-              Madness
-            </StyledA>
+        <DropDownContent>
+          <SubA href="/">Turnieje</SubA>
+          <DropDownTeam>
+            <SubA className="team">Żory</SubA>
+            <DropDownContentTeam>
+              <SubTeam href="/zory/index">Home Żory</SubTeam>
+              <SubTeam href="/zory/news/newsZory">Aktualności</SubTeam>
+              <SubTeam href="/zory/players/playersZory">Kadra</SubTeam>
+              <SubTeam href="/zory/games/gamesZory">Rozgrywki</SubTeam>
+            </DropDownContentTeam>
+          </DropDownTeam>
+          <DropDownTeam>
+            <SubA className="team">PLF</SubA>
+            <DropDownContentTeam>
+              <SubTeam href="/plf/index">Home PLF</SubTeam>
+              <SubTeam href="/plf/index">Aktualności</SubTeam>
+              <SubTeam href="/plf/index">Kadra</SubTeam>
+              <SubTeam href="/plf/index">Rozgrywki</SubTeam>
+            </DropDownContentTeam>
+          </DropDownTeam>
+          <DropDownTeam>
+            <SubA className="team">CHLF</SubA>
+            <DropDownContentTeam>
+              <SubTeam href="/chlf/index">Home CHLF</SubTeam>
+              <SubTeam href="/chlf/index">Aktualności</SubTeam>
+              <SubTeam href="/chlf/index">Kadra</SubTeam>
+              <SubTeam href="/chlf/index">Rozgrywki</SubTeam>
+            </DropDownContentTeam>
+          </DropDownTeam>
+        </DropDownContent>
+      </DropDownLi>
 
-            <DropDownContent>
-              {" "}
-              <SubA href="/" onClick={() => this.handleClick()}>
-                Turnieje
-              </SubA>
-              <SubA href="/zory/index" onClick={() => this.handleClick()}>
-                Żory
-              </SubA>
-              <SubA href="/plf/index" onClick={() => this.handleClick()}>
-                PLF
-              </SubA>
-              <SubA href="/chlf/index" onClick={() => this.handleClick()}>
-                CHFL
-              </SubA>
-            </DropDownContent>
-          </DropDownLi>
+      <StyledLi>
+        <StyledA href="/results">Wyniki</StyledA>
+      </StyledLi>
 
-          <StyledLi>
-            <StyledA href="/results" onClick={() => this.handleClick()}>
-              Wyniki
-            </StyledA>
-          </StyledLi>
-
-          <StyledLi>
-            <StyledA href="/gallery" onClick={() => this.handleClick("News")}>
-              Galeria
-            </StyledA>
-          </StyledLi>
-        </StyledUl>
-      </Menu>
-    );
-  };
-}
+      <StyledLi>
+        <StyledA href="/gallery">Galeria</StyledA>
+      </StyledLi>
+    </StyledUl>
+  </Menu>
+);
 
 export default BurgerMenu;

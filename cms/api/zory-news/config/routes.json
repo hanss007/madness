@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zory-news",
+      "handler": "zory-news.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zory-news/count",
+      "handler": "zory-news.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zory-news/:id",
+      "handler": "zory-news.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zory-news",
+      "handler": "zory-news.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zory-news/:id",
+      "handler": "zory-news.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zory-news/:id",
+      "handler": "zory-news.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

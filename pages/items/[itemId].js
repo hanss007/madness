@@ -15,7 +15,7 @@ const BackgroundWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1867&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1867&q=80"); */
     background-size: cover;
 
     width: 100%;
@@ -195,6 +195,40 @@ const ContentWrapper = styled.p`
   }
 `;
 
+const ContentWrapperColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 15px;
+  @media (min-width: 320px) {
+    width: 240px;
+    font-size: 12px;
+  }
+  @media (min-width: 460px) {
+    width: 280px;
+    font-size: 14px;
+  }
+  @media (min-width: 640px) {
+    width: 360px;
+    font-size: 16px;
+  }
+  @media (min-width: 800px) {
+    width: 460px;
+    font-size: 18px;
+  }
+  @media (min-width: 1024px) {
+    width: 520px;
+    font-size: 20px;
+  }
+  @media (min-width: 1200px) {
+    width: 580px;
+  }
+  @media (min-width: 1366px) {
+    width: 630px;
+  }
+`;
+
 export default function Item({ item }) {
   return (
     <>
@@ -223,7 +257,7 @@ export default function Item({ item }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const item = await fetchQuery("items", `${params.itemId}`);
   return {
     props: {
@@ -232,15 +266,15 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
-  const items = await fetchQuery("items");
-  const paths = items.map((item) => {
-    return {
-      params: { itemId: String(item.id) },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   const items = await fetchQuery("items");
+//   const paths = items.map((item) => {
+//     return {
+//       params: { itemId: String(item.id) },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }

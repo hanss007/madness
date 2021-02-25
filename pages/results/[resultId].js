@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { baseUrl, fetchQuery } from "../../utils";
 import styled from "styled-components";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
@@ -32,7 +30,7 @@ const StyledWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  background-color: #fd5825;
+  background-color: #ef273d;
   width: 100%;
   color: white;
   text-align: center;

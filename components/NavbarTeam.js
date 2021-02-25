@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const StyledWrapperTeam = styled.div`
@@ -7,16 +8,19 @@ const StyledWrapperTeam = styled.div`
   height: 40px;
   width: 100%;
   top: 7.5%;
-
   font-size: 16px;
   text-transform: uppercase;
   background: linear-gradient(
     90deg,
-    rgba(63, 175, 229, 0.7) 0%,
-    rgba(34, 34, 34, 0.8) 49%,
-    rgba(253, 88, 37, 0.9) 93%
+    rgba(13, 20, 44, 0.9) 34%,
+    rgba(239, 39, 61, 0.9) 99%
   );
-  display: block;
+  @media (min-width: 320px) {
+    display: none;
+  }
+  @media (min-width: 800px) {
+    display: block;
+  }
 `;
 const StyledUl = styled.ul`
   list-style-type: none;
@@ -41,6 +45,9 @@ const BorderRightWrapper = styled.div`
   height: 20px;
   margin-right: 5px;
   margin-top: 8px;
+  &:last-child {
+    display: none;
+  }
 `;
 
 const StyledA = styled.a`
@@ -56,19 +63,22 @@ const StyledA = styled.a`
     border-radius: 3px;
   }
 `;
-const StyledTeam = styled.div`
-  background-color: #222;
-`;
+
 const StyledUlTeam = styled(StyledUl)`
   margin-top: -4px;
-  margin-right: 170px;
+  margin-right: 140px;
 `;
 
+<<<<<<< HEAD
 function Navbar2({ name }) {
+=======
+function NavbarTeam({ links }) {
+>>>>>>> feat/team-sites
   const router = useRouter();
   return (
     <StyledWrapperTeam>
       <StyledUlTeam>
+<<<<<<< HEAD
         <StyledLi>
           <StyledA
             className={router.pathname === "/zory/[index]" ? "active" : ""}
@@ -98,9 +108,25 @@ function Navbar2({ name }) {
         <StyledLi>
           <StyledA href="/">Galeria</StyledA>
         </StyledLi>
+=======
+        {links.map((link) => (
+          <>
+            <StyledLi>
+              <Link href={link.href}>
+                <StyledA
+                  className={router.pathname === link.pathname ? "active" : ""}
+                >
+                  {link.title} {link.name}
+                </StyledA>
+              </Link>
+            </StyledLi>
+            <BorderRightWrapper />
+          </>
+        ))}
+>>>>>>> feat/team-sites
       </StyledUlTeam>
     </StyledWrapperTeam>
   );
 }
 
-export default Navbar2;
+export default NavbarTeam;

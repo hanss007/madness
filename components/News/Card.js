@@ -293,9 +293,9 @@ const ContentButton = styled.div`
   }
 `;
 
-const Card = ({ item }) => (
+const Card = ({ item, url }) => (
   <StyledWrapper>
-    <ImageWrapper src={item.image.url} alt="foto" />
+    <ImageWrapper src={item.image.url} />
     <InnerWrapper>
       <Title>
         {item.typ} <Data>/ {item.created}</Data>
@@ -307,7 +307,7 @@ const Card = ({ item }) => (
       <ContentButton>
         <MyArticle />
 
-        <Link href={`/items/${item.id}`}>
+        <Link href={`/${url}/${item.id}`}>
           <Button>więcej</Button>
         </Link>
       </ContentButton>

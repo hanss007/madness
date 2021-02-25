@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CardEvents from "./CardEvents";
 import { events } from "../data/events";
+import Image from "next/image";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -37,15 +38,15 @@ const StyledCalender = styled.div`
 const CalendarHeader = styled.div`
   width: 70%;
   height: 55px;
-  background-color: #fd5825;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  @media (max-width: 460px) {
-    width: 95%;
-  }
+  background-color: #ef273d;
   @media (min-width: 320px) {
     width: 95%;
   }
+
+  @media (max-width: 460px) {
+    width: 95%;
+  }
+
   @media (min-width: 1024px) {
     width: 80%;
   }
@@ -130,7 +131,7 @@ const ImageWrapper = styled.img`
   }
 `;
 
-const Calendar = ({ day, month, content }) => (
+const Calendar = ({ day, month, content, logo, children }) => (
   <StyledWrapper>
     <StyledCalender>
       <CalendarHeader>
@@ -150,6 +151,7 @@ const Calendar = ({ day, month, content }) => (
     <StyledAside>
       <div>
         <HeaderAside>Najbliższy turniej sponsorują:</HeaderAside>
+
         <ImageWrapper
           src="https://zory.com.pl/thumb/na-slasku-wiekszosc-miast-ma-swoje-logo/921036/2000/1200/i/jpg/zdjecie4"
           alt="miasto żory"
@@ -158,7 +160,8 @@ const Calendar = ({ day, month, content }) => (
           src="https://staropolanka.pl/wp-content/themes/wp-theme/images/logo.png"
           alt="logo-staropolanka"
         />
-        <ImageWrapper src="/images/logoMosir.png" width="200" />
+
+        <ImageWrapper src="/images/logoMosir.png" />
       </div>
     </StyledAside>
   </StyledWrapper>

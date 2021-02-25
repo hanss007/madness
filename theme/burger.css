@@ -42,14 +42,14 @@
 }
 .bm-menu-wrap {
   width: 100vw !important;
-  height: 38% !important;
+  height: 68% !important;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: rgba(50, 51, 50, 0.98);
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  padding: 1em 1em 0;
+  font-size: 1em;
 }
 
 /* Morph shape necessary with bubble or elastic */
