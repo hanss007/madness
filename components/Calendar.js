@@ -162,6 +162,7 @@ const Calendar = ({ day, month, content, logo, children }) => (
         />
 
         <ImageWrapper src="/images/logoMosir.png" />
+        <ImageWrapper src="/images/kameleon.png" />
       </div>
     </StyledAside>
   </StyledWrapper>
