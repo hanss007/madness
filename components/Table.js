@@ -166,7 +166,7 @@ const CellContentStyled = styled.td`
   }
 `;
 
-const Table = ({ item }) => (
+const Table = ({ table }) => (
   <StyledWrapper>
     <Table>
       <HeadlineStyled>
