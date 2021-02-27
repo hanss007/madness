@@ -166,7 +166,7 @@ const CellContentStyled = styled.td`
   }
 `;
 
-const Table = ({ table }) => (
+const Table = ({ item }) => (
   <StyledWrapper>
     <Table>
       <HeadlineStyled>
@@ -178,21 +178,15 @@ const Table = ({ table }) => (
         </RowStyled>
       </HeadlineStyled>
       <tbody>
-        {table
-          .sort((a, b) => a.lp - b.lp)
-          .map((item) => (
-            <RowStyled
-              className={
-                item.team === "MULTIBIURO-MADNESS-KK KWANT" ? "madness" : ""
-              }
-            >
-              <CellContentStyled>{item.lp}.</CellContentStyled>
-              <CellContentStyled>{item.name}</CellContentStyled>
-              <CellContentStyled>{item.pkt}</CellContentStyled>
-              <CellContentStyled>{item.goalsscored}</CellContentStyled>
-              <CellContentStyled>{item.goalslost}</CellContentStyled>
-            </RowStyled>
-          ))}
+        {item.map((item) => (
+          <RowStyled>
+            <CellContentStyled>{item.lp}.</CellContentStyled>
+            <CellContentStyled>{item.name}</CellContentStyled>
+            <CellContentStyled>{item.pkt}</CellContentStyled>
+            <CellContentStyled>{item.goalsscored}</CellContentStyled>
+            <CellContentStyled>{item.goalslost}</CellContentStyled>
+          </RowStyled>
+        ))}
       </tbody>
     </Table>
   </StyledWrapper>
