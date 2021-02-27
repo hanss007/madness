@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  /* width: 100%;
-  top: 30px; */
   @media (min-width: 320px) {
     margin-top: 60px;
   }
