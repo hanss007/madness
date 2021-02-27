@@ -99,15 +99,24 @@ export default function ItemResults({ item }) {
   );
 }
 
-export async function getServerSideProps({ query, params }) {
-  console.log("query", query, params);
-  const item = await fetchQuery(`results/${params.resultId}`);
+export async function getServerSideProps({ params }) {
+  const item = await fetchQuery("results", `${params.itemId}`);
   return {
     props: {
       item,
     },
   };
 }
+
+// export async function getServerSideProps({ query, params }) {
+//   console.log("query", query, params);
+//   const item = await fetchQuery(`results/${params.resultId}`);
+//   return {
+//     props: {
+//       item,
+//     },
+//   };
+// }
 
 // export default function ItemResults({ item }) {
 //   return (
