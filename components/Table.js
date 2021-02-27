@@ -178,15 +178,13 @@ const Table = ({ item }) => (
         </RowStyled>
       </HeadlineStyled>
       <tbody>
-        {item.map((item) => (
-          <RowStyled>
-            <CellContentStyled>{item.lp}.</CellContentStyled>
-            <CellContentStyled>{item.name}</CellContentStyled>
-            <CellContentStyled>{item.pkt}</CellContentStyled>
-            <CellContentStyled>{item.goalsscored}</CellContentStyled>
-            <CellContentStyled>{item.goalslost}</CellContentStyled>
-          </RowStyled>
-        ))}
+        <RowStyled>
+          <CellContentStyled>{item.lp}.</CellContentStyled>
+          <CellContentStyled>{item.name}</CellContentStyled>
+          <CellContentStyled>{item.pkt}</CellContentStyled>
+          <CellContentStyled>{item.goalsscored}</CellContentStyled>
+          <CellContentStyled>{item.goalslost}</CellContentStyled>
+        </RowStyled>
       </tbody>
     </Table>
   </StyledWrapper>
