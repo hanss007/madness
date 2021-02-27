@@ -100,7 +100,7 @@ export default function ItemResults({ item }) {
 }
 
 export async function getServerSideProps({ params }) {
-  const item = await fetchQuery("results", `${params.itemId}`);
+  const item = await fetchQuery("results", `${params.resultId}`);
   return {
     props: {
       item,
