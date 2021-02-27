@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { baseUrl, fetchQuery } from "../../utils";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
