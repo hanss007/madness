@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
   background-color: #222;
 
   @media (min-width: 320px) {
-    bottom: -290px;
+    bottom: -320px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -64,7 +64,7 @@ const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 10px 0 0 50px;
+  margin: 10px 0 40px 50px;
   &.secondary {
     @media (min-width: 1024px) {
       position: absolute;

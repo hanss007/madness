@@ -42,7 +42,6 @@
 }
 .bm-menu-wrap {
   width: 100vw !important;
-  height: 68% !important;
 }
 
 /* General sidebar styles */
@@ -50,6 +49,7 @@
   background: rgba(50, 51, 50, 0.98);
   padding: 1em 1em 0;
   font-size: 1em;
+  z-index: 99999;
 }
 
 /* Morph shape necessary with bubble or elastic */

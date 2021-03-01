@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
   @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
-    top: -270px;
+    top: -250px;
   }
   @media (min-width: 800px) {
     top: -200px;
@@ -68,8 +68,7 @@ const CalendarItems = styled.div`
   height: 80%;
   background-color: transparent;
   margin: 0 auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+
   @media (min-width: 320px) {
     width: 100%;
   }
@@ -80,12 +79,14 @@ const CalendarItems = styled.div`
 
 const StyledAside = styled.div`
   padding: 10px;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: 25px;
+  @media (min-width: 320px) {
+    margin-left: 20px;
+  }
 `;
 
 const SponsorWrapper = styled.div`

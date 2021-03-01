@@ -107,6 +107,9 @@ const TitleStyled = styled.h2`
   /* @media (max-width: 1024px) {
     font-size: 18px;
   } */
+  @media (min-width: 320px) {
+    font-size: 16px;
+  }
 
   @media (min-width: 460px) {
     font-size: 18px;
@@ -126,6 +129,9 @@ const ContentStyled = styled.p`
   color: grey;
   font-size: 15px;
   font-weight: 300;
+  @media (min-width: 320px) {
+    font-size: 14px;
+  }
 
   @media (min-width: 460px) {
     font-size: 14px;
