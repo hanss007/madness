@@ -8,10 +8,8 @@ import Table from "../../components/Table";
 
 const StyledWrapper = styled.div`
   width: 70%;
-
   margin-top: 25%;
   margin-left: 48%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,6 +67,9 @@ const TableWrapper = styled.div`
     height: 50px;
     grid-template-columns: 1.4fr 0.6fr 0.7fr;
   }
+  &.final {
+    display: none;
+  }
 `;
 
 export default function ItemResults({ item }) {
@@ -84,7 +85,7 @@ export default function ItemResults({ item }) {
             {item["resultteam"].map((item) => (
               <ResultCard key={item.id} item={item} />
             ))}
-            <TableWrapper>
+            <TableWrapper className={item["table"].length === 0 ? "final" : ""}>
               <h2>Drużyna</h2>
               <h2>Pkt</h2>
               <h2>Bramki</h2>

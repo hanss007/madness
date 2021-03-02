@@ -27,7 +27,8 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: rgb(155, 149, 149);
+  /* background: rgb(155, 149, 149); */
+  background-color: rgb(155, 149, 149);
 }
 
 /* Position and sizing of clickable cross button */
