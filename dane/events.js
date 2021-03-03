@@ -14,7 +14,7 @@ export const events = [
   {
     day: "11",
     month: "04.2021",
-    content: `"VVIII KLIMA CUP-GRAMY DLA EWELINY-charytatywny Turniej piłki siatkowej i futsalu-CHOCIANÓW 2021"`,
+    content: `"VIII KLIMA CUP-GRAMY DLA EWELINY-charytatywny Turniej piłki siatkowej i futsalu-CHOCIANÓW 2021"`,
   },
   {
     day: "08-09",
