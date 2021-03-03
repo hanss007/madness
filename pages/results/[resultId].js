@@ -72,6 +72,12 @@ const TableWrapper = styled.div`
   }
 `;
 
+const TitleTable = styled.h2`
+  &.finalTable {
+    display: none;
+  }
+`;
+
 export default function ItemResults({ item }) {
   return (
     <>
@@ -86,9 +92,9 @@ export default function ItemResults({ item }) {
               <ResultCard key={item.id} item={item} />
             ))}
             <TableWrapper className={item["table"].length === 0 ? "final" : ""}>
-              <h2>Drużyna</h2>
-              <h2>Pkt</h2>
-              <h2>Bramki</h2>
+              <TitleTable>Drużyna</TitleTable>
+              <TitleTable>Pkt</TitleTable>
+              <TitleTable>Bramki</TitleTable>
             </TableWrapper>
 
             {item["table"].map((item) => (

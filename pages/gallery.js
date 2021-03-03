@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import BurgerMenu from "../components/BurgerMenu";
 import GlobalStyle from "../theme/GlobalStyle";
+import { fetchQuery } from "../utils";
 
 const StyledWrapper = styled.div`
   display: flex;
