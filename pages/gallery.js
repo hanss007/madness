@@ -56,4 +56,5 @@ const Gallery = () => (
     </StyledWrapper>
   </>
 );
+
 export default Gallery;

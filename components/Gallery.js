@@ -63,7 +63,7 @@ const Title = styled.h2`
   }
   @media (min-width: 1024px) {
     display: block;
-    margin-top: 100px;
+    margin-top: 90px;
   }
 `;
 

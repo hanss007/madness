@@ -104,7 +104,7 @@ const monthNames = [
 
 function CalendarTeam({ schedule }) {
   const now = new Date();
-  const [cdate, setDate] = useState(now.getMonth() + 1);
+  const [cdate, setDate] = useState(now.getMonth());
 
   const nextMonth = () => {
     if (cdate === 11) {
