@@ -1,38 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import CardGallery from "./CardGallery";
-
-const images = [
-  {
-    id: 1,
-    ImageUrl: "/images/stadion.jpg",
-  },
-  {
-    id: 2,
-    ImageUrl:
-      "https://cdn.pixabay.com/photo/2017/12/07/18/25/tolgay-arslan-3004304_1280.jpg",
-  },
-  {
-    id: 3,
-    ImageUrl:
-      "https://cdn.pixabay.com/photo/2017/09/03/09/48/brazil-2709731_1280.jpg",
-  },
-  {
-    id: 1,
-    ImageUrl:
-      "https://cdn.pixabay.com/photo/2019/08/05/08/54/football-4385515_1280.jpg",
-  },
-  {
-    id: 2,
-    ImageUrl:
-      "https://cdn.pixabay.com/photo/2017/12/07/18/25/tolgay-arslan-3004304_1280.jpg",
-  },
-  {
-    id: 3,
-    ImageUrl:
-      "https://cdn.pixabay.com/photo/2017/09/03/09/48/brazil-2709731_1280.jpg",
-  },
-];
+import { fetchQuery } from "../utils";
 
 const StyledWrapper = styled.div`
   height: 700px;
@@ -53,7 +22,7 @@ const StyledWrapper = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 30%;
 `;
 
 const Title = styled.h2`
@@ -67,17 +36,32 @@ const Title = styled.h2`
   }
 `;
 
-const Gallery = () => (
-  <>
-    <Title>Galeria w Budowie dostępna wkrótce !!</Title>
-    <Container>
-      <StyledWrapper>
-        {images.map((item) => (
-          <CardGallery ImageUrl={item.ImageUrl} />
-        ))}
-      </StyledWrapper>
-    </Container>
-  </>
-);
+export default function Gallery({ galleries }) {
+  console.log(galleries);
+  return (
+    <>
+      {/* <Title>Galeria w Budowie dostępna wkrótce !!</Title> */}
+      <Container>
+        <StyledWrapper>
+          {galleries.map((item) => (
+            <CardGallery
+              item={item["cover"]}
+              title={item.title}
+              url={"cover"}
+            />
+          ))}
+        </StyledWrapper>
+      </Container>
+    </>
+  );
+}
 
-export default Gallery;
+// export async function getServerSideProps() {
+//   const galleries = await fetchQuery("galleries");
+
+//   return {
+//     props: {
+//       galleries,
+//     },
+//   };
+// }

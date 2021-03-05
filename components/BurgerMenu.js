@@ -138,7 +138,7 @@ const BurgerMenu = () => (
       </StyledLi>
 
       <StyledLi>
-        <StyledA href="/gallery">Galeria</StyledA>
+        <StyledA href="/galleries">Galeria</StyledA>
       </StyledLi>
     </StyledUl>
   </Menu>

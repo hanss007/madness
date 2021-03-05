@@ -1,42 +1,59 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   position: relative;
-  width: 280px;
-  height: 280px;
+
+  width: 350px;
+  height: 290px;
   background-color: transparent;
-  border: 2px solid rgba(34, 2, 0, 0.3);
-  border-radius: 5px;
+  border: 1px solid rgba(34, 2, 0, 0.3);
   @media (max-width: 800px) {
     width: 190px;
     height: 190px;
   }
 `;
 //poźniej .img
-const StyledImg = styled.div`
+const StyledImg = styled.img`
   position: absolute;
-  width: 200px;
+  width: 300px;
   height: 200px;
-  background-color: #727876;
-  background-size: contain;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -65%);
   text-align: center;
   color: white;
-  @media (min-width: 320px) {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translate(-50%, -65%) scale(1.1);
+  }
+  /* @media (min-width: 320px) {
     width: 150px;
     height: 150px;
-  }
+  } */
+`;
+const Title = styled.h5`
+  position: absolute;
+  width: 90%;
+  text-align: center;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: black;
+  /* text-decoration: none;
+  font-weight: 600;
+  font-size: 14px; */
 `;
 
-const CardGallery = ({ ImageUrl }) => (
-  <StyledWrapper>
-    <StyledImg>
-      <h3>miejsce na na zdjęcie</h3>
-    </StyledImg>
-  </StyledWrapper>
-);
+export default function CardGallery({ item, title, url }) {
+  // const click = () => {
 
-export default CardGallery;
+  // };
+  return (
+    <StyledWrapper onClick={() => "news"}>
+      <StyledImg src={item.url} />
+      <Title>{title} </Title>
+    </StyledWrapper>
+  );
+}
