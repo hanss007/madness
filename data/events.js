@@ -2,23 +2,30 @@ export const events = [
   {
     day: "27-28",
     month: "02.2021",
-    content: "Mistrzostwa Polski Górników i Przyjaciół",
+    content: "XV Futsalowe Mistrzostwa Polski Górników i Przyjaciół-ŻORY 2021",
   },
 
   {
     day: "27-28",
-    month: "02.2021",
-    content: "X OLDBOJOWE MISTRZOSTWA POLSKI GÓRNIKÓW I PRZYJACIÓŁ W FUTSALU ",
-  },
-  {
-    day: "07",
     month: "03.2021",
-    content: `"VIII KLIMA CUP - 'GRAMY DLA EWELINY' CHARYTATYWNY TURNIEJ PIŁKI SIATKOWEJ I FUTSALU "`,
+    content:
+      "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół-CHOCIANÓW 2021",
   },
   {
-    day: "Do",
-    month: "ustalenia",
+    day: "11",
+    month: "04.2021",
+    content: `"VIII KLIMA CUP-GRAMY DLA EWELINY-charytatywny Turniej piłki siatkowej i futsalu-CHOCIANÓW 2021"`,
+  },
+  {
+    day: "08-09",
+    month: "05.2021",
     content:
-      "XI AMATORSKIE MISTRZOSTWA POLSKI GÓRNIKÓW I PRZYJACIÓŁ  W PIŁCE SIATKOWEJ",
+      "XI Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce siatkowej-CHOCIANÓW 2021",
+  },
+  {
+    day: "26-27",
+    month: "06.2021",
+    content:
+      "Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce nożnej 6-osobowej-miejsce w trakcie negocjacji",
   },
 ];

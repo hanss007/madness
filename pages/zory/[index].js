@@ -59,6 +59,3 @@ const HomeZory = ({ news }) => (
   </>
 );
 export default HomeZory;
-
-//  załadka aktualności ograniczenie do 7 newsów i przechodzenie do następnej strony,
-//  dodawanie bezposrednio news ze strapi na strone , odswiezanie serwera !

@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   height: 610px;
   margin: 0 auto;
   background-color: transparent;
-  z-index: 9999;
+  z-index: 999;
 `;
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);

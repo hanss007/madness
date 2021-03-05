@@ -7,6 +7,7 @@ import Image from "next/image";
 const StyledWrapper = styled.div`
   position: relative;
   top: -70px;
+
   padding: 5px;
   background-color: transparent;
   width: 100vw;
@@ -17,7 +18,7 @@ const StyledWrapper = styled.div`
   @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
-    top: -230px;
+    top: -250px;
   }
   @media (min-width: 800px) {
     top: -200px;
@@ -67,8 +68,7 @@ const CalendarItems = styled.div`
   height: 80%;
   background-color: transparent;
   margin: 0 auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+
   @media (min-width: 320px) {
     width: 100%;
   }
@@ -78,14 +78,23 @@ const CalendarItems = styled.div`
 `;
 
 const StyledAside = styled.div`
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: 25px;
+  @media (min-width: 320px) {
+    margin-left: 20px;
+  }
+`;
+
+const SponsorWrapper = styled.div`
+  margin-bottom: 10px;
 `;
 
 const HeaderAside = styled.h2`
+  margin-bottom: 35px;
   width: 90%;
   height: 55px;
   border-top-left-radius: 8px;
@@ -149,7 +158,7 @@ const Calendar = ({ day, month, content, logo, children }) => (
       </CalendarItems>
     </StyledCalender>
     <StyledAside>
-      <div>
+      <SponsorWrapper>
         <HeaderAside>Najbliższy turniej sponsorują:</HeaderAside>
 
         <ImageWrapper
@@ -162,7 +171,8 @@ const Calendar = ({ day, month, content, logo, children }) => (
         />
 
         <ImageWrapper src="/images/logoMosir.png" />
-      </div>
+        <ImageWrapper src="/images/kameleon.png" />
+      </SponsorWrapper>
     </StyledAside>
   </StyledWrapper>
 );

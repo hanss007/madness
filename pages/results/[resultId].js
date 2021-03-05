@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { baseUrl, fetchQuery } from "../../utils";
 import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
@@ -7,10 +8,8 @@ import Table from "../../components/Table";
 
 const StyledWrapper = styled.div`
   width: 70%;
-
   margin-top: 25%;
   margin-left: 48%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +67,15 @@ const TableWrapper = styled.div`
     height: 50px;
     grid-template-columns: 1.4fr 0.6fr 0.7fr;
   }
+  &.final {
+    display: none;
+  }
+`;
+
+const TitleTable = styled.h2`
+  &.finalTable {
+    display: none;
+  }
 `;
 
 export default function ItemResults({ item }) {
@@ -83,10 +91,10 @@ export default function ItemResults({ item }) {
             {item["resultteam"].map((item) => (
               <ResultCard key={item.id} item={item} />
             ))}
-            <TableWrapper>
-              <h2>Drużyna</h2>
-              <h2>Pkt</h2>
-              <h2>Bramki</h2>
+            <TableWrapper className={item["table"].length === 0 ? "final" : ""}>
+              <TitleTable>Drużyna</TitleTable>
+              <TitleTable>Pkt</TitleTable>
+              <TitleTable>Bramki</TitleTable>
             </TableWrapper>
 
             {item["table"].map((item) => (
@@ -99,12 +107,60 @@ export default function ItemResults({ item }) {
   );
 }
 
-export async function getServerSideProps({ query, params }) {
-  console.log("query", query, params);
-  const item = await fetchQuery(`results/${params.resultId}`);
+export async function getServerSideProps({ params }) {
+  const item = await fetchQuery("results", `${params.resultId}`);
   return {
     props: {
       item,
     },
   };
 }
+
+// export async function getServerSideProps({ query, params }) {
+//   console.log("query", query, params);
+//   const item = await fetchQuery(`results/${params.resultId}`);
+//   return {
+//     props: {
+//       item,
+//     },
+//   };
+// }
+
+// export default function ItemResults({ item }) {
+//   return (
+//     <>
+//       <GlobalStyle />
+//       <Navbar />
+//       <BurgerMenu />
+//       <StyledWrapper>
+//         {item["Group"].map((item) => (
+//           <>
+//             <Title>{item.title}</Title>
+//             {item["resultteam"].map((item) => (
+//               <ResultCard key={item.id} item={item} />
+//             ))}
+//             <TableWrapper>
+//               <h2>Drużyna</h2>
+//               <h2>Pkt</h2>
+//               <h2>Bramki</h2>
+//             </TableWrapper>
+
+//             {item["table"].map((item) => (
+//               <Table key={item.id} item={item} />
+//             ))}
+//           </>
+//         ))}
+//       </StyledWrapper>
+//     </>
+//   );
+// }
+
+// export async function getServerSideProps({ query, params }) {
+//   console.log("query", query, params);
+//   const item = await fetchQuery(`results/${params.resultId}`);
+//   return {
+//     props: {
+//       item,
+//     },
+//   };
+// }

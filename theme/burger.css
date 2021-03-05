@@ -27,7 +27,8 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: rgb(155, 149, 149);
+  /* background: rgb(155, 149, 149); */
+  background-color: rgb(155, 149, 149);
 }
 
 /* Position and sizing of clickable cross button */
@@ -42,7 +43,6 @@
 }
 .bm-menu-wrap {
   width: 100vw !important;
-  height: 68% !important;
 }
 
 /* General sidebar styles */
@@ -50,6 +50,7 @@
   background: rgba(50, 51, 50, 0.98);
   padding: 1em 1em 0;
   font-size: 1em;
+  z-index: 99999;
 }
 
 /* Morph shape necessary with bubble or elastic */

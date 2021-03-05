@@ -4,10 +4,10 @@ import styled from "styled-components";
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   @media (min-width: 320px) {
-    margin-top: 160px;
+    margin-top: 215px;
   }
   @media (min-width: 640px) {
     flex-direction: row;

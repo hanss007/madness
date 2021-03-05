@@ -3,7 +3,22 @@ import styled from "styled-components";
 
 const ItemWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.6fr 3.5fr;
+  grid-template-columns: 0.8fr 3fr;
+  @media (min-width: 320px) {
+    grid-template-columns: 2fr 3fr;
+  }
+  @media (min-width: 460px) {
+    grid-template-columns: 1fr 3fr;
+  }
+  @media (min-width: 600px) {
+    grid-template-columns: 0.8fr 3fr;
+  }
+  @media (min-width: 800px) {
+    grid-template-columns: 0.6fr 3.5fr;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 0.8fr 3fr;
+  }
 `;
 
 const Data = styled.div`
@@ -12,9 +27,8 @@ const Data = styled.div`
   justify-content: center;
   align-items: center;
   border-right: 2px solid rgba(34, 34, 34, 0.3);
-  margin-right: 15px;
+  margin-right: 20px;
   padding: 0;
-
   height: 75%;
   @media (max-width: 460px) {
     height: 85%;
@@ -22,12 +36,12 @@ const Data = styled.div`
 `;
 
 const Day = styled.h2`
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
   padding: 0;
   font-size: 30px;
   color: #222;
   @media (min-width: 320px) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @media (min-width: 640px) {
     font-size: 22px;
@@ -44,7 +58,7 @@ const Day = styled.h2`
 `;
 
 const Month = styled.h2`
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
   padding: 0;
   font-size: 15px;
   color: #222;
@@ -62,7 +76,7 @@ const Content = styled.h2`
     font-size: 18px;
   } */
   @media (min-width: 320px) {
-    font-size: 15px;
+    font-size: 12px;
     width: 90%;
   }
   @media (min-width: 800px) {
