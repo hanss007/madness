@@ -11,25 +11,22 @@ const StyledWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   margin-top: 50px;
-  margin-left: 80px;
-
   @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 320px;
-    height: 320px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%); */
+  }
+  @media (min-width: 640px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-left: 80px;
   }
   @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    margin-top: 50px;
-    margin-left: 80px;
   }
   /* @media (min-width: 460px) {
     width: 380px;
