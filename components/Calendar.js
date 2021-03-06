@@ -91,7 +91,7 @@ const StyledAside = styled.div`
     margin-top: 25%;
   }
   @media (min-width: 640px) {
-    margin-top: 35%;
+    margin-top: 55%;
   }
   @media (min-width: 800px) {
     margin-top: 25px;
@@ -112,9 +112,9 @@ const HeaderAside = styled.h2`
 
   @media (min-width: 320px) {
     text-align: center;
+    font-size: 20px;
   }
   @media (min-width: 768px) {
-    font-size: 20px;
     text-align: center;
   }
   @media (min-width: 800px) {
@@ -131,16 +131,6 @@ const ImageWrapper = styled.img`
   @media (min-width: 320px) {
     width: 70px;
   }
-  @media (min-width: 460px) {
-    width: 70px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 150px;
-  }
-  @media (max-width: 800px) {
-    width: 110px;
-  }
 
   @media (min-width: 460px) {
     width: 120px;
@@ -148,6 +138,10 @@ const ImageWrapper = styled.img`
   @media (min-width: 768px) {
     width: 140px;
   }
+  @media (min-width: 800px) {
+    width: 110px;
+  }
+
   @media (min-width: 1200px) {
     width: 160px;
   }
