@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
@@ -14,6 +14,14 @@ const StyledWrapper = styled.div`
     height: 190px;
   }
   @media (min-width: 460px) {
+    width: 290px;
+    height: 240px;
+  }
+  @media (min-width: 800px) {
+    width: 215px;
+    height: 205px;
+  }
+  @media (min-width: 1024px) {
     width: 290px;
     height: 240px;
   }
@@ -46,6 +54,14 @@ const StyledImg = styled.img`
     height: 130px;
   }
   @media (min-width: 460px) {
+    width: 255px;
+    height: 165px;
+  }
+  @media (min-width: 800px) {
+    width: 185px;
+    height: 140px;
+  }
+  @media (min-width: 1024px) {
     width: 255px;
     height: 165px;
   }

@@ -21,8 +21,13 @@ const StyledWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    justify-content: space-around;
-    align-items: center;
+    margin: 50px 25px;
+  }
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 50px 55px;
   }
   @media (min-width: 800px) {
     display: grid;
