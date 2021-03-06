@@ -49,5 +49,8 @@
     "styled-components": "^5.2.1",
     "styled-icons": "^10.23.0",
     "swiper": "^6.4.5"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }
