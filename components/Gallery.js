@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
   @media (min-width: 320px) {
     display: none;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 45px;
