@@ -17,7 +17,7 @@ export default function GalleryId({ galleries }) {
       <Navbar />
       <BurgerMenu />
       <StyledWrapper>
-        <Masonry columsCount={3} gutter="10px">
+        <Masonry columsCount={3} gutter="15px">
           {galleries["gallery"].map((item) => (
             <img src={item.url} style={{ width: "100%", display: "block" }} />
           ))}
