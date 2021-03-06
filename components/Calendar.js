@@ -87,6 +87,15 @@ const StyledAside = styled.div`
   @media (min-width: 320px) {
     margin-left: 20px;
   }
+  @media (min-width: 540px) {
+    margin-top: 25%;
+  }
+  @media (min-width: 640px) {
+    margin-top: 35%;
+  }
+  @media (min-width: 800px) {
+    margin-top: 25px;
+  }
 `;
 
 const SponsorWrapper = styled.div`
