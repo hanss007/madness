@@ -6,6 +6,7 @@ import Players from "../../../components/Players";
 import { zory } from "../../../data/playersList";
 import { linksZory } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
+import Head from "next/head";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -75,6 +76,10 @@ const Title = styled.h1`
 
 const PlayersZory = () => (
   <>
+    <Head>
+      <title>Madness-Żory</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />

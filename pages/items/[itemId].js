@@ -5,6 +5,7 @@ import GlobalStyle from "../../theme/GlobalStyle";
 import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
 import { Calendar } from "@styled-icons/boxicons-regular/Calendar";
+import Head from "next/head";
 
 const BackgroundWrapper = styled.div`
   position: relative;
@@ -232,6 +233,10 @@ const ContentWrapperColumn = styled.div`
 export default function Item({ item }) {
   return (
     <>
+      <Head>
+        <title>Madness</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <Navbar />
       <BurgerMenu />

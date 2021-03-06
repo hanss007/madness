@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
 import { fetchQuery } from "../../utils";
+import Head from "next/head";
 
 const StyledWrapper = styled.div`
   margin: 50px 10px 30px 10px;
@@ -13,6 +14,10 @@ const StyledWrapper = styled.div`
 export default function GalleryId({ galleries }) {
   return (
     <>
+      <Head>
+        <title>Madness</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <Navbar />
       <BurgerMenu />

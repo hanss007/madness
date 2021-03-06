@@ -5,6 +5,7 @@ import GlobalStyle from "../theme/GlobalStyle";
 import Link from "next/link";
 import { fetchQuery } from "../utils";
 import CardGallery from "../components/CardGallery";
+import Head from "next/head";
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -55,6 +56,10 @@ const StyledWrapper = styled.div`
 export default function Galleries({ galleries }) {
   return (
     <>
+      <Head>
+        <title>Madness</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <BurgerMenu />
       <Navbar />

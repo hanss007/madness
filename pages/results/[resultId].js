@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import BurgerMenu from "../../components/BurgerMenu";
 import ResultCard from "../../components/ResultCard";
 import Table from "../../components/Table";
+import Head from "next/head";
 
 const StyledWrapper = styled.div`
   width: 70%;
@@ -81,6 +82,10 @@ const TitleTable = styled.h2`
 export default function ItemResults({ item }) {
   return (
     <>
+      <Head>
+        <title>Madness</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <Navbar />
       <BurgerMenu />

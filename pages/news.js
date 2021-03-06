@@ -5,6 +5,7 @@ import Card from "../components/News/Card";
 import GlobalStyle from "../theme/GlobalStyle";
 import styled from "styled-components";
 import { fetchQuery } from "../utils";
+import Head from "next/head";
 
 const WrapperStyled = styled.div`
   position: relative;
@@ -44,8 +45,11 @@ export default function News({ items, url }) {
   console.log(items);
   return (
     <>
+      <Head>
+        <title>Madness</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
-
       <Navbar />
       <BurgerMenu />
       <WrapperStyled>

@@ -16,6 +16,7 @@ import { scheduleZory } from "../../data/schedule";
 import { sponsorsZory } from "../../data/sponsors";
 import { tableZory } from "../../data/table";
 import { linksZory } from "../../data/links";
+import Head from "next/head";
 
 const Wrapper = styled.div`
   margin-top: 45px;
@@ -43,6 +44,10 @@ export async function getServerSideProps() {
 
 const HomeZory = ({ news }) => (
   <>
+    <Head>
+      <title>Madness-Żory</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />

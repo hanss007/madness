@@ -7,6 +7,7 @@ import NavbarTeam from "../../components/NavbarTeam";
 import BurgerMenu from "../../components/BurgerMenu";
 import { Calendar } from "@styled-icons/boxicons-regular/Calendar";
 import { linksZory } from "../../data/links";
+import Head from "next/head";
 
 const BackgroundWrapper = styled.div`
   position: relative;
@@ -200,6 +201,10 @@ const ContentWrapper = styled.p`
 export default function Item({ item }) {
   return (
     <>
+      <Head>
+        <title>Madness-Żory</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <Navbar />
       <NavbarTeam links={linksZory} />
@@ -235,17 +240,3 @@ export async function getServerSideProps({ params }) {
     },
   };
 }
-
-// export async function getStaticPaths() {
-//   const items = await fetchQuery("zory-news");
-//   const paths = items.map((item) => {
-//     console.log("item", item);
-//     return {
-//       params: { newsZoryId: String(item.id) },
-//     };
-//   });
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }

@@ -9,6 +9,7 @@ import { tableZory } from "../../../data/table";
 import { allRoundZory } from "../../../data/allRoundZory";
 import { linksZory } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
+import Head from "next/head";
 
 const StyledWrapper = styled.div`
   margin: 70px auto;
@@ -38,6 +39,10 @@ const Title = styled.h1`
 
 const GamesZory = () => (
   <>
+    <Head>
+      <title>Madness-Żory</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />

@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import GlobalStyle from "../theme/GlobalStyle";
 import BurgerMenu from "../components/BurgerMenu";
 import Link from "next/link";
-import { fetchQuery, baseUrl } from "../utils";
+import Head from "next/head";
+import { fetchQuery } from "../utils";
 
 const Backgound = styled.div`
   position: relative;
@@ -137,6 +138,10 @@ const ImageWrapper = styled.img`
 export default function Results({ results }) {
   return (
     <>
+      <Head>
+        <title>Madness</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <Navbar />
       <BurgerMenu />

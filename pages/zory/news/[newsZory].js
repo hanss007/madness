@@ -6,6 +6,7 @@ import Card from "../../../components/News/Card";
 import GlobalStyle from "../../../theme/GlobalStyle";
 import { fetchQuery } from "../../../utils";
 import { linksZory } from "../../../data/links";
+import Head from "next/head";
 
 const StyledWrapper = styled.div`
   /* position: relative; */
@@ -43,8 +44,11 @@ const StyledWrapper = styled.div`
 export default function NewsZory({ items, url }) {
   return (
     <>
+      <Head>
+        <title>Madness-Żory</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
-
       <Navbar />
       <NavbarTeam links={linksZory} />
       <BurgerMenu />

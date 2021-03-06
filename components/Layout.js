@@ -11,6 +11,7 @@ import GlobalStyle from "../theme/GlobalStyle";
 const Layout = ({ news, galleries }) => (
   <>
     <GlobalStyle />
+
     <Navbar />
     <BurgerMenu />
     <Header />
