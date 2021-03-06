@@ -27,8 +27,8 @@ const StyledWrapper = styled.div`
   }
 
   @media (min-width: 1200px) {
-    width: 310px;
-    height: 240px;
+    width: 320px;
+    height: 250px;
   }
   @media (min-width: 1355px) {
     width: 380px;

@@ -13,17 +13,23 @@ const StyledWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 45px;
-    margin-top: 50px;
+    margin-top: 35%;
+  }
+  @media (min-width: 1135px) {
+    margin-top: 30%;
   }
   @media (min-width: 1200px) {
     grid-column-gap: 95px;
+    margin-top: 20%;
+  }
+  @media (min-width: 1355px) {
+    margin-top: 16%;
   }
 `;
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 30%;
 `;
 
 export default function Gallery({ galleries }) {
