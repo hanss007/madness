@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css, keyframes } from "styled-components";
 import { Email } from "@styled-icons/entypo/Email";
 import { Phone } from "@styled-icons/boxicons-regular/Phone";
