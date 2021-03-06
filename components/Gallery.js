@@ -3,9 +3,9 @@ import styled from "styled-components";
 import CardGallery from "./CardGallery";
 
 const StyledWrapper = styled.div`
-  height: 700px;
-  margin-top: -100px;
-  margin-bottom: -180px;
+  height: auto;
+  /* margin-top: -100px;
+  margin-bottom: -180px; */
   @media (min-width: 320px) {
     display: none;
   }
@@ -13,6 +13,7 @@ const StyledWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 45px;
+    margin-top: 50px;
   }
   @media (min-width: 1200px) {
     grid-column-gap: 95px;
