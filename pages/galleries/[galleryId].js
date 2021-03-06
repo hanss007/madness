@@ -7,7 +7,7 @@ import GlobalStyle from "../../theme/GlobalStyle";
 import { fetchQuery } from "../../utils";
 
 const StyledWrapper = styled.div`
-  margin-top: 50px;
+  margin: 50px 10px 30px 10px;
 `;
 
 export default function GalleryId({ galleries }) {
@@ -17,7 +17,7 @@ export default function GalleryId({ galleries }) {
       <Navbar />
       <BurgerMenu />
       <StyledWrapper>
-        <Masonry columsCount={3} gutter="20px">
+        <Masonry columsCount={3} gutter="10px">
           {galleries["gallery"].map((item) => (
             <img src={item.url} style={{ width: "100%", display: "block" }} />
           ))}
