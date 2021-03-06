@@ -38,11 +38,13 @@ export default function Gallery({ galleries }) {
       <Container>
         <StyledWrapper>
           {galleries.map((item) => (
-            <CardGallery
-              item={item["cover"]}
-              title={item.title}
-              url={"cover"}
-            />
+            <a href={`/galleries/${item.id}`}>
+              <CardGallery
+                item={item["cover"]}
+                title={item.title}
+                url={"cover"}
+              />
+            </a>
           ))}
         </StyledWrapper>
       </Container>
