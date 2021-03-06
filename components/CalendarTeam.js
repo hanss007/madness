@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import styled from "styled-components";
 import CardEvents from "./CardEvents";
-
 import { ArrowRightCircleFill } from "@styled-icons/bootstrap/ArrowRightCircleFill";
 import { ArrowLeftCircleFill } from "@styled-icons/bootstrap/ArrowLeftCircleFill";
 

@@ -3,40 +3,97 @@ import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   position: relative;
-  width: 280px;
-  height: 280px;
+  margin-top: 25px;
+
   background-color: transparent;
-  border: 2px solid rgba(34, 2, 0, 0.3);
-  border-radius: 5px;
-  @media (max-width: 800px) {
+  border: 1px solid rgba(34, 2, 0, 0.3);
+
+  @media (min-width: 320px) {
     width: 190px;
     height: 190px;
   }
-`;
-//poźniej .img
-const StyledImg = styled.div`
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: #727876;
-  background-size: contain;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  @media (min-width: 320px) {
-    width: 150px;
-    height: 150px;
+  @media (min-width: 460px) {
+    width: 290px;
+    height: 240px;
+  }
+  @media (min-width: 800px) {
+    width: 215px;
+    height: 205px;
+  }
+  @media (min-width: 1024px) {
+    width: 290px;
+    height: 240px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 320px;
+    height: 250px;
+  }
+  @media (min-width: 1355px) {
+    width: 380px;
+    height: 300px;
   }
 `;
 
-const CardGallery = ({ ImageUrl }) => (
-  <StyledWrapper>
-    <StyledImg>
-      <h3>miejsce na na zdjęcie</h3>
-    </StyledImg>
-  </StyledWrapper>
-);
+const StyledImg = styled.img`
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  text-align: center;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translate(-50%, -65%) scale(1.1);
+  }
+  @media (min-width: 320px) {
+    width: 175px;
+    height: 130px;
+  }
+  @media (min-width: 460px) {
+    width: 255px;
+    height: 165px;
+  }
+  @media (min-width: 800px) {
+    width: 185px;
+    height: 140px;
+  }
+  @media (min-width: 1024px) {
+    width: 255px;
+    height: 165px;
+  }
+  @media (min-width: 1200px) {
+    width: 280px;
+    height: 170px;
+  }
+  @media (min-width: 1355px) {
+    width: 330px;
+    height: 200px;
+  }
+`;
+const Title = styled.h5`
+  position: absolute;
+  width: 90%;
+  text-align: center;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: black;
+  /* text-decoration: none;
+  font-weight: 600;
+  font-size: 14px; */
+`;
 
-export default CardGallery;
+export default function CardGallery({ item, title, url }) {
+  // const click = () => {
+
+  // };
+  return (
+    <StyledWrapper onClick={() => "news"}>
+      <StyledImg src={item.url} />
+      <Title>{title} </Title>
+    </StyledWrapper>
+  );
+}

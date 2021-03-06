@@ -44,6 +44,9 @@
         "lubin"
       ],
       "required": true
+    },
+    "test": {
+      "type": "richtext"
     }
   }
 }

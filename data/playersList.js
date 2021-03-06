@@ -87,7 +87,7 @@ export const zory = [
     position: "Pomocnik",
     firstname: "Andrzej",
     surname: "Hanusek",
-    number: 19,
+    number: 15,
     img: "/images/no-photo.jpg",
   },
   {
@@ -108,7 +108,7 @@ export const zory = [
     position: "Pomocnik",
     firstname: "Jacek",
     surname: "Rokita",
-    number: 19,
+    number: 13,
     img: "/images/no-photo.jpg",
   },
 
