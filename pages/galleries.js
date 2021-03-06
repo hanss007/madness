@@ -13,14 +13,25 @@ const StyledWrapper = styled.div`
   margin-top: 50px;
   margin-left: 80px;
 
-  /* @media (min-width: 320px) {
-    width: 320px;
+  @media (min-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 320px;
     height: 320px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); */
   }
-  @media (min-width: 460px) {
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 50px;
+    margin-left: 80px;
+  }
+  /* @media (min-width: 460px) {
     width: 380px;
     height: 380px;
   }

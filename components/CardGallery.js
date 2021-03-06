@@ -4,17 +4,22 @@ import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   position: relative;
-
+  margin-top: 25px;
   width: 350px;
   height: 290px;
   background-color: transparent;
   border: 1px solid rgba(34, 2, 0, 0.3);
+
+  @media (min-width: 320px) {
+    width: 190px;
+    height: 190px;
+  }
   @media (max-width: 800px) {
     width: 190px;
     height: 190px;
   }
 `;
-//poźniej .img
+
 const StyledImg = styled.img`
   position: absolute;
   width: 300px;
@@ -28,10 +33,10 @@ const StyledImg = styled.img`
   &:hover {
     transform: translate(-50%, -65%) scale(1.1);
   }
-  /* @media (min-width: 320px) {
-    width: 150px;
-    height: 150px;
-  } */
+  @media (min-width: 320px) {
+    width: 175px;
+    height: 130px;
+  }
 `;
 const Title = styled.h5`
   position: absolute;
