@@ -14,16 +14,17 @@ const StyledWrapper = styled.div`
     height: 190px;
   }
   @media (min-width: 460px) {
-    width: 280px;
-    height: 225px;
+    width: 290px;
+    height: 240px;
   }
-  @media (max-width: 1200px) {
-    width: 300px;
+
+  @media (min-width: 1200px) {
+    width: 310px;
     height: 240px;
   }
   @media (min-width: 1355px) {
-    width: 350px;
-    height: 290px;
+    width: 380px;
+    height: 300px;
   }
 `;
 
@@ -63,7 +64,7 @@ const Title = styled.h5`
   text-align: center;
   bottom: 0%;
   left: 50%;
-  transform: translate(-50%, 25%);
+  transform: translate(-50%, 0%);
   color: black;
   /* text-decoration: none;
   font-weight: 600;

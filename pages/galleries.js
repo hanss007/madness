@@ -9,7 +9,7 @@ import CardGallery from "../components/CardGallery";
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+
   margin-top: 50px;
   @media (min-width: 320px) {
     display: flex;
@@ -21,7 +21,8 @@ const StyledWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    margin-left: 80px;
+    justify-content: space-around;
+    align-items: center;
   }
   @media (min-width: 800px) {
     display: grid;
