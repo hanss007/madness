@@ -211,8 +211,8 @@ function Navbar() {
           <BorderRightWrapper />
           <StyledLi>
             <StyledA
-              className={router.pathname === "/gallery" ? "active" : ""}
-              href="/gallery"
+              className={router.pathname === "/galleries" ? "active" : ""}
+              href="/galleries"
             >
               Galeria
             </StyledA>

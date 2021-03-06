@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./Navbar";
 import BurgerMenu from "./BurgerMenu";
 import Header from "./Header";
@@ -7,7 +8,7 @@ import Gallery from "./Gallery";
 import Footer from "./Footer";
 import GlobalStyle from "../theme/GlobalStyle";
 
-const Layout = ({ news }) => (
+const Layout = ({ news, galleries }) => (
   <>
     <GlobalStyle />
     <Navbar />
@@ -15,7 +16,7 @@ const Layout = ({ news }) => (
     <Header />
     <News news={news} url={"items"} />
     <Calendar />
-    <Gallery />
+    <Gallery galleries={galleries} />
     <Footer />
   </>
 );

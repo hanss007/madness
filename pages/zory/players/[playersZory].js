@@ -3,9 +3,7 @@ import Navbar from "../../../components/Navbar";
 import NavbarTeam from "../../../components/NavbarTeam";
 import BurgerMenu from "../../../components/BurgerMenu";
 import Players from "../../../components/Players";
-import TableTeam from "../../../components/TableTeam";
 import { zory } from "../../../data/playersList";
-import { tableZory } from "../../../data/table";
 import { linksZory } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
 

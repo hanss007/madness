@@ -251,6 +251,7 @@ export default function Item({ item }) {
           </InnerWrapper>
           <ImageWrapper src={item.image.url} alt={item.title} />
           <ContentWrapper>{item.content}</ContentWrapper>
+          <ContentWrapper>{item.test}</ContentWrapper>
         </StyledWrapper>
       </BackgroundWrapper>
     </>

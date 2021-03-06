@@ -87,6 +87,15 @@ const StyledAside = styled.div`
   @media (min-width: 320px) {
     margin-left: 20px;
   }
+  @media (min-width: 540px) {
+    margin-top: 25%;
+  }
+  @media (min-width: 640px) {
+    margin-top: 55%;
+  }
+  @media (min-width: 800px) {
+    margin-top: 25px;
+  }
 `;
 
 const SponsorWrapper = styled.div`
@@ -103,9 +112,9 @@ const HeaderAside = styled.h2`
 
   @media (min-width: 320px) {
     text-align: center;
+    font-size: 20px;
   }
   @media (min-width: 768px) {
-    font-size: 20px;
     text-align: center;
   }
   @media (min-width: 800px) {
@@ -119,22 +128,20 @@ const HeaderAside = styled.h2`
 const ImageWrapper = styled.img`
   margin-left: 10px;
   padding: 5px;
-  width: 200px;
-  @media (max-width: 1200px) {
-    width: 150px;
-  }
-  @media (max-width: 800px) {
-    width: 110px;
-  }
-  @media (min-width: 460px) {
+  @media (min-width: 320px) {
     width: 70px;
   }
+
   @media (min-width: 460px) {
     width: 120px;
   }
   @media (min-width: 768px) {
     width: 140px;
   }
+  @media (min-width: 800px) {
+    width: 110px;
+  }
+
   @media (min-width: 1200px) {
     width: 160px;
   }
