@@ -5,8 +5,7 @@ import styled from "styled-components";
 const StyledWrapper = styled.div`
   position: relative;
   margin-top: 25px;
-  width: 350px;
-  height: 290px;
+
   background-color: transparent;
   border: 1px solid rgba(34, 2, 0, 0.3);
 
@@ -22,7 +21,7 @@ const StyledWrapper = styled.div`
     width: 300px;
     height: 240px;
   }
-  @media (max-width: 1355px) {
+  @media (min-width: 1355px) {
     width: 350px;
     height: 290px;
   }
@@ -53,7 +52,7 @@ const StyledImg = styled.img`
     width: 280px;
     height: 170px;
   }
-  @media (max-width: 1355px) {
+  @media (min-width: 1355px) {
     width: 330px;
     height: 200px;
   }
