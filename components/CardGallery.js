@@ -81,9 +81,12 @@ const Title = styled.h5`
   left: 50%;
   transform: translate(-50%, 0%);
   color: black;
-  /* text-decoration: none;
-  font-weight: 600;
-  font-size: 14px; */
+  @media (min-width: 800px) {
+    font-size: 10px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 12px;
+  }
 `;
 
 export default function CardGallery({ item, title, url }) {

@@ -1,42 +1,83 @@
 import Image from "next/image";
 import styled from "styled-components";
 import CardGallery from "./CardGallery";
+import GlobalStyle from "../theme/GlobalStyle";
 
 const StyledWrapper = styled.div`
   height: auto;
-  /* margin-top: -100px;
-  margin-bottom: -180px; */
+
   @media (min-width: 320px) {
     display: none;
   }
   @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 45px;
-    margin-top: 35%;
+    grid-gap: 30px;
+    padding: 15px;
   }
-  @media (min-width: 1135px) {
-    margin-top: 30%;
+  @media (min-width: 900px) {
+    grid-gap: 40px;
+  }
+  @media (min-width: 1024px) {
+    grid-gap: 35px;
+  }
+  @media (min-width: 1155px) {
+    grid-gap: 55px;
   }
   @media (min-width: 1200px) {
-    grid-column-gap: 95px;
-    margin-top: 20%;
+    grid-gap: 65px;
   }
-  @media (min-width: 1355px) {
-    margin-top: 16%;
+  @media (min-width: 1400px) {
+    grid-gap: 95px;
   }
 `;
 
 const Container = styled.div`
-  display: flex;
+  @media (min-width: 320px) {
+    display: none;
+  }
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
-  justify-content: center;
+const StaledHeader = styled.div`
+  height: 55px;
+  background-color: #ef273d;
+
+  @media (min-width: 800px) {
+    width: 90%;
+  }
+  @media (min-width: 900px) {
+    width: 85%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 95%;
+  }
+  @media (min-width: 1455px) {
+    width: 90%;
+  }
+`;
+const Title = styled.h2`
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 4px;
 `;
 
 export default function Gallery({ galleries }) {
   return (
     <>
+      <GlobalStyle />
       <Container>
+        <StaledHeader>
+          <Title>Galeria</Title>
+        </StaledHeader>
+
         <StyledWrapper>
           {galleries.map((item) => (
             <a href={`/galleries/${item.id}`}>

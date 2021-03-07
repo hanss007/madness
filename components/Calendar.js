@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
   padding: 5px;
   background-color: transparent;
   width: 100vw;
-  height: 540px;
+  height: auto;
   color: black;
   margin: 0;
 
