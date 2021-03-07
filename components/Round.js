@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   /* width: 700px; */
-  margin-top: 60px;
+  margin-top: 180px;
 
   @media (min-width: 320px) {
     width: 300px;
