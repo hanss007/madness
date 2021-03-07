@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 
 const StyledWrapperTeam = styled.div`
   position: absolute;
+  z-index: 2;
   height: 40px;
   width: 100%;
-  top: 7.5%;
   font-size: 16px;
   text-transform: uppercase;
   background: linear-gradient(
@@ -81,7 +81,7 @@ function NavbarTeam({ links }) {
                 <StyledA
                   className={router.pathname === link.pathname ? "active" : ""}
                 >
-                  {link.title} {link.name}
+                  {link.title}
                 </StyledA>
               </Link>
             </StyledLi>
