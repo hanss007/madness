@@ -81,7 +81,10 @@ const Title = styled.h5`
   left: 50%;
   transform: translate(-50%, 0%);
   color: black;
-  @media (min-width: 800px) {
+  @media (min-width: 320px) {
+    font-size: 9px;
+  }
+  @media (min-width: 460px) {
     font-size: 10px;
   }
   @media (min-width: 1024px) {

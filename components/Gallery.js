@@ -4,16 +4,17 @@ import CardGallery from "./CardGallery";
 import GlobalStyle from "../theme/GlobalStyle";
 
 const StyledWrapper = styled.div`
-  height: auto;
+  display: none;
 
-  @media (min-width: 320px) {
+  /* @media (min-width: 320px) {
     display: none;
-  }
+  } */
   @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     padding: 15px;
+    height: auto;
   }
   @media (min-width: 900px) {
     grid-gap: 40px;
@@ -33,9 +34,8 @@ const StyledWrapper = styled.div`
 `;
 
 const Container = styled.div`
-  @media (min-width: 320px) {
-    display: none;
-  }
+  display: none;
+
   @media (min-width: 800px) {
     display: flex;
     flex-direction: column;

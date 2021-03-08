@@ -303,7 +303,7 @@ const Footer = () => (
       <Content className="secondary">
         <InnerContent>
           <Mail />
-          <p>klimas@interia.pl</p>
+          <p>adam.klimas@interia.pl</p>
         </InnerContent>
         <InnerContent>
           <MyPhone />

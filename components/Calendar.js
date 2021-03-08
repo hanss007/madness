@@ -83,9 +83,10 @@ const StyledAside = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 25px;
+
   @media (min-width: 320px) {
     margin-left: 20px;
+    margin-top: 25%;
   }
   @media (min-width: 540px) {
     margin-top: 25%;
