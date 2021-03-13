@@ -58,7 +58,7 @@ const DropDownContent = styled.div`
   min-width: 160px;
   margin-left: -8px;
   margin-top: 10px;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const DropDownLi = styled(StyledLi)`

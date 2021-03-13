@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const StyledWrapperTeam = styled.div`
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   height: 40px;
   width: 100%;
   font-size: 16px;
