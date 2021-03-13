@@ -41,7 +41,7 @@ const WrapperStyled = styled.div`
 `;
 
 export default function News({ items, url }) {
-  console.log(items);
+  console.log(items.length);
   return (
     <>
       <GlobalStyle />

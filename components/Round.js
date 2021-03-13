@@ -155,10 +155,21 @@ const CellContentStyled = styled.td`
 `;
 
 function Round({ allRound }) {
+  console.log(
+    "liczba kolejek",
+    allRound.filter(
+      (item) => item.team1 === "Madness" || item.team2 === "Madness"
+    ).length
+  );
   const [count, setCount] = useState(1);
 
   const nextRound = () => {
-    if (count === 26) {
+    if (
+      count ===
+      allRound.filter(
+        (item) => item.team1 === "Madness" || item.team2 === "Madness"
+      ).length
+    ) {
       setCount(1);
       return;
     }
@@ -169,7 +180,11 @@ function Round({ allRound }) {
 
   const previousRound = () => {
     if (count === 1) {
-      setCount(26);
+      setCount(
+        allRound.filter(
+          (item) => item.team1 === "Madness" || item.team2 === "Madness"
+        ).length
+      );
       return;
     }
     setCount(count - 1);

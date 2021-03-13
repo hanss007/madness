@@ -5,9 +5,9 @@ import BurgerMenu from "../../../components/BurgerMenu";
 import Round from "../../../components/Round";
 import TableTeam from "../../../components/TableTeam";
 import Footer from "../../../components/Footer";
-import { tableZory } from "../../../data/tableZory";
-import { allRoundZory } from "../../../data/allRoundZory";
-import { linksZory } from "../../../data/links";
+import { tableChlf } from "../../../data/tableChlf";
+import { allRoundChlf } from "../../../data/allRoundChlf";
+import { linksChlf } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
 
 const StyledWrapper = styled.div`
@@ -36,18 +36,18 @@ const Title = styled.h1`
   }
 `;
 
-const GamesZory = () => (
+const GamesChlf = () => (
   <>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam links={linksZory} />
+    <NavbarTeam links={linksChlf} />
     <StyledWrapper>
-      <Title>ŻALO - 2020/2021</Title>
-      <TableTeam table={tableZory} />
-      <Round allRound={allRoundZory} />
+      <Title>CHLF - 2020/2021</Title>
+      <TableTeam table={tableChlf} nameTeam={"Madness"} />
+      <Round allRound={allRoundChlf} />
     </StyledWrapper>
     <Footer />
   </>
 );
-export default GamesZory;
+export default GamesChlf;

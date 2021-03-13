@@ -3,10 +3,9 @@ import Navbar from "../../../components/Navbar";
 import NavbarTeam from "../../../components/NavbarTeam";
 import BurgerMenu from "../../../components/BurgerMenu";
 import Players from "../../../components/Players";
-import { zory } from "../../../data/playersList";
-import { linksZory } from "../../../data/links";
+import { chlf } from "../../../data/playersList";
+import { linksChlf } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
-import Head from "next/head";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -74,22 +73,19 @@ const Title = styled.h1`
   }
 `;
 
-const PlayersZory = () => (
+const PlayersChlf = () => (
   <>
-    <Head>
-      <title>Madness-Żory</title>
-    </Head>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam links={linksZory} />
+    <NavbarTeam links={linksChlf} />
     <StyledWrapper>
-      <Title>Multibiuro-Madness-KK Kwant</Title>
+      <Title>Madness Chocianów</Title>
 
       <ImageTeam src="/images/zory.jpg" />
 
-      <Players players={zory} />
+      <Players players={chlf} />
     </StyledWrapper>
   </>
 );
-export default PlayersZory;
+export default PlayersChlf;

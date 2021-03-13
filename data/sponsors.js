@@ -13,17 +13,17 @@ export const sponsorsZory = [
   },
 ];
 
-export const sponsorsPLF = [
+export const sponsorsChlf = [
   {
-    name: "kk-kwant ",
-    url: "https://www.otologo.pl/data/files/logo-budowlanka-remont.png",
+    name: "budimex",
+    url: "/images/sponsors/budimex.png",
   },
   {
-    name: "multibiuro ",
-    url: "/images/sponsors/multibiuro.jpeg",
+    name: "chocianów tv",
+    url: "/images/sponsors/tvchocianow.png",
   },
   {
-    name: "asVending ",
-    url: "/images/sponsors/asVending.jpg",
+    name: "zina",
+    url: "/images/sponsors/zina.png",
   },
 ];

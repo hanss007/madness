@@ -9,7 +9,7 @@ const StyledCalender = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 540px;
+  height: auto;
 
   /* margin-top: -70px; */
   /* margin-left: 40px; */

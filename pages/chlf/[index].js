@@ -1,58 +1,61 @@
+import React from "react";
 import styled from "styled-components";
-import Navbar from "../../components/Navbar";
+import { fetchQuery } from "../../utils";
 import BurgerMenu from "../../components/BurgerMenu";
 import GlobalStyle from "../../theme/GlobalStyle";
+import Navbar from "../../components/Navbar";
+import NavbarTeam from "../../components/NavbarTeam";
+import Header from "../../components/Header";
+import News from "../../components/News/News";
+import Footer from "../../components/Footer";
+import CalendarTeam from "../../components/CalendarTeam";
+import Sponsors from "../../components/Sponsors";
+import TableTeam from "../../components/TableTeam";
+import ButtonTable from "../../components/ButtonTable";
+import { scheduleChlf } from "../../data/scheduleChlf";
+import { sponsorsChlf } from "../../data/sponsors";
+import { tableChlf } from "../../data/tableChlf";
+import { linksChlf } from "../../data/links";
 
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-image: url("/images/build.png");
-  background-size: cover;
-  color: white;
+const Wrapper = styled.div`
+  margin-top: 45px;
   @media (min-width: 320px) {
-    width: 320px;
-    height: 320px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-  }
-  @media (min-width: 460px) {
-    width: 380px;
-    height: 380px;
-  }
-  @media (min-width: 768px) {
-    width: 450px;
-    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   @media (min-width: 1024px) {
-    width: 500px;
-    height: 500px;
-  }
-  @media (min-width: 1200px) {
-    width: 550px;
-    height: 550px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 `;
 
-const Title = styled.h1`
-  color: black;
-  position: absolute;
-  text-align: center;
-  top: -120px;
-`;
+export async function getServerSideProps() {
+  const news = await fetchQuery("chlf-news?_limit=6&_sort=id:DESC");
+  console.log("news on server", news);
+  return {
+    props: {
+      news,
+    },
+  };
+}
 
-const Chlf = () => (
+const HomeChlf = ({ news }) => (
   <>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-
-    <StyledWrapper>
-      <Title>Strona w budowie</Title>
-    </StyledWrapper>
+    <NavbarTeam links={linksChlf} />
+    <Header />
+    <News news={news} url={"chlf-news"} />
+    <Wrapper>
+      <CalendarTeam schedule={scheduleChlf} />
+      <Sponsors logo={sponsorsChlf} />
+    </Wrapper>
+    <TableTeam table={tableChlf.slice(0, 7)} nameTeam={"Madness"} />
+    <ButtonTable />
+    <Footer />
   </>
 );
-export default Chlf;
+export default HomeChlf;

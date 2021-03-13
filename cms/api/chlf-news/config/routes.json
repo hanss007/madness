@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chlf-news",
+      "handler": "chlf-news.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chlf-news/count",
+      "handler": "chlf-news.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chlf-news/:id",
+      "handler": "chlf-news.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chlf-news",
+      "handler": "chlf-news.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chlf-news/:id",
+      "handler": "chlf-news.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chlf-news/:id",
+      "handler": "chlf-news.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

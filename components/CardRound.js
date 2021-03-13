@@ -1,41 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// const StyledWrapper = styled.div`
-//   width: 100%;
-//   top: 30px;
-// `;
-
-// const Table = styled.table`
-//   width: 100%;
-//   margin-left: 250px;
-//   border-spacing: 50px;
-//   border-collapse: collapse;
-// `;
-
-// const RowStyled = styled.tr`
-//   border-bottom: 1px solid rgba(34, 34, 34, 0.5);
-//   color: #0d142d;
-//   display: table-row;
-//   &.madness {
-//     background: linear-gradient(
-//       90deg,
-//       rgba(13, 20, 44, 1) 30%,
-//       rgba(239, 39, 61, 1) 99%
-//     );
-
-//     color: white;
-//   }
-// `;
-
-// const CellContentStyled = styled.td`
-//   padding: 2px;
-//   font-weight: 600;
-//   font-size: 16px;
-// `;
-
-//
-
 const StyledWrapper = styled.div`
   width: 100%;
   top: 30px;
