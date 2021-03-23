@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Navbar from "../../../components/Navbar";
 import NavbarTeam from "../../../components/NavbarTeam";
 import BurgerMenu from "../../../components/BurgerMenu";
+import TeamsChlf from "..../../../components/TeamsChlf";
 import Players from "../../../components/Players";
 import { chlf } from "../../../data/playersList";
 import { linksChlf } from "../../../data/links";
@@ -51,7 +52,7 @@ const ImageTeam = styled.img`
 const Title = styled.h1`
   color: #023047;
   text-align: center;
-  margin-top: 60px;
+  margin: 60px auto;
   @media (min-width: 320px) {
     font-size: 16px;
   }
@@ -80,11 +81,8 @@ const PlayersChlf = () => (
     <Navbar />
     <NavbarTeam links={linksChlf} />
     <StyledWrapper>
-      <Title>Madness Chocianów</Title>
-
-      <ImageTeam src="/images/zory.jpg" />
-
-      <Players players={chlf} />
+      <Title>Chocianowska Liga Futsalu</Title>
+      <TeamsChlf />
     </StyledWrapper>
   </>
 );

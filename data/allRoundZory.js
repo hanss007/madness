@@ -575,7 +575,7 @@ export const allRoundZory = [
     time: "18:00 ",
     team1: "Pniówek Team ",
     team2: "Aluminiowy Zespół Sportowy",
-    score: "-:-",
+    score: "13:0",
   },
 
   {
@@ -584,7 +584,7 @@ export const allRoundZory = [
     time: "18:55 ",
     team1: "Drunken Sharks ",
     team2: "Zymft ",
-    score: "-:-",
+    score: "4:4",
   },
   {
     numberRound: 11,
@@ -592,7 +592,7 @@ export const allRoundZory = [
     time: "19:50 ",
     team1: "Maxelektro ",
     team2: "Brakuje Nam Jednego",
-    score: "-:-",
+    score: "2:3",
   },
   {
     numberRound: 11,
@@ -600,7 +600,7 @@ export const allRoundZory = [
     time: "20:45 ",
     team1: "Madness",
     team2: "Bistro Cegielnia ",
-    score: "-:-",
+    score: "2:3",
   },
   {
     numberRound: 11,
@@ -608,7 +608,7 @@ export const allRoundZory = [
     time: "18:30",
     team1: " Grajki  ",
     team2: "Dream Team ",
-    score: "-:-",
+    score: "3:4",
   },
   {
     numberRound: 11,
@@ -616,7 +616,7 @@ export const allRoundZory = [
     time: "19:25 ",
     team1: " Old Stars  ",
     team2: "Palar Trans Żory",
-    score: "-:-",
+    score: "2:10",
   },
   {
     numberRound: 11,
@@ -624,7 +624,7 @@ export const allRoundZory = [
     time: "20:20 ",
     team1: " Sekonix Poland ",
     team2: "Squad Drewna ",
-    score: "-:-",
+    score: "4:10",
   },
   {
     numberRound: 12,
@@ -690,7 +690,7 @@ export const allRoundZory = [
     time: "18:00 ",
     team1: " Pniówek Team ",
     team2: "Bistro Cegielnia ",
-    score: "-:-",
+    score: "2:0",
   },
 
   {
@@ -699,7 +699,7 @@ export const allRoundZory = [
     time: "18:55 ",
     team1: " Maxelektro ",
     team2: "Drunken Sharks ",
-    score: "-:-",
+    score: "10:3",
   },
   {
     numberRound: 13,
@@ -707,7 +707,7 @@ export const allRoundZory = [
     time: "19:50 ",
     team1: "Madness",
     team2: "Dream Team ",
-    score: "-:-",
+    score: "4:2",
   },
   {
     numberRound: 13,
@@ -715,7 +715,7 @@ export const allRoundZory = [
     time: "20:45 ",
     team1: " Squad Drewna ",
     team2: "Aluminiowy Zespół Sportowy",
-    score: "-:-",
+    score: "3:3",
   },
   {
     numberRound: 13,
@@ -723,7 +723,7 @@ export const allRoundZory = [
     time: "18:30 ",
     team1: " Grajki ",
     team2: "Zymft ",
-    score: "-:-",
+    score: "8:2",
   },
   {
     numberRound: 13,
@@ -731,7 +731,7 @@ export const allRoundZory = [
     time: "19:25 ",
     team1: " Sekonix Poland ",
     team2: "Palar Trans Żory",
-    score: "-:-",
+    score: "0:16",
   },
   {
     numberRound: 13,
@@ -739,7 +739,7 @@ export const allRoundZory = [
     time: "20:20 ",
     team1: " Old Stars ",
     team2: "Brakuje Nam Jednego",
-    score: "-:-",
+    score: "7:2",
   },
   {
     numberRound: 14,

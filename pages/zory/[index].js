@@ -54,7 +54,7 @@ const HomeZory = ({ news }) => (
       <Sponsors logo={sponsorsZory} />
     </Wrapper>
     <TableTeam
-      table={tableZory.slice(0, 7)}
+      table={tableZory.slice(0, 9)}
       nameTeam={"MULTIBIURO-MADNESS-KK KWANT"}
     />
     <ButtonTable />

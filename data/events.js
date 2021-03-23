@@ -6,8 +6,8 @@ export const events = [
   },
 
   {
-    day: "27-28",
-    month: "03.2021",
+    day: "18",
+    month: "04.2021",
     content:
       "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół-CHOCIANÓW 2021",
   },

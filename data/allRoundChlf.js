@@ -77,16 +77,9 @@ export const allRoundChlf = [
     time: "21:15",
     team1: "Exclusive",
     team2: "After U Sopla",
-    score: "5:1",
+    score: "6:11",
   },
-  {
-    numberRound: 3,
-    date: "07.12.2020",
-    time: "21:15",
-    team1: "Exclusive",
-    team2: "After U Sopla",
-    score: "5:1",
-  },
+
   {
     numberRound: 3,
     date: "14.12.2020",
@@ -277,7 +270,7 @@ export const allRoundChlf = [
     time: "21:10",
     team1: "Stalowcy",
     team2: "Pebeka",
-    score: "-:-",
+    score: "11:1",
   },
   {
     numberRound: 7,
@@ -325,7 +318,7 @@ export const allRoundChlf = [
     time: "18:15",
     team1: "Line Consulting",
     team2: "Lubin",
-    score: "-:-",
+    score: "6:6",
   },
   {
     numberRound: 8,
@@ -333,7 +326,7 @@ export const allRoundChlf = [
     time: "18:50",
     team1: "After U Sopla",
     team2: "Pebeka",
-    score: "-:-",
+    score: "1:7",
   },
   {
     numberRound: 8,
@@ -341,7 +334,7 @@ export const allRoundChlf = [
     time: "19:35",
     team1: "Smulders",
     team2: "Hormann",
-    score: "-:-",
+    score: "1:4",
   },
   {
     numberRound: 8,
@@ -349,7 +342,7 @@ export const allRoundChlf = [
     time: "20:10",
     team1: "Lubin",
     team2: "Pebeka",
-    score: "-:-",
+    score: "3:3",
   },
   {
     numberRound: 8,
@@ -357,7 +350,7 @@ export const allRoundChlf = [
     time: "20:50",
     team1: "Madness",
     team2: "Hormann",
-    score: "-:-",
+    score: "3:6",
   },
 
   {
