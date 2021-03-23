@@ -5,11 +5,10 @@ import BurgerMenu from "../../../components/BurgerMenu";
 import Round from "../../../components/Round";
 import TableTeam from "../../../components/TableTeam";
 import Footer from "../../../components/Footer";
-import { tableZory } from "../../../data/tableZory";
-import { allRoundZory } from "../../../data/allRoundZory";
-import { linksZory } from "../../../data/links";
+import { tableChlf } from "../../../data/tableChlf";
+import { allRoundChlf } from "../../../data/allRoundChlf";
+import { linksChlf } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
-import Head from "next/head";
 
 const StyledWrapper = styled.div`
   margin: 70px auto;
@@ -37,22 +36,18 @@ const Title = styled.h1`
   }
 `;
 
-const GamesZory = () => (
+const GamesChlf = () => (
   <>
-    <Head>
-      <title>Madness-Żory</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam links={linksZory} />
+    <NavbarTeam links={linksChlf} />
     <StyledWrapper>
-      <Title>ŻALO - 2020/2021</Title>
-      <TableTeam table={tableZory} nameTeam={"MULTIBIURO-MADNESS-KK KWANT"} />
-      <Round allRound={allRoundZory} />
+      <Title>CHLF - 2020/2021</Title>
+      <TableTeam table={tableChlf} nameTeam={"Madness"} />
+      <Round allRound={allRoundChlf} />
     </StyledWrapper>
     <Footer />
   </>
 );
-export default GamesZory;
+export default GamesChlf;

@@ -5,8 +5,7 @@ import BurgerMenu from "../../../components/BurgerMenu";
 import Card from "../../../components/News/Card";
 import GlobalStyle from "../../../theme/GlobalStyle";
 import { fetchQuery } from "../../../utils";
-import { linksZory } from "../../../data/links";
-import Head from "next/head";
+import { linksChlf } from "../../../data/links";
 
 const StyledWrapper = styled.div`
   /* position: relative; */
@@ -41,20 +40,17 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default function NewsZory({ items, url }) {
+export default function NewsChlf({ items, url }) {
   return (
     <>
-      <Head>
-        <title>Madness-Żory</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <GlobalStyle />
+
       <Navbar />
-      <NavbarTeam links={linksZory} />
+      <NavbarTeam links={linksChlf} />
       <BurgerMenu />
       <StyledWrapper>
         {items.map((item) => (
-          <Card key={item.id} item={item} url={"zory-news"} />
+          <Card key={item.id} item={item} url={"chlf-news"} />
         ))}
       </StyledWrapper>
     </>
@@ -62,7 +58,7 @@ export default function NewsZory({ items, url }) {
 }
 
 export async function getServerSideProps() {
-  const items = await fetchQuery("zory-news?_sort=id:DESC");
+  const items = await fetchQuery("chlf-news?_sort=id:DESC");
 
   return {
     props: {

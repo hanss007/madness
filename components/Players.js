@@ -5,7 +5,6 @@ import styled from "styled-components";
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
   @media (min-width: 320px) {
     margin: 0 auto;
   }
@@ -30,6 +29,9 @@ const Title = styled.h1`
   @media (min-width: 640px) {
     margin-left: 60px;
   }
+  &.futsal {
+    display: none;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -51,6 +53,7 @@ const InnerWrapper = styled.div`
 const Players = ({ players }) => (
   <StyledWrapper>
     <Title>Bramkarze</Title>
+
     <InnerWrapper>
       {players
         .filter((item) => item.position === "Bramkarz")
@@ -63,7 +66,16 @@ const Players = ({ players }) => (
           />
         ))}
     </InnerWrapper>
-    <Title>Obrońcy</Title>
+    <Title
+      className={
+        players.filter((item) => item.position === "Pomocnik").length === 0
+          ? "futsal"
+          : ""
+      }
+    >
+      Obrońcy
+    </Title>
+
     <InnerWrapper>
       {players
         .filter((item) => item.position === "Obrońca")
@@ -76,7 +88,15 @@ const Players = ({ players }) => (
           />
         ))}
     </InnerWrapper>
-    <Title>Pomocnicy</Title>
+    <Title
+      className={
+        players.filter((item) => item.position === "Pomocnik").length === 0
+          ? "futsal"
+          : ""
+      }
+    >
+      Pomocnicy
+    </Title>
     <InnerWrapper>
       {players
         .filter((item) => item.position === "Pomocnik")
@@ -89,10 +109,39 @@ const Players = ({ players }) => (
           />
         ))}
     </InnerWrapper>
-    <Title>Napastnicy</Title>
+    <Title
+      className={
+        players.filter((item) => item.position === "Napastnik").length === 0
+          ? "futsal"
+          : ""
+      }
+    >
+      Napastnicy
+    </Title>
     <InnerWrapper>
       {players
         .filter((item) => item.position === "Napastnik")
+        .map((item) => (
+          <CardPlayer
+            img={item.img}
+            firstname={item.firstname}
+            surname={item.surname}
+            number={item.number}
+          />
+        ))}
+    </InnerWrapper>
+    <Title
+      className={
+        players.filter((item) => item.position === "futsal").length === 0
+          ? "futsal"
+          : ""
+      }
+    >
+      Zawodnicy z Pola
+    </Title>
+    <InnerWrapper>
+      {players
+        .filter((item) => item.position === "futsal")
         .map((item) => (
           <CardPlayer
             img={item.img}

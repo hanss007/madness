@@ -1,7 +1,7 @@
 export const zory = [
   {
     position: "Bramkarz",
-    firstname: "Marcin",
+    firstname: "Łukasz",
     surname: "Gruszczyński",
     number: 1,
     img: "/images/no-photo.jpg",
@@ -114,14 +114,14 @@ export const zory = [
 
   {
     position: "Napastnik",
-    firstname: "Marcin",
+    firstname: "Łukasz",
     surname: "Lewandowski",
     number: 9,
     img: "/images/no-photo.jpg",
   },
   {
     position: "Napastnik",
-    firstname: "Marcin",
+    firstname: "Łukasz",
     surname: "Janowski",
     number: 4,
     img: "/images/no-photo.jpg",
@@ -145,6 +145,107 @@ export const zory = [
     firstname: "Radosław",
     surname: "Drozd",
     number: 18,
+    img: "/images/no-photo.jpg",
+  },
+];
+
+export const chlf = [
+  {
+    position: "Bramkarz",
+    firstname: "Maciej",
+    surname: "Sambor",
+    number: 1,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "Bramkarz",
+    firstname: "Jakub",
+    surname: "Duszeńko",
+    number: 31,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "Bramkarz",
+    firstname: "Łukasz",
+    surname: "Sikorski",
+    number: "",
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Arkadiusz",
+    surname: "Czerep",
+    number: 13,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Mirosław",
+    surname: "Kunz",
+    number: 69,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Grzegorz",
+    surname: "Słonina",
+    number: 28,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Artur",
+    surname: "Szymczak",
+    number: 12,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Jakub",
+    surname: "Hrynczyszyn",
+    number: 16,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Mateusz",
+    surname: "Leszki",
+    number: 9,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Paweł",
+    surname: "Świeżko",
+    number: 69,
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Adam",
+    surname: "Klimas",
+    number: "",
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Łukasz",
+    surname: "Sikorski",
+    number: "",
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Dawid",
+    surname: "Świdwa",
+    number: "",
+    img: "/images/no-photo.jpg",
+  },
+  {
+    position: "futsal",
+    firstname: "Mateusz",
+    surname: "Wasylik",
+    number: "",
     img: "/images/no-photo.jpg",
   },
 ];

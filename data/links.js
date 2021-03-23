@@ -16,3 +16,22 @@ export const linksZory = [
     pathname: "/zory/games/[gamesZory]",
   },
 ];
+
+export const linksChlf = [
+  { href: "/chlf/index", title: "Home CHLF", pathname: "/chlf/[index]" },
+  {
+    href: "/chlf/news/newsChlf",
+    title: "Aktualności",
+    pathname: "/chlf/news/[newsChlf]",
+  },
+  {
+    href: "/chlf/players/playersChlf",
+    title: "Kadra",
+    pathname: "/chlf/players/[playersChlf]",
+  },
+  {
+    href: "/chlf/games/gamesChlf",
+    title: "Rozgrywki",
+    pathname: "/chlf/games/[gamesChlf]",
+  },
+];

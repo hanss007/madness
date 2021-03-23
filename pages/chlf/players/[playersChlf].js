@@ -2,11 +2,11 @@ import styled from "styled-components";
 import Navbar from "../../../components/Navbar";
 import NavbarTeam from "../../../components/NavbarTeam";
 import BurgerMenu from "../../../components/BurgerMenu";
+import TeamsChlf from "..../../../components/TeamsChlf";
 import Players from "../../../components/Players";
-import { zory } from "../../../data/playersList";
-import { linksZory } from "../../../data/links";
+import { chlf } from "../../../data/playersList";
+import { linksChlf } from "../../../data/links";
 import GlobalStyle from "../../../theme/GlobalStyle";
-import Head from "next/head";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ const ImageTeam = styled.img`
 const Title = styled.h1`
   color: #023047;
   text-align: center;
-  margin-top: 60px;
+  margin: 60px auto;
   @media (min-width: 320px) {
     font-size: 16px;
   }
@@ -74,22 +74,16 @@ const Title = styled.h1`
   }
 `;
 
-const PlayersZory = () => (
+const PlayersChlf = () => (
   <>
-    <Head>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
     <GlobalStyle />
     <BurgerMenu />
     <Navbar />
-    <NavbarTeam links={linksZory} />
+    <NavbarTeam links={linksChlf} />
     <StyledWrapper>
-      <Title>Multibiuro-Madness-KK Kwant</Title>
-
-      <ImageTeam src="/images/zory.jpg" />
-
-      <Players players={zory} />
+      <Title>Chocianowska Liga Futsalu</Title>
+      <TeamsChlf />
     </StyledWrapper>
   </>
 );
-export default PlayersZory;
+export default PlayersChlf;

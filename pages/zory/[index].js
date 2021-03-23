@@ -14,7 +14,7 @@ import TableTeam from "../../components/TableTeam";
 import ButtonTable from "../../components/ButtonTable";
 import { scheduleZory } from "../../data/schedule";
 import { sponsorsZory } from "../../data/sponsors";
-import { tableZory } from "../../data/table";
+import { tableZory } from "../../data/tableZory";
 import { linksZory } from "../../data/links";
 import Head from "next/head";
 
@@ -58,7 +58,10 @@ const HomeZory = ({ news }) => (
       <CalendarTeam schedule={scheduleZory} />
       <Sponsors logo={sponsorsZory} />
     </Wrapper>
-    <TableTeam table={tableZory.slice(0, 7)} />
+    <TableTeam
+      table={tableZory.slice(0, 9)}
+      nameTeam={"MULTIBIURO-MADNESS-KK KWANT"}
+    />
     <ButtonTable />
     <Footer />
   </>
