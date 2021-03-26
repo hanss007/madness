@@ -125,9 +125,9 @@ const BurgerMenu = () => (
             <SubA className="team">CHLF</SubA>
             <DropDownContentTeam>
               <SubTeam href="/chlf/index">Home CHLF</SubTeam>
-              <SubTeam href="/chlf/index">Aktualności</SubTeam>
-              <SubTeam href="/chlf/index">Kadra</SubTeam>
-              <SubTeam href="/chlf/index">Rozgrywki</SubTeam>
+              <SubTeam href="/chlf/news/newsChlf">Aktualności</SubTeam>
+              <SubTeam href="/chlf/players/playersChlf">Kadra</SubTeam>
+              <SubTeam href="/chlf/games/gamesChlf">Rozgrywki</SubTeam>
             </DropDownContentTeam>
           </DropDownTeam>
         </DropDownContent>
