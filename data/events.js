@@ -6,21 +6,21 @@ export const events = [
   },
 
   {
-    day: "18",
-    month: "04.2021",
-    content:
-      "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół-CHOCIANÓW 2021",
-  },
-  {
-    day: "11",
-    month: "04.2021",
+    day: "09",
+    month: "05.2021",
     content: `"VIII KLIMA CUP-GRAMY DLA EWELINY-charytatywny Turniej piłki siatkowej i futsalu-CHOCIANÓW 2021"`,
   },
   {
-    day: "08-09",
+    day: "15-16",
     month: "05.2021",
     content:
       "XI Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce siatkowej-CHOCIANÓW 2021",
+  },
+  {
+    day: "30",
+    month: "05.2021",
+    content:
+      "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół-CHOCIANÓW 2021",
   },
   {
     day: "26-27",
