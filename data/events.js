@@ -23,9 +23,9 @@ export const events = [
       "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół-CHOCIANÓW 2021",
   },
   {
-    day: "26-27",
+    day: "25-27",
     month: "06.2021",
     content:
-      "Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce nożnej 6-osobowej-miejsce w trakcie negocjacji",
+      "Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce nożnej 6-osobowej w Gniewinie",
   },
 ];

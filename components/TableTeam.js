@@ -116,6 +116,7 @@ const TableTeam = ({ table, nameTeam }) => (
           ))}
       </tbody>
     </Table>
+    <p style={{ color: "red" }}>Drużyna Palar Trans wycofała się z rozgrywek</p>
   </StyledWrapper>
 );
 
