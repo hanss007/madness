@@ -49,7 +49,15 @@ const GamesZory = () => (
     <NavbarTeam links={linksZory} />
     <StyledWrapper>
       <Title>ŻALO - 2020/2021</Title>
-      <TableTeam table={tableZory} nameTeam={"MULTIBIURO-MADNESS-KK KWANT"} />
+      <TableTeam
+        table={tableZory}
+        nameTeam={"MULTIBIURO-MADNESS-KK KWANT"}
+        disqualification={"PALAR TRANS ŻORY"}
+      />
+      <p style={{ color: "red", fontWeight: "600" }}>
+        Drużyna Palar Trans wycofała się z rozgrywek. W tabeli zostały
+        uwzględnione mecze rozegrane przez drużynę w I rundzie rozgrywek.
+      </p>
       <Round allRound={allRoundZory} />
     </StyledWrapper>
     <Footer />

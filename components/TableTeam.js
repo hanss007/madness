@@ -52,6 +52,10 @@ const RowStyled = styled.tr`
 
     color: white;
   }
+  &.palar {
+    color: red;
+    font-weight: 600;
+  }
 `;
 
 const CellHeadlineStyled = styled.th`
@@ -90,7 +94,7 @@ const CellContentStyled = styled.td`
   }
 `;
 
-const TableTeam = ({ table, nameTeam }) => (
+const TableTeam = ({ table, nameTeam, disqualification }) => (
   <StyledWrapper>
     <Table>
       <HeadlineStyled>
@@ -106,7 +110,15 @@ const TableTeam = ({ table, nameTeam }) => (
         {table
           .sort((a, b) => a.lp - b.lp)
           .map((item) => (
-            <RowStyled className={item.team === `${nameTeam}` ? "madness" : ""}>
+            <RowStyled
+              className={
+                item.team === `${nameTeam}`
+                  ? "madness"
+                  : "" || item.team === `${disqualification}`
+                  ? "palar"
+                  : ""
+              }
+            >
               <CellContentStyled>{item.lp}.</CellContentStyled>
               <CellContentStyled>{item.team}</CellContentStyled>
               <CellContentStyled>{item.matches}</CellContentStyled>
@@ -116,7 +128,6 @@ const TableTeam = ({ table, nameTeam }) => (
           ))}
       </tbody>
     </Table>
-    <p style={{ color: "red" }}>Drużyna Palar Trans wycofała się z rozgrywek</p>
   </StyledWrapper>
 );
 
