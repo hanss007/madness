@@ -974,7 +974,7 @@ export const allRoundZory = [
     time: "18:00 ",
     team1: " Sekonix Poland ",
     team2: " Grajki ",
-    score: "-:-",
+    score: "0:2",
   },
   {
     numberRound: 18,
@@ -982,7 +982,7 @@ export const allRoundZory = [
     time: "18:55 ",
     team1: " Pniówek Team ",
     team2: " Maxelektro  ",
-    score: "-:-",
+    score: "5:3",
   },
   {
     numberRound: 18,
@@ -990,23 +990,16 @@ export const allRoundZory = [
     time: "19:50 ",
     team1: " Aluminiowy Zespół Sportowy ",
     team2: " Dream Team   ",
-    score: "-:-",
+    score: "2:11",
   },
-  {
-    numberRound: 18,
-    date: "29.04.2021 ",
-    time: "19:50 ",
-    team1: " Aluminiowy Zespół Sportowy ",
-    team2: " Dream Team   ",
-    score: "-:-",
-  },
+
   {
     numberRound: 18,
     date: "29.04.2021 ",
     time: "20:45 ",
     team1: " Squad Drewna ",
     team2: " Drunken Sharks ",
-    score: "-:-",
+    score: "6:2",
   },
   {
     numberRound: 18,
@@ -1014,7 +1007,7 @@ export const allRoundZory = [
     time: "18:30 ",
     team1: " Zymft ",
     team2: " Bistro Cegielnia ",
-    score: "-:-",
+    score: "4:7",
   },
   {
     numberRound: 18,
@@ -1022,7 +1015,7 @@ export const allRoundZory = [
     time: "19:25 ",
     team1: " Palar Trans Żory  ",
     team2: " Brakuje Nam Jednego",
-    score: "-:-",
+    score: "0:5",
   },
 
   {
@@ -1031,7 +1024,7 @@ export const allRoundZory = [
     time: "20:20 ",
     team1: " Old Stars ",
     team2: "Madness",
-    score: "-:-",
+    score: "2:3",
   },
   {
     numberRound: 19,
@@ -1039,7 +1032,7 @@ export const allRoundZory = [
     time: "18:00 ",
     team1: " Drunken Sharks ",
     team2: " Aluminiowy Zespół Sportowy",
-    score: "-:-",
+    score: "3:4",
   },
   {
     numberRound: 19,
@@ -1047,7 +1040,7 @@ export const allRoundZory = [
     time: "18:55 ",
     team1: " Maxelektro ",
     team2: " Sekonix Poland ",
-    score: "-:-",
+    score: "3:5",
   },
   {
     numberRound: 19,
@@ -1055,7 +1048,7 @@ export const allRoundZory = [
     time: "19:50 ",
     team1: "Madness",
     team2: " Pniówek Team ",
-    score: "-:-",
+    score: "4:3",
   },
   {
     numberRound: 19,
@@ -1063,7 +1056,7 @@ export const allRoundZory = [
     time: "20:45 ",
     team1: " Grajki  ",
     team2: " Squad Drewna ",
-    score: "-:-",
+    score: "7:3",
   },
   {
     numberRound: 19,
@@ -1071,7 +1064,7 @@ export const allRoundZory = [
     time: "18:30 ",
     team1: " Dream Team ",
     team2: " Palar Trans Żory",
-    score: "-:-",
+    score: "5:0",
   },
   {
     numberRound: 19,
@@ -1079,7 +1072,7 @@ export const allRoundZory = [
     time: "19:25 ",
     team1: " Zymft ",
     team2: " Old Stars ",
-    score: "-:-",
+    score: "1:6",
   },
   {
     numberRound: 19,
@@ -1087,7 +1080,7 @@ export const allRoundZory = [
     time: "20:20 ",
     team1: " Brakuje Nam Jednego ",
     team2: " Bistro Cegielnia ",
-    score: "-:-",
+    score: "2:2",
   },
   {
     numberRound: 20,
