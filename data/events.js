@@ -1,32 +1,26 @@
 export const events = [
   {
-    day: "27-28",
-    month: "02.2021",
-    content: "XV Futsalowe Mistrzostwa Polski Górników i Przyjaciół-ŻORY 2021",
+    day: "23",
+    month: "10.2021",
+    content: "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół w futsalu",
   },
   {
-    day: "15-16",
-    month: "05.2021",
+    day: "20-21",
+    month: "11.2021",
     content:
-      "XI Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce siatkowej-CHOCIANÓW 2021",
+      "XII Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce siatkowej",
   },
 
   {
-    day: "30",
-    month: "05.2021",
-    content: `"VIII KLIMA CUP-GRAMY DLA EWELINY-charytatywny Turniej piłki siatkowej i futsalu-CHOCIANÓW 2021"`,
+    day: "28",
+    month: "11.2021",
+    content:
+      "III Oborska Pętla lub 2- bieg na 5 i 10 km, charytatywnie Razem dla EWELINY",
   },
 
   {
-    day: "26-27",
-    month: "06.2021",
-    content:
-      "Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce nożnej 6-osobowej w Gniewinie",
-  },
-  {
-    day: "Do",
-    month: "ustalenia",
-    content:
-      "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół-CHOCIANÓW 2021",
+    day: "11-12",
+    month: "12.2021",
+    content: "XII Mistrzostwa Polski Ratowników Górniczych w Futsalu",
   },
 ];
