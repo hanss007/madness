@@ -110,15 +110,7 @@ const TableTeam = ({ table, nameTeam, disqualification }) => (
         {table
           .sort((a, b) => a.lp - b.lp)
           .map((item) => (
-            <RowStyled
-              className={
-                item.team === `${nameTeam}`
-                  ? "madness"
-                  : "" || item.team === `${disqualification}`
-                  ? "palar"
-                  : ""
-              }
-            >
+            <RowStyled className={item.team === `${nameTeam}` ? "madness" : ""}>
               <CellContentStyled>{item.lp}.</CellContentStyled>
               <CellContentStyled>{item.team}</CellContentStyled>
               <CellContentStyled>{item.matches}</CellContentStyled>
