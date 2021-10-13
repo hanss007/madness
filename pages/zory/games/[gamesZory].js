@@ -49,11 +49,7 @@ const GamesZory = () => (
     <NavbarTeam links={linksZory} />
     <StyledWrapper>
       <Title>ŻALO - 2020/2021</Title>
-      <TableTeam
-        table={tableZory}
-        nameTeam={"MULTIBIURO-MADNESS-KK KWANT"}
-        disqualification={"PALAR TRANS ŻORY"}
-      />
+      <TableTeam table={tableZory} nameTeam={"MULTIBIURO-MADNESS-KK KWANT"} />
 
       <Round allRound={allRoundZory} />
     </StyledWrapper>

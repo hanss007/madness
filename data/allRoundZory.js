@@ -231,7 +231,7 @@ export const allRoundZory = [
   {
     numberRound: 5,
     date: "28.10.2021",
-    time: "18:30",
+    time: "21:00",
     team1: "Nigdy Mało",
     team2: "Madness",
     score: "-:-",
@@ -527,7 +527,7 @@ export const allRoundZory = [
     numberRound: 11,
     date: "10.03.2022",
     time: "20:15 ",
-    team1: "Drunken Sharks ",
+    team1: "Drunken Sharks",
     team2: "Madness",
     score: "-:-",
   },
@@ -779,7 +779,7 @@ export const allRoundZory = [
   {
     numberRound: 16,
     date: "13.04.2022",
-    time: "18:30",
+    time: "21:00",
     team1: "Madness",
     team2: "Nigdy Mało",
     score: "-:-",
@@ -1056,7 +1056,7 @@ export const allRoundZory = [
   },
 
   {
-    numberRound: 11,
+    numberRound: 22,
     date: "26.05.2022",
     time: "18:45 ",
     team1: "Squad Drewna",
@@ -1064,7 +1064,7 @@ export const allRoundZory = [
     score: "-:-",
   },
   {
-    numberRound: 11,
+    numberRound: 22,
     date: "26.05.2022",
     time: "19:30 ",
     team1: "Sekonix",
@@ -1072,7 +1072,7 @@ export const allRoundZory = [
     score: "-:-",
   },
   {
-    numberRound: 11,
+    numberRound: 22,
     date: "26.05.2022",
     time: "20:15 ",
     team1: "Madness",
@@ -1080,7 +1080,7 @@ export const allRoundZory = [
     score: "-:-",
   },
   {
-    numberRound: 11,
+    numberRound: 22,
     date: "26.05.2022",
     time: "21:00",
     team1: "Nigdy Mało",
@@ -1088,7 +1088,7 @@ export const allRoundZory = [
     score: "-:-",
   },
   {
-    numberRound: 11,
+    numberRound: 22,
     date: "26.05.2022",
     time: "-",
     team1: "Galaxy Team",
