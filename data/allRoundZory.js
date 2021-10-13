@@ -5,7 +5,7 @@ export const allRoundZory = [
     time: "18:00",
     team1: "Nigdy Mało",
     team2: "ZSP Nr 8",
-    score: "-:-",
+    score: "3:3",
   },
   {
     numberRound: 1,
@@ -13,7 +13,7 @@ export const allRoundZory = [
     time: "18:45",
     team1: "Squad Drewna",
     team2: "Dream Team",
-    score: "-:-",
+    score: "1:7",
   },
   {
     numberRound: 1,
@@ -21,7 +21,7 @@ export const allRoundZory = [
     time: "19:30",
     team1: "Sekonix",
     team2: "Drunken Sharks",
-    score: "-:-",
+    score: "2:5",
   },
   {
     numberRound: 1,
@@ -38,7 +38,7 @@ export const allRoundZory = [
     time: "21:00",
     team1: "Galaxy Team",
     team2: "Pniówek Team",
-    score: "-:-",
+    score: "0:3",
   },
   {
     numberRound: 1,
