@@ -286,7 +286,7 @@ export const allRoundChlf = [
     time: "19:35",
     team1: "Lubin",
     team2: "Pebeka",
-    score: "-:-",
+    score: "3:3",
   },
   {
     numberRound: 7,
@@ -302,7 +302,7 @@ export const allRoundChlf = [
     time: "20:50",
     team1: "After U Sopla",
     team2: "Smulders",
-    score: "-:-",
+    score: "0:5",
   },
   {
     numberRound: 7,
@@ -359,7 +359,7 @@ export const allRoundChlf = [
     time: "18:15",
     team1: "Stalowcy",
     team2: "Smulders",
-    score: "-:-",
+    score: "5:3",
   },
   {
     numberRound: 9,
@@ -367,7 +367,7 @@ export const allRoundChlf = [
     time: "18:50",
     team1: "Pebeka",
     team2: "Line Consulting",
-    score: "-:-",
+    score: "5:1",
   },
   {
     numberRound: 9,
@@ -375,7 +375,7 @@ export const allRoundChlf = [
     time: "19:35",
     team1: "Lubin",
     team2: "Budimex",
-    score: "-:-",
+    score: "5:0",
   },
   {
     numberRound: 9,
@@ -383,7 +383,7 @@ export const allRoundChlf = [
     time: "20:10",
     team1: "Madness",
     team2: "Czarni",
-    score: "-:-",
+    score: "7:3",
   },
   {
     numberRound: 9,
@@ -391,7 +391,7 @@ export const allRoundChlf = [
     time: "20:50",
     team1: "Lubin",
     team2: "Hormann",
-    score: "-:-",
+    score: "2:7",
   },
   {
     numberRound: 9,
@@ -399,7 +399,7 @@ export const allRoundChlf = [
     time: "21:25",
     team1: "Czarni",
     team2: "After U Sopla",
-    score: "-:-",
+    score: "5:0",
   },
   {
     numberRound: 10,
@@ -407,7 +407,7 @@ export const allRoundChlf = [
     time: "18:15",
     team1: "After U Sopla",
     team2: "Madness",
-    score: "-:-",
+    score: "5:0",
   },
 
   {
@@ -416,7 +416,7 @@ export const allRoundChlf = [
     time: "19:35",
     team1: "Smulders",
     team2: "After U Sopla",
-    score: "-:-",
+    score: "5:0",
   },
   {
     numberRound: 10,
@@ -424,7 +424,7 @@ export const allRoundChlf = [
     time: "20:10",
     team1: "Madness",
     team2: "Line Consulting",
-    score: "-:-",
+    score: "5:5",
   },
   {
     numberRound: 10,
@@ -432,7 +432,7 @@ export const allRoundChlf = [
     time: "20:50",
     team1: "After U Sopla",
     team2: "Budimex",
-    score: "-:-",
+    score: "5:0",
   },
   {
     numberRound: 10,
@@ -440,6 +440,6 @@ export const allRoundChlf = [
     time: "21:25",
     team1: "Smulders",
     team2: "Czarni",
-    score: "-:-",
+    score: "5:0",
   },
 ];
