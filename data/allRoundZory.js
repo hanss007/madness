@@ -202,7 +202,7 @@ export const allRoundZory = [
     time: "18:00",
     team1: "Dream Team",
     team2: "ZSP Nr 8",
-    score: "-:-",
+    score: "9:3",
   },
   {
     numberRound: 5,
@@ -210,7 +210,7 @@ export const allRoundZory = [
     time: "18:45",
     team1: "Squad Drewna",
     team2: "Zymft",
-    score: "-:-",
+    score: "2:4",
   },
   {
     numberRound: 5,
@@ -218,7 +218,7 @@ export const allRoundZory = [
     time: "19:30",
     team1: "Galaxy Team",
     team2: "Grajki",
-    score: "-:-",
+    score: "2:5",
   },
   {
     numberRound: 5,
@@ -226,7 +226,7 @@ export const allRoundZory = [
     time: "20:15",
     team1: "Pniówek Team",
     team2: "Drunken Sharks",
-    score: "-:-",
+    score: "8:2",
   },
   {
     numberRound: 5,
@@ -234,7 +234,7 @@ export const allRoundZory = [
     time: "21:00",
     team1: "Nigdy Mało",
     team2: "Madness",
-    score: "-:-",
+    score: "0:5",
   },
   {
     numberRound: 5,
@@ -251,7 +251,7 @@ export const allRoundZory = [
     time: "18:00",
     team1: "Zymft",
     team2: "Galaxy Team",
-    score: "-:-",
+    score: "2:4",
   },
   {
     numberRound: 6,
@@ -259,7 +259,7 @@ export const allRoundZory = [
     time: "18:45",
     team1: "Drunken Sharks",
     team2: "Dream Team",
-    score: "-:-",
+    score: "1:1",
   },
   {
     numberRound: 6,
@@ -267,7 +267,7 @@ export const allRoundZory = [
     time: "19:30",
     team1: "Grajki",
     team2: "Pniówek Team",
-    score: "-:-",
+    score: "3:2",
   },
   {
     numberRound: 6,
@@ -275,7 +275,7 @@ export const allRoundZory = [
     time: "20:15",
     team1: "Madness",
     team2: "Squad Drewna",
-    score: "-:-",
+    score: "8:1",
   },
   {
     numberRound: 6,
@@ -283,7 +283,7 @@ export const allRoundZory = [
     time: "21:00",
     team1: "Sekonix",
     team2: "Nigdy Mało",
-    score: "-:-",
+    score: "3:4",
   },
   {
     numberRound: 6,
@@ -300,7 +300,7 @@ export const allRoundZory = [
     time: "18:00",
     team1: "Dream Team",
     team2: "Grajki",
-    score: "-:-",
+    score: "2:3",
   },
   {
     numberRound: 7,
@@ -308,7 +308,7 @@ export const allRoundZory = [
     time: "18:45 ",
     team1: "Squad Drewna",
     team2: "Sekonix",
-    score: "-:-",
+    score: "5:4",
   },
 
   {
@@ -317,7 +317,7 @@ export const allRoundZory = [
     time: "19:30 ",
     team1: "ZSP Nr 8",
     team2: "Drunken Sharks",
-    score: "-:-",
+    score: "7:1",
   },
 
   {
@@ -326,7 +326,7 @@ export const allRoundZory = [
     time: "20:15 ",
     team1: "Galaxy Team",
     team2: "Madness",
-    score: "-:-",
+    score: "6:5",
   },
   {
     numberRound: 7,
@@ -334,7 +334,7 @@ export const allRoundZory = [
     time: "21:00 ",
     team1: "Pniówek Team",
     team2: "Zymft",
-    score: "-:-",
+    score: "7:2",
   },
 
   {
@@ -352,7 +352,7 @@ export const allRoundZory = [
     time: "18:00 ",
     team1: "Grajki",
     team2: "ZSP Nr 8",
-    score: "-:-",
+    score: "6:1",
   },
   {
     numberRound: 8,
@@ -360,7 +360,7 @@ export const allRoundZory = [
     time: "18:45 ",
     team1: "Sekonix",
     team2: "Galaxy Team",
-    score: "-:-",
+    score: "5:8",
   },
 
   {
@@ -369,7 +369,7 @@ export const allRoundZory = [
     time: "19:30 ",
     team1: "Zymft",
     team2: "Dream Team",
-    score: "-:-",
+    score: "0:5",
   },
 
   {
@@ -378,7 +378,7 @@ export const allRoundZory = [
     time: "20:15 ",
     team1: "Nigdy Mało",
     team2: "Squad Drewna",
-    score: "-:-",
+    score: "5:0",
   },
 
   {
@@ -387,7 +387,7 @@ export const allRoundZory = [
     time: "21:00 ",
     team1: "Madness",
     team2: "Pniówek Team",
-    score: "-:-",
+    score: "2:5",
   },
   {
     numberRound: 8,
@@ -404,7 +404,7 @@ export const allRoundZory = [
     time: "18:00",
     team1: "Galaxy Team",
     team2: "Nigdy Mało",
-    score: "-:-",
+    score: "9:6",
   },
   {
     numberRound: 9,
@@ -412,7 +412,7 @@ export const allRoundZory = [
     time: "18:45",
     team1: "Pniówek Team",
     team2: "Sekonix",
-    score: "-:-",
+    score: "7:3",
   },
 
   {
@@ -421,7 +421,7 @@ export const allRoundZory = [
     time: "19:30",
     team1: "Dream Team",
     team2: "Madness",
-    score: "-:-",
+    score: "5:1",
   },
   {
     numberRound: 9,
@@ -429,7 +429,7 @@ export const allRoundZory = [
     time: "20:15 ",
     team1: "ZSP Nr 8",
     team2: "Zymft",
-    score: "-:-",
+    score: "15:2",
   },
   {
     numberRound: 9,
@@ -437,7 +437,7 @@ export const allRoundZory = [
     time: "21:00 ",
     team1: "Drunken Sharks",
     team2: "Grajki",
-    score: "-:-",
+    score: "2:9",
   },
 
   {
