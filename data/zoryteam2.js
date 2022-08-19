@@ -19,7 +19,7 @@ export const tableZory = [
     team: "MULTIBIURO-MADNESS-KK KWANT",
     matches: 8,
     pts: 12,
-    goals: 38,
+    goals: "38:25",
   },
   {
     lp: 1,
@@ -32,15 +32,15 @@ export const tableZory = [
     lp: 4,
     team: "ZSP Nr 8",
     matches: 8,
-    pts: 12,
-    goals: 20,
+    pts: 13,
+    goals: "44:29",
   },
   {
     lp: 7,
     team: "GALAXY TEAM",
     matches: 9,
     pts: 12,
-    goals: 34,
+    goals: "34:37",
   },
   {
     lp: 9,

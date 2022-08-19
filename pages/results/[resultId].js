@@ -101,7 +101,6 @@ export default function ItemResults({ item }) {
               <TitleTable>Pkt</TitleTable>
               <TitleTable>Bramki</TitleTable>
             </TableWrapper>
-
             {item["table"].map((item) => (
               <Table key={item.id} item={item} />
             ))}

@@ -94,7 +94,7 @@ const CellContentStyled = styled.td`
   }
 `;
 
-const TableTeam = ({ table, nameTeam, disqualification }) => (
+const TableTeam = ({ table, nameTeam }) => (
   <StyledWrapper>
     <Table>
       <HeadlineStyled>
@@ -108,7 +108,7 @@ const TableTeam = ({ table, nameTeam, disqualification }) => (
       </HeadlineStyled>
       <tbody>
         {table
-          .sort((a, b) => a.lp - b.lp)
+          .sort((a, b) => b.pts - a.pts)
           .map((item) => (
             <RowStyled className={item.team === `${nameTeam}` ? "madness" : ""}>
               <CellContentStyled>{item.lp}.</CellContentStyled>

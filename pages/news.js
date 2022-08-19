@@ -62,7 +62,7 @@ export default function News({ items, url }) {
 }
 
 export async function getServerSideProps() {
-  const items = await fetchQuery("items?_limit=7&_sort=id:DESC");
+  const items = await fetchQuery("items?_limit=6&_sort=id:DESC");
 
   return {
     props: {
