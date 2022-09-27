@@ -1,29 +1,44 @@
 export const events = [
   {
-    day: "23",
-    month: "10.2021",
-    content: "X Oldbojowe Mistrzostwa Polski Górników i Przyjaciół w futsalu",
+    day: "09",
+    month: "10.2022",
+    content:
+      "IX KLIMA CUP-Gramy dla Aleksa-charytatywny turniej futsalu i piłki siatkowej ",
   },
   {
-    day: "20-21",
-    month: "11.2021",
+    day: "05",
+    month: "11.2022",
     content:
-      "XII Amatorskie Mistrzostwa Polski Górników i Przyjaciół w piłce siatkowej",
+      "V Mistrzostwa Polski górników i przyjaciół w Piłce koszykowej w Żorach",
   },
 
   {
-    day: "12",
-    month: "12.2021",
-    content: "XII Mistrzostwa Polski Ratowników Górniczych w Futsalu",
-  },
-  {
-    day: "22-23",
-    month: "01.2022",
-    content: "XVI Futsalowe Mistrzostwa Polski Górników i Przyjaciół",
+    day: "06",
+    month: "11.2022",
+    content:
+      "XIII Mistrzostwa Polski Górników i przyjaciół w Piłce Siatkowej w Żorach",
   },
   {
     day: "20",
-    month: "02.2022",
-    content: "XI Oldbojowe Mistrzostwa Polski Górników i Przyjaciół w futsalu",
+    month: "01.2022",
+    content:
+      "XIII Mistrzostwa Polski Ratowników Górniczych w futsalu w Pawłowicach",
+  },
+  {
+    day: "17-18",
+    month: "12.2022",
+    content: "WYJAZD NA TURNIEJ Solidarności do GORLIC",
+  },
+  {
+    day: "28-29",
+    month: "01.2023",
+    content:
+      "XVII Futsalowe Mistrzostwa Polski Górników i przyjaciół Żory/Pawłowice",
+  },
+  {
+    day: "26",
+    month: "02.2023",
+    content:
+      "XII Oldbojowe  Mistrzostwa Polski Górników i przyjaciół w futsalu w Żorach",
   },
 ];
